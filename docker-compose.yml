@@ -1,18 +1,21 @@
-version: '3'
+version: "3.7"
 
 services:
-  webserver:
-    image: nginx:latest
+  caddy:
+    image: caddy:latest
+
+    restart: unless-stopped
+
     ports:
-      - 80:80
-      - 443:443
-    restart: always
+      - "80:80"
+      - "443:443"
+
     volumes:
-      - ./nginx/conf/:/etc/nginx/conf.d/:ro
-      - ./certbot/www:/var/www/certbot/:ro
-      - ./certbot/conf/:/etc/nginx/ssl/:ro
-  certbot:
-    image: certbot/certbot:latest
-    volumes:
-      - ./certbot/www/:/var/www/certbot/:rw
-      - ./certbot/conf/:/etc/letsencrypt/:rw
+      - $PWD/data/Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+    external: true
+  caddy_config:
