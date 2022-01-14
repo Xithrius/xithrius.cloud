@@ -1,3 +1,7 @@
-xithrius.cloud
+git.xithrius.cloud {
+	redir https://gitlab.xithrius.cloud{uri}
+}
 
-respond "Hello, xithrius.cloud"
+gitlab.xithrius.cloud {
+    reverse_proxy localhost:8929
+}
