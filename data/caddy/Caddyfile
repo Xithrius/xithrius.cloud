@@ -7,5 +7,5 @@ git.xithrius.cloud {
 }
 
 gitlab.xithrius.cloud {
-    reverse_proxy localhost:8929
+    reverse_proxy xithriuscloud_web_1:8929
 }
