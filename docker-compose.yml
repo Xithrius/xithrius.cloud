@@ -36,20 +36,20 @@ services:
 
     shm_size: '256m'
 
-  gitlab-runner:
-    image: gitlab/gitlab-runner:alpine
+  # gitlab-runner:
+  #   image: gitlab/gitlab-runner:alpine
 
-    restart: always
+  #   restart: always
 
-    depends_on:
-      - web
+  #   depends_on:
+  #     - web
 
-    volumes:
-      - ./config/gitlab-runner:/etc/gitlab-runner
-      - /var/run/docker.sock:/var/run/docker.sock
+  #   volumes:
+  #     - ./config/gitlab-runner:/etc/gitlab-runner
+  #     - /var/run/docker.sock:/var/run/docker.sock
 
-    networks:
-      - web
+  #   networks:
+  #     - web
 
 networks:
   web:
