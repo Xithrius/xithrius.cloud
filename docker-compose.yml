@@ -20,6 +20,9 @@ services:
     restart: always
     hostname: 'gitlab.xithrius.cloud'
 
+    depends_on:
+    - caddy
+
     environment:
       GITLAB_OMNIBUS_CONFIG: |
         external_url 'http://gitlab.xithrius.cloud:8929'
@@ -36,20 +39,16 @@ services:
 
     shm_size: '256m'
 
-  # gitlab-runner:
-  #   image: gitlab/gitlab-runner:alpine
+  site:
+    build:
+      context: site
+      dockerfile: Dockerfile
 
-  #   restart: always
+    ports:
+      - 3000:80
 
-  #   depends_on:
-  #     - web
-
-  #   volumes:
-  #     - ./config/gitlab-runner:/etc/gitlab-runner
-  #     - /var/run/docker.sock:/var/run/docker.sock
-
-  #   networks:
-  #     - web
+    depends_on:
+      - caddy
 
 networks:
   web:
