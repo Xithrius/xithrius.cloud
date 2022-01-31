@@ -1,7 +1,3 @@
-xithrius.cloud {
-    respond "Hello, world!"
-}
-
 git.xithrius.cloud {
 	redir https://gitlab.xithrius.cloud{uri}
 }
