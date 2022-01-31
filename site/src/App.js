@@ -1,22 +1,18 @@
-import Switch from "./components/Switch";
-import "./App.css";
-import { Container, Box, Heading, Stack } from "@chakra-ui/react";
+import { Box, Container, Heading, Stack } from "@chakra-ui/react";
 import { useState } from "react";
+import "./App.css";
+import Switch from "./components/Switch.js";
+import "./components/Switch.css";
 
 function App() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("dark-mode");
 
   const themeToggler = () => {
-    theme === "dark" ? setTheme("light") : setTheme("dark");
+    theme === "dark-mode" ? setTheme("light-mode") : setTheme("dark-mode");
   };
 
   return (
-    <Container>
-      <Box display={{ md: "flex" }} align="right">
-        <Box flexGrow={1}>
-          <Switch onToggle={() => themeToggler()} />
-        </Box>
-      </Box>
+    <Container className={theme}>
       <Box display={{ md: "flex" }} align="center">
         <Box flexGrow={1}>
           <Stack spacing={5}>
@@ -27,6 +23,7 @@ function App() {
               Rustacean, Pythonista, Triager.
             </Heading>
           </Stack>
+          <Switch onToggle={() => themeToggler()} />
         </Box>
       </Box>
     </Container>
