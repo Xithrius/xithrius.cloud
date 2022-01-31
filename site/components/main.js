@@ -7,6 +7,7 @@ const Main = ({ children, router }) => {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>xithrius.cloud - Homepage</title>
+
       </Head>
       <Container maxW="container.md" pt={14}>
         {children}
