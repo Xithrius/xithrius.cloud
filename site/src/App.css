@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Turret+Road:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=family=Turret+Road:wght@200&display=swap");
 
 .App {
   text-align: center;
@@ -12,6 +12,15 @@
   font-size: 10vw;
   font-weight: 100;
   font-family: "Turret Road", cursive;
+  -webkit-filter: drop-shadow(5px 5px 5px #000);
+  filter: drop-shadow(5px 5px 5px #000);
+}
+
+.homepage-header-description {
+  font-family: "Turret Road", cursive;
+  color: rgb(219, 206, 206);
+  font-size: 2.23vw;
+  font-weight: 500;
   -webkit-filter: drop-shadow(5px 5px 5px #000);
   filter: drop-shadow(5px 5px 5px #000);
 }
