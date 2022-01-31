@@ -2,7 +2,8 @@
   background-color: #282828;
   color: rgb(219, 206, 206);
   transition: background-color 0.4s ease-in-out;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .light-mode {
@@ -10,6 +11,8 @@
   color: #282828;
   transition: background-color 0.4s ease-in-out;
   /* height: 100%; */
+  width: 100vw;
+  height: 100vh;
 }
 
 .switch {
