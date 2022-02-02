@@ -1,0 +1,13 @@
+global:
+  scrape_interval:     15s
+  evaluation_interval: 15s
+
+external_labels:
+  monitor: 'my-project'
+
+job_name: 'cloudfalre'
+
+  scrape_interval: 300s
+
+  static_configs:
+    - targets: ['xithriuscloud_cloudflare_1:8080']
