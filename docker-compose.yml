@@ -72,8 +72,8 @@ services:
       - "9090:9090"
 
     volumes:
-      - $PWD/data/prometheus:/etc/prometheus/
-      - $PWD/prometheus/prometheus_data:/prometheus
+      - $PWD/data/prometheus:/etc/prometheus/:rw
+      - $PWD/data/prometheus/prometheus_data:/prometheus:rw
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
