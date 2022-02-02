@@ -29,7 +29,6 @@ services:
   grafana:
     image: 'grafana/grafana-oss'
     restart: always
-    hostname: 'grafana.xithrius.cloud'
 
     depends_on:
       - caddy
