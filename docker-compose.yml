@@ -20,11 +20,11 @@ services:
       context: site
       dockerfile: Dockerfile
 
-    ports:
-      - "3000:80"
-
     depends_on:
       - caddy
+
+    ports:
+      - "3000:80"
 
   grafana:
     image: 'grafana/grafana-oss'
