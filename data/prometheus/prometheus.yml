@@ -5,17 +5,12 @@ global:
 external_labels:
     monitor: 'xithrius.cloud'
 
-- job_name: 'prometheus'
+    - job_name: 'prometheus'
+        scrape_interval: 5s
+        static_configs:
+            - targets: ['xithriuscloud_prometheus_1:9090']
 
-    scrape_interval: 5s
-
-    static_configs:
-        - targets: ['xithriuscloud_prometheus_1:9090']
-
-
-- job_name: 'cloudflare'
-
-    scrape_interval: 5s
-
-    static_configs:
-        - targets: ['xithriuscloud_cloudflare_1:8080']
+    - job_name: 'cloudflare'
+        scrape_interval: 5s
+        static_configs:
+            - targets: ['xithriuscloud_cloudflare_1:8080']
