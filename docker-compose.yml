@@ -65,6 +65,7 @@ services:
     restart: always
 
     depends_on:
+      - caddy
       - grafana
 
     ports:
