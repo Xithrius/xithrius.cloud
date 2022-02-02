@@ -77,6 +77,17 @@ services:
     env_file:
       - .env
 
+  prometheus:
+    image: 'prom/prometheus'
+    restart: always
+
+    depends_on:
+      - caddy
+      - grafana
+
+    ports:
+      - "9090:9090"
+
 networks:
   gitlab:
 
