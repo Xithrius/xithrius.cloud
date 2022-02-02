@@ -60,6 +60,22 @@ services:
 
     shm_size: '256m'
 
+  cloudflare:
+    image: 'ghcr.io/lablabs/cloudflare_exporter'
+    restart: always
+
+    depends_on:
+      - grafana
+
+    ports:
+      - "8080:8080"
+
+    environment:
+      - FREE_TIER=true
+
+    env_file:
+      - .env
+
 networks:
   gitlab:
 
