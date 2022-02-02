@@ -24,7 +24,7 @@ services:
       - caddy
 
     ports:
-      - "3000:80"
+      - "8000:80"
 
   grafana:
     image: 'grafana/grafana-oss'
@@ -34,7 +34,7 @@ services:
       - caddy
 
     ports:
-      - "8000:8000"
+      - "3000:3000"
 
   gitlab:
     image: 'gitlab/gitlab-ee:latest'
