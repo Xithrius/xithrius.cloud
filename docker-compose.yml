@@ -62,6 +62,7 @@ services:
 
   prometheus:
     image: 'prom/prometheus'
+    user: root
     restart: always
 
     depends_on:
