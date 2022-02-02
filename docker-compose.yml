@@ -60,23 +60,6 @@ services:
 
     shm_size: '256m'
 
-  cloudflare:
-    image: 'ghcr.io/lablabs/cloudflare_exporter'
-    restart: always
-
-    depends_on:
-      - caddy
-      - grafana
-
-    ports:
-      - "8080:8080"
-
-    environment:
-      - FREE_TIER=true
-
-    env_file:
-      - .env
-
   prometheus:
     image: 'prom/prometheus'
     restart: always
@@ -96,6 +79,24 @@ services:
       - '--storage.tsdb.path=/prometheus'
       - '--web.console.libraries=/usr/share/prometheus/console_libraries'
       - '--web.console.templates=/usr/share/prometheus/consoles'
+
+  cloudflare:
+    image: 'ghcr.io/lablabs/cloudflare_exporter'
+    restart: always
+
+    depends_on:
+      - caddy
+      - grafana
+      - prometheus
+
+    ports:
+      - "8080:8080"
+
+    environment:
+      - FREE_TIER=true
+
+    env_file:
+      - .env
 
 networks:
   gitlab:
