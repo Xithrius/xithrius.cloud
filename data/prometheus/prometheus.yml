@@ -4,11 +4,9 @@ global:
 
 scrape_configs:
   - job_name: "prometheus"
-
     static_configs:
       - targets: ["xithriuscloud_prometheus_1:9090"]
 
-	- job_name: "cloudflare"
-
+	- job_name: "cf"
 		static_configs:
 			- targets: ["xithriuscloud_cloudflare_1:8080"]
