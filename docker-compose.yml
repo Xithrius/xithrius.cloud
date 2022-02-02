@@ -15,7 +15,29 @@ services:
       - caddy_data:/data
       - caddy_config:/config
 
-  web:
+  site:
+    build:
+      context: site
+      dockerfile: Dockerfile
+
+    ports:
+      - "3000:80"
+
+    depends_on:
+      - caddy
+
+  grafana:
+    image: 'grafana/grafana-oss'
+    restart: always
+    hostname: 'grafana.xithrius.cloud'
+
+    depends_on:
+      - caddy
+
+    ports:
+      - "8000:8000"
+
+  gitlab:
     image: 'gitlab/gitlab-ee:latest'
     restart: always
     hostname: 'gitlab.xithrius.cloud'
@@ -29,8 +51,8 @@ services:
         gitlab_rails['gitlab_shell_ssh_port'] = 2224
 
     ports:
-      - '8929:8929'
-      - '2224:22'
+      - "8929:8929"
+      - "2224:22"
 
     volumes:
       - '$GITLAB_HOME/config:/etc/gitlab'
@@ -39,19 +61,8 @@ services:
 
     shm_size: '256m'
 
-  site:
-    build:
-      context: site
-      dockerfile: Dockerfile
-
-    ports:
-      - 3000:80
-
-    depends_on:
-      - caddy
-
 networks:
-  web:
+  gitlab:
 
 volumes:
   caddy_data:
