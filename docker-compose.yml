@@ -95,6 +95,7 @@ services:
 
     environment:
       - FREE_TIER=true
+      - SCRAPE_DELAY=15
 
     env_file:
       - .env
