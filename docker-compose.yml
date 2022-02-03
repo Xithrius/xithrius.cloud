@@ -33,6 +33,9 @@ services:
     depends_on:
       - caddy
 
+    environment:
+      - GF_INSTALL_PLUGINS=cloudflare-app
+
     ports:
       - "3000:3000"
 
@@ -80,25 +83,6 @@ services:
       - '--storage.tsdb.path=/prometheus'
       - '--web.console.libraries=/usr/share/prometheus/console_libraries'
       - '--web.console.templates=/usr/share/prometheus/consoles'
-
-  cloudflare:
-    image: 'ghcr.io/lablabs/cloudflare_exporter'
-    restart: always
-
-    depends_on:
-      - caddy
-      - grafana
-      - prometheus
-
-    ports:
-      - "8080:8080"
-
-    environment:
-      - FREE_TIER=true
-      - SCRAPE_DELAY=15
-
-    env_file:
-      - .env
 
 networks:
   gitlab:
