@@ -1,14 +1,14 @@
 .homepage-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 10vw;
-    font-weight: 100;
-    font-family: "Turret Road", cursive;
-    -webkit-filter: drop-shadow(5px 5px 5px #000);
-    filter: drop-shadow(5px 5px 5px #000);
-  }
-  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 10vw;
+  font-weight: 100;
+  font-family: "Turret Road", cursive;
+  -webkit-filter: drop-shadow(5px 5px 5px #000);
+  filter: drop-shadow(5px 5px 5px #000);
+}
+
 .homepage-header-description {
   font-family: "Turret Road", cursive;
   font-size: 2.23vw;
