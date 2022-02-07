@@ -21,6 +21,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+          working-directory: site
           cache: 'npm'
 
       - name: Install project with a clean slate
