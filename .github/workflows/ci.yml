@@ -20,8 +20,8 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
+          scope: site
           node-version: ${{ matrix.node-version }}
-          working-directory: site
           cache: 'npm'
 
       - name: Install project with a clean slate
