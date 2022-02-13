@@ -80,6 +80,21 @@ services:
       - '--web.console.libraries=/usr/share/prometheus/console_libraries'
       - '--web.console.templates=/usr/share/prometheus/consoles'
 
+  graphite:
+    image: 'hopsoft/graphite-statsd'
+    restart: always
+
+    depends_on:
+      - grafana
+
+    ports:
+      - "80:80"
+      - "81:81"
+      - "2003-2004:2003-2004"
+      - "2023-2024:2023-2024"
+      - "8125:8125/udp"
+      - "8126:8126"
+
 volumes:
   caddy_data:
     external: true
