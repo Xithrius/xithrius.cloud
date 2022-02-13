@@ -1,5 +1,5 @@
 xithrius.cloud {
-    reverse_proxy xithriuscloud_site_1:8000
+    reverse_proxy xithriuscloud_site_1:8001
 }
 
 grafana.xithrius.cloud {
