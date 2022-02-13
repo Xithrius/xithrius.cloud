@@ -5,11 +5,3 @@ xithrius.cloud {
 grafana.xithrius.cloud {
     reverse_proxy xithriuscloud_grafana_1:3000
 }
-
-git.xithrius.cloud {
-	redir https://gitlab.xithrius.cloud{uri}
-}
-
-gitlab.xithrius.cloud {
-    reverse_proxy xithriuscloud_gitlab_1:8929
-}
