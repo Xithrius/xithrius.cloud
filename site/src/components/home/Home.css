@@ -7,6 +7,7 @@
   font-family: "Turret Road", cursive;
   -webkit-filter: drop-shadow(5px 5px 5px #000);
   filter: drop-shadow(5px 5px 5px #000);
+  transition: 0.4s;
 }
 
 .homepage-header-description {
@@ -15,4 +16,5 @@
   font-weight: 500;
   -webkit-filter: drop-shadow(5px 5px 5px #000);
   filter: drop-shadow(5px 5px 5px #000);
+  transition: 0.4s;
 }
