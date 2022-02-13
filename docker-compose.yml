@@ -85,7 +85,6 @@ services:
 
   graphite:
     image: 'graphiteapp/graphite-statsd'
-    container_name: graphite
     restart: always
 
     depends_on:
