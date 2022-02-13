@@ -90,14 +90,6 @@ services:
     depends_on:
       - grafana
 
-    ports:
-      - "8000:80"
-      - "81:81"
-      - "2003-2004:2003-2004"
-      - "2023-2024:2023-2024"
-      - "8125:8125/udp"
-      - "8126:8126"
-
 volumes:
   caddy_data:
     external: true
