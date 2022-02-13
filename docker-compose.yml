@@ -32,6 +32,9 @@ services:
     ports:
       - "7777:5432"
 
+    networks:
+      - grafana-net
+
     environment:
       POSTGRES_DB: site
       POSTGRES_PASSWORD: site
@@ -59,6 +62,12 @@ services:
     ports:
       - "3000:3000"
 
+    networks:
+      - grafana-net
+
+    volumes:
+      - grafana-volume
+
   prometheus:
     image: 'prom/prometheus'
     user: root
@@ -69,6 +78,9 @@ services:
 
     ports:
       - "9090:9090"
+
+    networks:
+      - grafana-net
 
     volumes:
       - $PWD/data/prometheus:/etc/prometheus/:rw
@@ -95,7 +107,15 @@ services:
       - "8125:8125/udp"
       - "8126:8126"
 
+    networks:
+      - grafana-net
+
+networks:
+  grafana-net:
+
 volumes:
   caddy_data:
+    external: true
+  grafana-volume:
     external: true
   caddy_config:
