@@ -1,7 +1,5 @@
-Hostname "$HOSTNAME"
-
 FQDNLookup false
-Interval $INTERVAL
+Interval 10
 Timeout 2
 ReadThreads 5
 
@@ -14,10 +12,9 @@ LoadPlugin interface
 LoadPlugin uptime
 LoadPlugin swap
 LoadPlugin write_graphite
-
-<Plugin cpu>
-  ReportByCpu $REPORT_BY_CPU
-</Plugin>
+LoadPlugin processes
+LoadPlugin aggregation
+LoadPlugin match_regex
 
 <Plugin df>
   # expose host's mounts into container using -v /:/host:ro  (location inside container does not matter much)
@@ -44,6 +41,10 @@ LoadPlugin write_graphite
   MountPoint "/etc/hosts"
   IgnoreSelected true
   ReportByDevice false
+  ReportReserved true
+  ReportInodes true
+  ValuesAbsolute true
+  ValuesPercentage true
   ReportInodes true
 </Plugin>
 
@@ -52,6 +53,15 @@ LoadPlugin write_graphite
   IgnoreSelected false
 </Plugin>
 
+<Plugin "aggregation">
+  <Aggregation>
+    Plugin "cpu"
+    Type "cpu"
+    GroupBy "Host"
+    GroupBy "TypeInstance"
+    CalculateAverage true
+  </Aggregation>
+</Plugin>
 
 <Plugin interface>
   Interface "lo"
@@ -60,16 +70,28 @@ LoadPlugin write_graphite
   IgnoreSelected true
 </Plugin>
 
+<Chain "PostCache">
+  <Rule>
+    <Match regex>
+      Plugin "^cpu$"
+      PluginInstance "^[0-9]+$"
+    </Match>
+    <Target write>
+      Plugin "aggregation"
+    </Target>
+    Target stop
+  </Rule>
+  Target "write"
+</Chain>
 
 <Plugin "write_graphite">
  <Carbon>
-   Host "$GRAPHITE_HOST"
-   Port "$GRAPHITE_PORT"
-   Prefix "$GRAPHITE_PREFIX"
+   Host "localhost"
+   Port 2003
+   Prefix "collectd."
    EscapeCharacter "_"
    SeparateInstances true
    StoreRates true
    AlwaysAppendDS false
  </Carbon>
 </Plugin>
-

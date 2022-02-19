@@ -21,11 +21,11 @@ services:
 
     restart: always
 
-    labels:
-      - collectd_docker_app
-
     environment:
-      COLLECTD_DOCKER_APP: graphite
+      COLLECTD_DOCKER_APP: site
+
+    labels:
+      - collectd_docker_task
 
     depends_on:
       - caddy
@@ -36,9 +36,6 @@ services:
   postgres:
     image: postgres:14-alpine
     restart: always
-
-    labels:
-      - collectd_docker_app
 
     environment:
       COLLECTD_DOCKER_APP: graphite
@@ -79,9 +76,6 @@ services:
     depends_on:
       - grafana
 
-    labels:
-      - collectd_docker_app
-
     environment:
       COLLECTD_DOCKER_APP: prometheus
 
@@ -105,9 +99,6 @@ services:
     depends_on:
       - grafana
 
-    labels:
-      - collectd_docker_app
-
     environment:
       COLLECTD_DOCKER_APP: graphite
 
@@ -129,6 +120,9 @@ services:
       COLLECTD_INTERVAL: 5
       GRAPHITE_HOST: graphite
       COLLECTD_HOST: xithriuscloud
+
+    labels:
+      - collectd_docker_app
 
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
