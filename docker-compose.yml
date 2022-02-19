@@ -20,6 +20,12 @@ services:
       context: site
       dockerfile: Dockerfile
 
+    labels:
+      - collectd_docker_app
+
+    environment:
+      COLLECTD_DOCKER_APP: graphite
+
     depends_on:
       - caddy
 
@@ -29,13 +35,17 @@ services:
   postgres:
     image: postgres:14-alpine
 
-    ports:
-      - "7777:5432"
+    labels:
+      - collectd_docker_app
 
     environment:
+      COLLECTD_DOCKER_APP: graphite
       POSTGRES_DB: site
       POSTGRES_PASSWORD: site
       POSTGRES_USER: site
+
+    ports:
+      - "7777:5432"
 
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U site"]
@@ -47,14 +57,11 @@ services:
       - $PWD/data/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
 
   grafana:
-    image: 'grafana/grafana-oss'
+    image: 'grafana/grafana'
     restart: always
 
     depends_on:
       - caddy
-
-    environment:
-      - GF_INSTALL_PLUGINS=cloudflare-app
 
     ports:
       - "3000:3000"
@@ -69,6 +76,12 @@ services:
 
     depends_on:
       - grafana
+
+    labels:
+      - collectd_docker_app
+
+    environment:
+      COLLECTD_DOCKER_APP: prometheus
 
     ports:
       - "9090:9090"
@@ -90,12 +103,48 @@ services:
     depends_on:
       - grafana
 
+    labels:
+      - collectd_docker_app
+
+    environment:
+      COLLECTD_DOCKER_APP: graphite
+
     ports:
       - "8000:80"
       - "2003-2004:2003-2004"
       - "2023-2024:2023-2024"
       - "8125:8125/udp"
       - "8126:8126"
+
+  container_metrics:
+    image: bobrik/collectd-docker
+
+    depends_on:
+      - graphite
+
+    environment:
+      COLLECTD_INTERVAL: 5
+      GRAPHITE_HOST: graphite
+      COLLECTD_HOST: xithriuscloud
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  metrics:
+    hostname: netcup
+
+    build: ./metrics
+
+    privileged: true
+
+    environment:
+      GRAPHITE_HOST: graphite
+
+    depends_on:
+      - graphite
+
+    volumes:
+      - /:/hostfs:ro
 
 volumes:
   caddy_data:
