@@ -24,9 +24,6 @@ services:
     environment:
       COLLECTD_DOCKER_APP: site
 
-    labels:
-      - collectd_docker_task
-
     depends_on:
       - caddy
 
