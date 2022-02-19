@@ -133,7 +133,7 @@ services:
   metrics:
     hostname: netcup
 
-    build: ./metrics
+    build: ./data/metrics
 
     privileged: true
 
