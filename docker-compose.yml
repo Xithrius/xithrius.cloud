@@ -130,22 +130,6 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 
-  metrics:
-    hostname: netcup
-
-    build: ./data/metrics
-
-    privileged: true
-
-    environment:
-      GRAPHITE_HOST: graphite
-
-    depends_on:
-      - graphite
-
-    volumes:
-      - /:/hostfs:ro
-
 volumes:
   caddy_data:
     external: true
