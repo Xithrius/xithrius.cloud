@@ -10,7 +10,7 @@ services:
       - "443:443"
 
     volumes:
-      - $PWD/data/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - $PWD/services/caddy/Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data
       - caddy_config:/config
 
@@ -50,7 +50,7 @@ services:
       retries: 5
 
     volumes:
-      - $PWD/data/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - $PWD/services/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
 
   grafana:
     image: 'grafana/grafana'
@@ -80,8 +80,8 @@ services:
       - "9090:9090"
 
     volumes:
-      - $PWD/data/prometheus:/etc/prometheus/:rw
-      - $PWD/data/prometheus/prometheus_data:/prometheus:rw
+      - $PWD/services/prometheus:/etc/prometheus/:rw
+      - $PWD/services/prometheus/prometheus_data:/prometheus:rw
 
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
