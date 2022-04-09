@@ -5,3 +5,7 @@ xithrius.cloud {
 grafana.xithrius.cloud {
     reverse_proxy xithriuscloud_grafana_1:3000
 }
+
+guides.xithrius.cloud {
+    reverse_proxy xithriuscloud_site_guides:2000
+}
