@@ -1,4 +1,4 @@
-FROM getzola/zola:v0.15.1
+FROM ghcr.io/getzola/zola:v0.15.1
 
 WORKDIR /site_guides
 
