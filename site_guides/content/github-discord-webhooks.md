@@ -1,9 +1,7 @@
 +++
-title = "What is Gutenberg"
+title = "Discord and GitHub webhooks"
 date = 2022-04-08
 
 [taxonomies]
-categories = ["Minecraft"]
+categories = ["Webhooks"]
 +++
-
-This is an article yes yes
