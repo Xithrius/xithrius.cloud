@@ -1,11 +1,9 @@
-FROM ghcr.io/getzola/zola:v0.15.1
+FROM ghcr.io/getzola/zola:v0.15.3
 
 WORKDIR /site_guides
 
 COPY . .
 
-ENV PORT=2000
-
 EXPOSE 2000
 
-CMD ["zola", "serve", "--port", "2000"]
+ENTRYPOINT [ "/bin/zola", "serve", "-p", "2000" ]
