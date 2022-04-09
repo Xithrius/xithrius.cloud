@@ -1,0 +1,20 @@
+base_url = "https://guides.xithrius.cloud"
+compile_sass = true
+title = "Xithrius's guides"
+description = ""
+generate_feed = true
+taxonomies = [
+    {name = "categories", feed = true}
+]
+build_search_index = false
+
+[markdown]
+highlight_code = true
+
+[extra]
+author = "Xithrius"
+after_dark_menu = [
+    {url = "$BASE_URL", name = "Home"},
+    {url = "$BASE_URL/categories", name = "Categories"},
+]
+after_dark_title = "Xithrius's guides"
