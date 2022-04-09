@@ -30,7 +30,7 @@ services:
     ports:
       - "8001:8001"
 
-  site_guides:
+  zola:
     build:
       context: site_guides
       dockerfile: Dockerfile

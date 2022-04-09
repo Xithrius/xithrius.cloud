@@ -6,4 +6,4 @@ COPY . .
 
 EXPOSE 2000
 
-ENTRYPOINT [ "/bin/zola", "serve", "-p", "2000" ]
+CMD [ "/bin/zola", "build", "--", "/bin/zola", "-i", "0.0.0.0", "-p", "2000" ]

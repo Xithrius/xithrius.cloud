@@ -7,5 +7,5 @@ grafana.xithrius.cloud {
 }
 
 guides.xithrius.cloud {
-    reverse_proxy xithriuscloud_site_guides_1:2000
+    reverse_proxy xithriuscloud_zola_1:2000
 }
