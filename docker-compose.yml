@@ -1,6 +1,19 @@
 version: "3"
 
 services:
+  caddy:
+    image: caddy:latest
+    restart: always
+
+    ports:
+      - "80:80"
+      - "443:443"
+
+    volumes:
+      - $PWD/services/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+
   site:
     build:
       context: site
@@ -17,35 +30,99 @@ services:
     ports:
       - "8001:8001"
 
-  caddy:
-    extends:
-      file: ./services/caddy.yml
-      service: caddy
-
   postgres:
-    extends:
-      file: ./services/postgres.yml
-      service: postgres
+    image: postgres:14-alpine
+    restart: always
+
+    environment:
+      COLLECTD_DOCKER_APP: graphite
+      POSTGRES_DB: site
+      POSTGRES_PASSWORD: site
+      POSTGRES_USER: site
+
+    ports:
+      - "7777:5432"
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U site"]
+      interval: 2s
+      timeout: 1s
+      retries: 5
+
+    volumes:
+      - $PWD/services/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
 
   grafana:
-    extends:
-      file: ./services/grafana.yml
-      service: grafana
+    image: 'grafana/grafana'
+    restart: always
+
+    depends_on:
+      - caddy
+
+    ports:
+      - "3000:3000"
+
+    volumes:
+      - grafana-storage:/var/lib/grafana
 
   prometheus:
-    extends:
-      file: ./services/prometheus.yml
-      service: prometheus
+    image: 'prom/prometheus'
+    user: root
+    restart: always
+
+    depends_on:
+      - grafana
+
+    environment:
+      COLLECTD_DOCKER_APP: prometheus
+
+    ports:
+      - "9090:9090"
+
+    volumes:
+      - $PWD/services/prometheus:/etc/prometheus/:rw
+      - $PWD/data/prometheus/prometheus_data:/prometheus:rw
+
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
 
   graphite:
-    extends:
-      file: ./services/graphite.yml
-      service: graphite
+    image: 'graphiteapp/graphite-statsd'
+    restart: always
+
+    depends_on:
+      - grafana
+
+    environment:
+      COLLECTD_DOCKER_APP: graphite
+
+    ports:
+      - "8000:80"
+      - "2003-2004:2003-2004"
+      - "2023-2024:2023-2024"
+      - "8125:8125/udp"
+      - "8126:8126"
 
   container_metrics:
-    extends:
-      file: ./services/graphite.yml
-      service: container_metrics
+    image: bobrik/collectd-docker
+    restart: always
+
+    depends_on:
+      - graphite
+
+    environment:
+      COLLECTD_INTERVAL: 5
+      GRAPHITE_HOST: graphite
+      COLLECTD_HOST: xithriuscloud
+
+    labels:
+      - collectd_docker_app
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
 
 volumes:
   caddy_data:
