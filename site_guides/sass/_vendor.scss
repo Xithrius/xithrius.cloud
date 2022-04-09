@@ -5,6 +5,7 @@ html {
 * {
   box-sizing: border-box;
   text-rendering: geometricPrecision;
+  margin-bottom: 1rem;
 }
 
 body {
@@ -261,7 +262,7 @@ a:hover {
 .hack h5,
 .hack h6 {
   position: relative;
-  margin-bottom: 1.75rem;
+  margin-bottom: 0.25rem;
 }
 
 .hack h2:before,

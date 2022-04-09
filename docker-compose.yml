@@ -30,6 +30,19 @@ services:
     ports:
       - "8001:8001"
 
+  site_guides:
+    build:
+      context: site_guides
+      dockerfile: Dockerfile
+
+    restart: always
+
+    depends_on:
+      - caddy
+
+    ports:
+      - "2000:2000"
+
   postgres:
     image: postgres:14-alpine
     restart: always
