@@ -35,8 +35,6 @@ services:
       context: site_guides
       dockerfile: Dockerfile
 
-    restart: no
-
     depends_on:
       - caddy
 
