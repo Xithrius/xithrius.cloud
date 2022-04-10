@@ -1,4 +1,4 @@
-version: "3"
+version: "3.3"
 
 services:
   caddy:
@@ -35,23 +35,20 @@ services:
       context: site_guides
       dockerfile: Dockerfile
 
-    restart: always
+    restart: no
 
     depends_on:
       - caddy
 
-    ports:
-      - "2000:2000"
-
   postgres:
-    image: postgres:14-alpine
+    image: "postgres:14-alpine"
     restart: always
 
     environment:
       COLLECTD_DOCKER_APP: graphite
-      POSTGRES_DB: site
-      POSTGRES_PASSWORD: site
       POSTGRES_USER: site
+      POSTGRES_PASSWORD: site
+      POSTGRES_DB: site
 
     ports:
       - "7777:5432"
@@ -62,11 +59,43 @@ services:
       timeout: 1s
       retries: 5
 
+    networks:
+      - gitea
+
     volumes:
       - $PWD/services/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - ./postgres:/var/lib/postgresql/data
+
+  gitea:
+    image: "gitea/gitea:latest"
+    restart: always
+
+    environment:
+      USER_UID: 1000
+      USER_GID: 1000
+      GITEA__database__DB_TYPE: postgres
+      GITEA__database__HOST: postgres:5432
+      GITEA__database__NAME: site
+      GITEA__database__USER: site
+      GITEA__database__PASSWD: site
+
+    networks:
+      - gitea
+
+    volumes:
+      - $PWD/gitea:/data
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+
+    ports:
+      - "3001:3001"
+      - "222:22"
+
+    depends_on:
+      - postgres
 
   grafana:
-    image: 'grafana/grafana'
+    image: "grafana/grafana"
     restart: always
 
     depends_on:
@@ -79,7 +108,7 @@ services:
       - grafana-storage:/var/lib/grafana
 
   prometheus:
-    image: 'prom/prometheus'
+    image: "prom/prometheus"
     user: root
     restart: always
 
@@ -97,13 +126,13 @@ services:
       - $PWD/data/prometheus/prometheus_data:/prometheus:rw
 
     command:
-      - '--config.file=/etc/prometheus/prometheus.yml'
-      - '--storage.tsdb.path=/prometheus'
-      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
-      - '--web.console.templates=/usr/share/prometheus/consoles'
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--web.console.libraries=/usr/share/prometheus/console_libraries"
+      - "--web.console.templates=/usr/share/prometheus/consoles"
 
   graphite:
-    image: 'graphiteapp/graphite-statsd'
+    image: "graphiteapp/graphite-statsd"
     restart: always
 
     depends_on:
@@ -143,3 +172,7 @@ volumes:
   grafana-storage:
     external: true
   caddy_config:
+
+networks:
+  gitea:
+    external: false

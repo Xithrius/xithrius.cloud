@@ -7,5 +7,10 @@ grafana.xithrius.cloud {
 }
 
 guides.xithrius.cloud {
-    reverse_proxy xithriuscloud_zola_1:2000
+    root * site_guides/public
+    file_server
+}
+
+git.xithrius.cloud {
+  reverse_proxy xithriuscloud_gitea_1:3001
 }

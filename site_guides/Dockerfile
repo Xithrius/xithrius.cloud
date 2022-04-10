@@ -4,6 +4,4 @@ WORKDIR /site_guides
 
 COPY . .
 
-EXPOSE 2000
-
-CMD [ "/bin/zola", "build", "--", "/bin/zola", "-i", "0.0.0.0", "-p", "2000" ]
+CMD ["build"]
