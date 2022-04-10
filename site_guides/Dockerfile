@@ -1,7 +1,7 @@
 FROM ghcr.io/getzola/zola:v0.15.3
 
-WORKDIR /site_guides
+RUN mkdir /site_guides
 
-COPY . .
+COPY . /site_guides
 
 CMD ["build"]
