@@ -37,7 +37,7 @@ services:
       dockerfile: Dockerfile
 
     volumes:
-      - static-content:/site_guides/public
+      - static-content:/site_guides/public:rw
 
     depends_on:
       - caddy
