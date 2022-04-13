@@ -1,9 +1,20 @@
 import { Link } from "gatsby";
 import React from "react";
+import styled from "styled-components";
+import { MdNorthEast } from "react-icons/md";
 
-export const Header = ({ siteTitle, siteDescription }) => (
+const HeaderStyles = styled.div`
+  text-decoration: underline;
+  text-decoration-color: #ff2e88;
+`;
+
+export const Header = () => (
   <Link to="/">
-    <h1>{siteTitle}</h1>
-    <p>{siteDescription}</p>
+    <HeaderStyles>
+      <p>
+        Home
+        <MdNorthEast />
+      </p>
+    </HeaderStyles>
   </Link>
 );

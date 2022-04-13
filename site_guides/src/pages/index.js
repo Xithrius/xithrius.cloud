@@ -9,7 +9,7 @@ const IndexWrapper = styled.main``;
 
 const PostWrapper = styled.div``;
 
-export default ({ data }) => {
+const Main = ({ data }) => {
   const { description, title, image, siteUrl, siteLanguage, siteLocale } =
     useSiteMetadata();
   return (
@@ -59,3 +59,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default Main;
