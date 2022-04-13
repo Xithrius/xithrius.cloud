@@ -10,6 +10,16 @@ const LinkStyles = styled.div`
   text-decoration-color: #ff2e88;
 `;
 
+const RightArrow = styled(MdEast)`
+  vertical-align: middle;
+  margin-left: 5px;
+`;
+
+const LeftArrow = styled(MdWest)`
+  vertical-align: middle;
+  margin-right: 5px;
+`;
+
 const guideTemplate = ({ data, pageContext }) => {
   const { frontmatter, body } = data.mdx;
   const { previous, next } = pageContext;
@@ -26,7 +36,7 @@ const guideTemplate = ({ data, pageContext }) => {
               <Link to={next.fields.slug}>
                 <p>
                   {next.frontmatter.title}
-                  <MdEast />
+                  <RightArrow />
                 </p>
               </Link>
             </LinkStyles>
@@ -39,7 +49,7 @@ const guideTemplate = ({ data, pageContext }) => {
             <LinkStyles>
               <Link to={previous.fields.slug}>
                 <p>
-                  <MdWest />
+                  <LeftArrow />
                   {previous.frontmatter.title}
                 </p>
               </Link>
