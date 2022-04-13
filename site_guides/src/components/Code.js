@@ -3,7 +3,6 @@ import theme from "prism-react-renderer/themes/nightOwl";
 import React from "react";
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from "react-live";
 import styled from "styled-components";
-import { copyToClipboard } from "../../utils/copy-to-clipboard";
 
 const Pre = styled.pre`
   position: relative;
@@ -49,10 +48,6 @@ export const Code = ({ codeString, language, ...props }) => {
       </LiveProvider>
     );
   }
-
-  const handleClick = () => {
-    copyToClipboard(codeString);
-  };
 
   return (
     <Highlight
