@@ -1,5 +1,65 @@
-import React from 'react'
+import { graphql, Link } from "gatsby";
+import React from "react";
+import SEO from "react-seo-component";
+import styled from "styled-components";
+import { Layout } from "../components/Layout";
+import { useSiteMetadata } from "../hooks/useSiteMetadata";
 
-export default () => {
-  return <h1>Hello World!</h1>
-}
+const IndexWrapper = styled.main``;
+
+const PostWrapper = styled.div``;
+
+export default ({ data }) => {
+  const {
+    description,
+    title,
+    image,
+    siteUrl,
+    siteLanguage,
+    siteLocale,
+  } = useSiteMetadata();
+  return (
+    <Layout>
+      <SEO
+        title={title}
+        description={description || `nothin'`}
+        image={`${siteUrl}${image}`}
+        pathname={siteUrl}
+        siteLanguage={siteLanguage}
+        siteLocale={siteLocale}
+      />
+      <IndexWrapper>
+        {data.allMdx.nodes.map(({ id, excerpt, frontmatter, fields }) => (
+          <PostWrapper key={id}>
+            <Link to={fields.slug}>
+              <h1>{frontmatter.title}</h1>
+              <p>{frontmatter.date}</p>
+              <p>{excerpt}</p>
+            </Link>
+          </PostWrapper>
+        ))}
+      </IndexWrapper>
+    </Layout>
+  );
+};
+
+export const query = graphql`
+  query SITE_INDEX_QUERY {
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { published: { eq: true } } }
+    ) {
+      nodes {
+        id
+        excerpt(pruneLength: 250)
+        frontmatter {
+          title
+          date(formatString: "YYYY MMMM Do")
+        }
+        fields {
+          slug
+        }
+      }
+    }
+  }
+`;
