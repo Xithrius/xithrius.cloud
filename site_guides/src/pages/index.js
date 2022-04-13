@@ -10,14 +10,8 @@ const IndexWrapper = styled.main``;
 const PostWrapper = styled.div``;
 
 export default ({ data }) => {
-  const {
-    description,
-    title,
-    image,
-    siteUrl,
-    siteLanguage,
-    siteLocale,
-  } = useSiteMetadata();
+  const { description, title, image, siteUrl, siteLanguage, siteLocale } =
+    useSiteMetadata();
   return (
     <Layout>
       <SEO
@@ -29,15 +23,17 @@ export default ({ data }) => {
         siteLocale={siteLocale}
       />
       <IndexWrapper>
-        {data.allMdx.nodes.map(({ id, excerpt, frontmatter, fields }) => (
-          <PostWrapper key={id}>
-            <Link to={fields.slug}>
-              <h1>{frontmatter.title}</h1>
-              <p>{frontmatter.date}</p>
-              <p>{excerpt}</p>
-            </Link>
-          </PostWrapper>
-        ))}
+        {data.allMdx.nodes.map(({ id, _, frontmatter, fields }) =>
+          frontmatter.published ? null : (
+            <PostWrapper key={id}>
+              <Link to={fields.slug}>
+                <h1>{frontmatter.title}</h1>
+                <p>{frontmatter.date}</p>
+                <p>{frontmatter.description}</p>
+              </Link>
+            </PostWrapper>
+          )
+        )}
       </IndexWrapper>
     </Layout>
   );
@@ -51,10 +47,10 @@ export const query = graphql`
     ) {
       nodes {
         id
-        excerpt(pruneLength: 250)
         frontmatter {
           title
           date(formatString: "YYYY MMMM Do")
+          description
         }
         fields {
           slug
