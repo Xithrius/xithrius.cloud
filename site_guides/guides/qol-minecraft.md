@@ -1,5 +1,5 @@
 ---
-title: "QOl in Minecraft"
+title: "Increasing QOL in Minecraft"
 date: 2022-04-08
 published: true
 ---
