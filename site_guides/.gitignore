@@ -24,4 +24,4 @@ yarn-error.log*
 
 .cache
 
-/page-data
+*/page-data
