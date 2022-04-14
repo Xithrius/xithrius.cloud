@@ -19,18 +19,11 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-live": "^2.4.1",
-    "react-scripts": "^5.0.1",
     "react-seo-component": "^2.0.2",
     "styled-components": "^5.3.5"
   },
-  "optionalDependencies": {
-    "fsevents": "^2.3.2"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "dev": "gatsby develop -p 9988 -o",
-    "serve": "gatsby serve -p 2000"
+    "dev": "gatsby develop -p 9988 -o"
   },
   "eslintConfig": {
     "extends": [
