@@ -27,7 +27,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "dev": "gatsby develop -p 9988 -o",
-    "production": "gatsby build"
+    "serve": "gatsby serve -p 2000"
   },
   "eslintConfig": {
     "extends": [
