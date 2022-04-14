@@ -23,6 +23,9 @@
     "react-seo-component": "^2.0.2",
     "styled-components": "^5.3.5"
   },
+  "optionalDependencies": {
+    "fsevents": "^2.3.2"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
