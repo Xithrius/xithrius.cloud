@@ -5,19 +5,34 @@ html {
   scroll-behavior: smooth;
 }
 
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, li {
+  font-family: "Montserrat", sans-serif;
+}
+
 p {
   color: rgb(219, 206, 206);
-  font-family: "Montserrat", sans-serif;
+  transition: 0.4s ease-in-out;
 }
 
-h1 {
-  color: #fff;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgb(219, 206, 206);
   border-bottom: 1px solid #ff2e88;
   transition: 0.4s ease-in-out;
-  font-family: "Montserrat", sans-serif;
 }
 
-h1:hover {
+h1:hover, p:link:hover {
   color: #ff2e88;
   transition: 0.4s ease-in-out;
 }
@@ -25,6 +40,20 @@ h1:hover {
 a:link,
 a:visited,
 a:hover,
-a:active {
-  text-decoration: none;
+a:active,
+p:link {
+  -webkit-text-decoration: #ff2e88 solid underline;
+  text-decoration: #ff2e88 solid underline;
+  -webkit-text-underline-position: under;
+  text-underline-position: under;
+  color: #ff2e88;
+}
+
+li {
+  color: rgb(219, 206, 206);
+}
+
+code {
+  border-radius: 4px;
+  background: #353535;
 }

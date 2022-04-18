@@ -9,7 +9,6 @@ const AppStyles = styled.main`
 `;
 
 export const Layout = ({ children }) => {
-  const { title, description } = useSiteMetadata();
   return (
     <AppStyles>
       <Header />

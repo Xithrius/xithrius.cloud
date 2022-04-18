@@ -5,11 +5,6 @@ import { Layout } from "../components/Layout";
 import styled from "styled-components";
 import { MdEast, MdWest } from "react-icons/md";
 
-const LinkStyles = styled.div`
-  text-decoration: underline;
-  text-decoration-color: #ff2e88;
-`;
-
 const RightArrow = styled(MdEast)`
   vertical-align: middle;
   margin-left: 5px;
@@ -32,28 +27,24 @@ const guideTemplate = ({ data, pageContext }) => {
       {next === false ? null : (
         <>
           {next && (
-            <LinkStyles>
-              <Link to={next.fields.slug}>
-                <p>
-                  {next.frontmatter.title}
-                  <RightArrow />
-                </p>
-              </Link>
-            </LinkStyles>
+            <Link to={next.fields.slug}>
+              <p>
+                {next.frontmatter.title}
+                <RightArrow />
+              </p>
+            </Link>
           )}
         </>
       )}
       {previous === false ? null : (
         <>
           {previous && (
-            <LinkStyles>
-              <Link to={previous.fields.slug}>
-                <p>
-                  <LeftArrow />
-                  {previous.frontmatter.title}
-                </p>
-              </Link>
-            </LinkStyles>
+            <Link to={previous.fields.slug}>
+              <p>
+                <LeftArrow />
+                {previous.frontmatter.title}
+              </p>
+            </Link>
           )}
         </>
       )}

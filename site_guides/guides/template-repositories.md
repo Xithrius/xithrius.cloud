@@ -5,7 +5,7 @@ description: Creating new repositories has never been easier
 published: true
 ---
 
-# Creating the template repository
+## Creating the template repository
 
 Template repositories are very useful if you have many projects to create with the same languages and/or base files.
 
@@ -19,7 +19,7 @@ After you make a template repository, it will show up in the drop down list belo
 
 ![Template list](./static/template-repositories/list.png)
 
-# Useful files
+## Useful files
 
 An example template repository that I've created, and where the files are referened below, would be my [rust-binary-project-template](https://github.com/Xithrius/rust-binary-project-template) repository.
 
