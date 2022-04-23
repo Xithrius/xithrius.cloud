@@ -21,7 +21,7 @@ After you make a template repository, it will show up in the drop down list belo
 
 ## Useful files
 
-An example template repository that I've created, and where the files are referened below, would be my [rust-binary-project-template](https://github.com/Xithrius/rust-binary-project-template) repository.
+An example template repository that I've created, and where the files are referenced below, would be my [rust-binary-project-template](https://github.com/Xithrius/rust-binary-project-template) repository.
 
 - `.pre-commit-config.yaml`: [pre-commit](https://pre-commit.com/) for making sure your staged files have passed checks.
 - `README.md`: It's best to have a description of what your repository is about.
