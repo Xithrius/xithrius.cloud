@@ -12,7 +12,8 @@ h2,
 h3,
 h4,
 h5,
-h6, li {
+h6,
+li {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -28,11 +29,10 @@ h4,
 h5,
 h6 {
   color: rgb(219, 206, 206);
-  border-bottom: 1px solid #ff2e88;
   transition: 0.4s ease-in-out;
 }
 
-h1:hover, p:link:hover {
+h1:hover {
   color: #ff2e88;
   transition: 0.4s ease-in-out;
 }
@@ -40,8 +40,7 @@ h1:hover, p:link:hover {
 a:link,
 a:visited,
 a:hover,
-a:active,
-p:link {
+a:active {
   -webkit-text-decoration: #ff2e88 solid underline;
   text-decoration: #ff2e88 solid underline;
   -webkit-text-underline-position: under;

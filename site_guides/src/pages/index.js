@@ -28,9 +28,9 @@ const Main = ({ data }) => {
             <PostWrapper key={id}>
               <Link to={fields.slug}>
                 <h1>{frontmatter.title}</h1>
-                <p>{frontmatter.date}</p>
-                <p>{frontmatter.description}</p>
               </Link>
+              <p>{frontmatter.date}</p>
+              <p>{frontmatter.description}</p>
             </PostWrapper>
           )
         )}
