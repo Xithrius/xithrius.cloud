@@ -50,7 +50,9 @@ a:active {
 
 li {
   color: rgb(219, 206, 206);
+  margin-bottom: 7px;
 }
+
 
 code {
   border-radius: 4px;
