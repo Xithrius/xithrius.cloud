@@ -4,7 +4,6 @@ import { SiGithub, SiGitea, SiTwitch, SiYoutube } from "react-icons/si";
 import { IconContext } from "react-icons";
 import Switch from "../switch/Switch";
 import "./Home.css";
-import { NavLink } from "react";
 
 const iconStyle = { margin: "4px" };
 

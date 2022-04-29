@@ -18,3 +18,19 @@
   filter: drop-shadow(5px 5px 5px #000);
   transition: 0.4s;
 }
+
+a {
+  transition: 0.3s;
+}
+
+a:link,
+a:visited,
+a:active {
+  filter: drop-shadow(3px 3px 3px #000);
+  transition: 0.4s;
+  position: relative;
+}
+
+a:hover {
+  transform: translate(0, -10px);
+}
