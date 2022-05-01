@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { Box, Container, Heading, Stack } from "@chakra-ui/react";
+import { SiGithub, SiGitea, SiTwitch, SiYoutube } from "react-icons/si";
+import { IconContext } from "react-icons";
 import Switch from "../switch/Switch";
 import "./Home.css";
+
+const iconStyle = { margin: "4px" };
 
 export function Home() {
   const [theme, setTheme] = useState("dark-mode");
@@ -9,6 +13,7 @@ export function Home() {
   const themeToggler = () => {
     theme === "dark-mode" ? setTheme("light-mode") : setTheme("dark-mode");
   };
+
   return (
     <Container className={theme}>
       <Box display={{ md: "flex" }} align="center">
