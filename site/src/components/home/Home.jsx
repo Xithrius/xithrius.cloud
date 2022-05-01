@@ -23,6 +23,24 @@ export function Home() {
           </Stack>
           <Switch onToggle={() => themeToggler()} />
         </Box>
+        <Box display="inline-flex">
+          <IconContext.Provider
+            value={{ className: "shared-class", size: 40, style: iconStyle }}
+          >
+            <a href="https://github.com/Xithrius">
+              <SiGithub />
+            </a>
+            <a href="https://git.xithrius.cloud/">
+              <SiGitea />
+            </a>
+            <a href="https://twitch.tv/Xithrius">
+              <SiTwitch />
+            </a>
+            <a href="https://www.youtube.com/channel/UCD97h_kt9b3dhHPaDpsHevA">
+              <SiYoutube />
+            </a>
+          </IconContext.Provider>
+        </Box>
       </Box>
     </Container>
   );
