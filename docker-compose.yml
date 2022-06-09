@@ -1,4 +1,4 @@
-version: "3.3"
+version: "3.4"
 
 x-default: &default
   restart: always
@@ -95,7 +95,7 @@ services:
   prometheus:
     <<: *default
 
-    build: ./prometheus
+    build: ./services/prometheus
 
     depends_on:
       - grafana
