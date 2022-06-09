@@ -127,6 +127,12 @@ services:
       - "8125:8125/udp"
       - "8126:8126"
 
+    volumes:
+      - graphite-storage:/opt/graphite/storage
+
+    logging:
+      driver: none
+
   container_metrics:
     image: bobrik/collectd-docker
     restart: always
@@ -146,8 +152,9 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 
 volumes:
-  caddy_data:
+  caddy-data:
     external: true
+  caddy-config:
   grafana-storage:
     external: true
-  caddy_config:
+  graphite-storage:
