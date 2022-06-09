@@ -11,8 +11,8 @@ services:
 
     volumes:
       - $PWD/services/caddy/Caddyfile:/etc/caddy/Caddyfile
-      - caddy_data:/data
-      - caddy_config:/config
+      - caddy-data:/data
+      - caddy-config:/config
 
   site:
     build:
