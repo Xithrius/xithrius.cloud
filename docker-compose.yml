@@ -1,9 +1,17 @@
 version: "3.3"
 
+x-default: &default
+  restart: always
+  logging:
+    driver: "json-file"
+    options:
+      max-size: "50m"
+
 services:
   caddy:
+    <<: *default
+
     image: caddy:latest
-    restart: always
 
     ports:
       - "80:80"
@@ -15,14 +23,11 @@ services:
       - caddy_config:/config
 
   site:
+    <<: *default
+
     build:
       context: site
       dockerfile: Dockerfile
-
-    restart: always
-
-    environment:
-      COLLECTD_DOCKER_APP: site
 
     depends_on:
       - caddy
@@ -31,11 +36,11 @@ services:
       - "8001:8001"
 
   postgres:
+    <<: *default
+
     image: "postgres:14-alpine"
-    restart: always
 
     environment:
-      COLLECTD_DOCKER_APP: graphite
       POSTGRES_USER: site
       POSTGRES_PASSWORD: site
       POSTGRES_DB: site
@@ -44,12 +49,12 @@ services:
       - "7777:5432"
 
     volumes:
-      - $PWD/services/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
       - ./postgres:/var/lib/postgresql/data
 
   gitea:
+    <<: *default
+
     image: "gitea/gitea:latest"
-    restart: always
 
     environment:
       USER_UID: 1000
@@ -74,8 +79,9 @@ services:
       - caddy
 
   grafana:
+    <<: *default
+
     image: "grafana/grafana"
-    restart: always
 
     depends_on:
       - caddy
@@ -87,69 +93,46 @@ services:
       - grafana-storage:/var/lib/grafana
 
   prometheus:
-    image: "prom/prometheus"
-    user: root
-    restart: always
+    <<: *default
+
+    build: ./prometheus
 
     depends_on:
       - grafana
 
-    environment:
-      COLLECTD_DOCKER_APP: prometheus
-
     ports:
-      - "9090:9090"
+      - "127.0.0.1:9090:9090"
 
     volumes:
-      - $PWD/services/prometheus:/etc/prometheus/:rw
-      - $PWD/data/prometheus/prometheus_data:/prometheus:rw
+      - prometheus-storage:/prometheus
+
+  cadvisor:
+    <<: *default
+
+    image: gcr.io/cadvisor/cadvisor:v0.44.0
+
+    ports:
+      - "127.0.0.1:8080:8080"
+
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+
+  node_exporter:
+    <<: *default
+
+    image: prom/node-exporter:v1.3.1
 
     command:
-      - "--config.file=/etc/prometheus/prometheus.yml"
-      - "--storage.tsdb.path=/prometheus"
-      - "--web.console.libraries=/usr/share/prometheus/console_libraries"
-      - "--web.console.templates=/usr/share/prometheus/consoles"
-
-  graphite:
-    image: "graphiteapp/graphite-statsd"
-    restart: always
-
-    depends_on:
-      - grafana
-
-    environment:
-      COLLECTD_DOCKER_APP: graphite
-
-    ports:
-      - "8000:80"
-      - "2003-2004:2003-2004"
-      - "2023-2024:2023-2024"
-      - "8125:8125/udp"
-      - "8126:8126"
+      - '--path.procfs=/host/proc'
+      - '--path.rootfs=/rootfs'
+      - '--path.sysfs=/host/sys'
+      - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
 
     volumes:
-      - graphite-storage:/opt/graphite/storage
-
-    logging:
-      driver: none
-
-  container_metrics:
-    image: bobrik/collectd-docker
-    restart: always
-
-    depends_on:
-      - graphite
-
-    environment:
-      COLLECTD_INTERVAL: 5
-      GRAPHITE_HOST: graphite
-      COLLECTD_HOST: xithriuscloud
-
-    labels:
-      - collectd_docker_app
-
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      - '/:/host:ro,rslave'
 
 volumes:
   caddy_data:
@@ -157,4 +140,4 @@ volumes:
   caddy_config:
   grafana-storage:
     external: true
-  graphite-storage:
+  prometheus-storage:
