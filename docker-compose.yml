@@ -11,8 +11,8 @@ services:
 
     volumes:
       - $PWD/services/caddy/Caddyfile:/etc/caddy/Caddyfile
-      - caddy-data:/data
-      - caddy-config:/config
+      - caddy_data:/data
+      - caddy_config:/config
 
   site:
     build:
@@ -152,9 +152,9 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 
 volumes:
-  caddy-data:
+  caddy_data:
     external: true
-  caddy-config:
+  caddy_config:
   grafana-storage:
     external: true
   graphite-storage:
