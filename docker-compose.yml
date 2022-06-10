@@ -8,19 +8,17 @@ x-default: &default
       max-size: "50m"
 
 services:
-  caddy:
+  nginx:
     <<: *default
 
-    image: caddy:latest
+    image: "nginx:latest"
+
+    volumes:
+    - ./services/nginx/templates:/etc/nginx/templates
 
     ports:
       - "80:80"
       - "443:443"
-
-    volumes:
-      - $PWD/services/caddy/Caddyfile:/etc/caddy/Caddyfile
-      - caddy_data:/data
-      - caddy_config:/config
 
   site:
     <<: *default
@@ -30,7 +28,7 @@ services:
       dockerfile: Dockerfile
 
     depends_on:
-      - caddy
+      - nginx
 
     ports:
       - "8001:8001"
@@ -76,15 +74,15 @@ services:
 
     depends_on:
       - postgres
-      - caddy
+      - nginx
 
   grafana:
     <<: *default
 
-    image: "grafana/grafana"
+    build: ./services/grafana
 
     depends_on:
-      - caddy
+      - nginx
 
     ports:
       - "3000:3000"
@@ -135,9 +133,5 @@ services:
       - '/:/host:ro,rslave'
 
 volumes:
-  caddy_data:
-    external: true
-  caddy_config:
   grafana-storage:
-    external: true
   prometheus-storage:

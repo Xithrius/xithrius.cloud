@@ -1,0 +1,9 @@
+server {
+    listen 80;
+    server_name grafana.xithrius.cloud;
+
+    location / {
+        proxy_set_header Host $http_host;
+        proxy_pass http://grafana:3000;
+    }
+}
