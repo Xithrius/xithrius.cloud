@@ -4,7 +4,7 @@ WORKDIR /site
 
 COPY package*.json ./
 
-RUN npm i
+RUN yarn i
 
 COPY . .
 
