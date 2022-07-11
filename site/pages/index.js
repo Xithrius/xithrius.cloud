@@ -17,6 +17,8 @@ export default function Home() {
         <h1 className={styles.title}>Xithrius</h1>
 
         <p className={styles.description}>Rustacean, Pythonista, Triager.</p>
+
+        <div className={styles.icons}><SiGithub /><SiTwitch /><SiYoutube /></div>
       </main>
 
       {/* <Box display="inline-flex">
