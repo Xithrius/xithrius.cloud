@@ -30,9 +30,20 @@
 }
 
 .description {
-  margin: 4rem 0;
+  margin: 4rem 0 0 0;
   line-height: 1.5;
   font-size: 3vw;
+}
+
+.icons {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0 0 0;
+}
+
+.icons svg {
+  height: clamp(0.1rem, 3vw, 2rem);
+  width: clamp(0.1rem, 3vw, 2rem);
 }
 
 /* TODO: Have the theme switcher down here */
