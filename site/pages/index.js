@@ -1,7 +1,5 @@
 import Head from "next/head";
-import { SiGithub, SiGitea, SiTwitch, SiYoutube } from "react-icons/si";
-import { IconContext } from "react-icons";
-// import Image from 'next/image'
+import { SiGithub, SiTwitch, SiYoutube, SiGitea } from "react-icons/si";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -18,13 +16,7 @@ export default function Home() {
 
         <p className={styles.description}>Rustacean, Pythonista, Triager.</p>
 
-        <div className={styles.icons}><SiGithub /><SiTwitch /><SiYoutube /></div>
-      </main>
-
-      {/* <Box display="inline-flex">
-        <IconContext.Provider
-          value={{ className: "shared-class", size: 40, style: iconStyle }}
-        >
+        <div className={styles.icons}>
           <a href="https://github.com/Xithrius">
             <SiGithub />
           </a>
@@ -37,21 +29,8 @@ export default function Home() {
           <a href="https://www.youtube.com/channel/UCD97h_kt9b3dhHPaDpsHevA">
             <SiYoutube />
           </a>
-        </IconContext.Provider>
-      </Box> */}
-
-      {/* <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer> */}
+        </div>
+      </main>
     </div>
   );
 }
