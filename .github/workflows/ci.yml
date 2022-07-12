@@ -6,32 +6,30 @@ on:
   pull_request:
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: 'site'
-
     strategy:
-      matrix:
-        node-version: [18.x]
+      fail-fast: false
+    
+      matrix: { dir: ['site', 'site_guides'] }
 
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
+    steps:        
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Node v14
         uses: actions/setup-node@v2
         with:
-          scope: site
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-          cache-dependency-path: '**/package-lock.json'
+          node-version: 14
 
-      - name: Install project with a clean slate
-        run: npm ci
-
-      - name: Build project
-        run: npm run build --if-present
+      - name: Install dependencies
+        working-directory: ${{ matrix.dir }}
+        run: yarn install
+        
+      - name: Install dependencies
+        working-directory: ${{ matrix.dir }}
+        run: yarn lint
 
       # Prepare the Pull Request Payload artifact. If this fails, we
       # we fail silently using the `continue-on-error` option. It's
