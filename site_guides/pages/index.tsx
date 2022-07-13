@@ -5,6 +5,7 @@ import Intro from "../components/intro";
 import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Post from "../interfaces/post";
+import Head from "next/head";
 
 type Props = {
   allPosts: Post[];
@@ -15,6 +16,10 @@ export default function Index({ allPosts }: Props) {
   const morePosts = allPosts.slice(1);
   return (
     <>
+      <Head>
+        <title>guides.xithrius.cloud</title>
+        <link rel="icon" href="/logo.png" />
+      </Head>
       <Layout>
         <Container>
           <Intro />
