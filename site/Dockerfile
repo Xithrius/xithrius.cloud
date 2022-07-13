@@ -15,4 +15,6 @@ ENV PORT=8001
 
 EXPOSE 8001
 
+RUN yarn build
+
 CMD ["yarn", "start", "-p", "8001"]
