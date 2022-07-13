@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Turret+Road:wght@200&display=swap");
+
 .container {
   padding: 0 2rem;
 }
@@ -21,8 +23,6 @@
 
 .title,
 .description {
-  /* color: #b8c0d3; */
-  color: #3b4345;
   font-family: "Turret Road", cursive;
   text-align: center;
 }
@@ -43,7 +43,6 @@
   height: clamp(0.1rem, 3vw, 2rem);
   width: clamp(0.1rem, 3vw, 2rem);
   transition: 0.4s ease-in-out;
-  color: #3b4345;
 }
 
 .icons svg:hover {
