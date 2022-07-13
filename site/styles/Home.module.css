@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Turret+Road:wght@200&display=swap");
+
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-family: "Turret Road", cursive;
+  margin: 0;
+  line-height: 1.15;
+  font-size: 10vw;
+}
+
+.title,
+.description {
+  font-family: "Turret Road", cursive;
+  text-align: center;
+}
+
+.description {
+  margin: 4rem 0 0 0;
+  line-height: 1.5;
+  font-size: 3vw;
+}
+
+.icons {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0 0 0;
+}
+
+.icons svg {
+  height: clamp(0.1rem, 3vw, 2rem);
+  width: clamp(0.1rem, 3vw, 2rem);
+  transition: 0.4s ease-in-out;
+}
+
+.icons svg:hover {
+  transform: translate(0, -10px);
+  transition: 0.4s ease-in-out;
+}

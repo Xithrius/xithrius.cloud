@@ -1,46 +1,37 @@
 {
   "name": "site_guides",
-  "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@mdx-js/mdx": "^1.0.0",
-    "@mdx-js/react": "^1.0.0",
-    "babel-plugin-styled-components": "^2.0.7",
-    "gatsby": "^4.13.0",
-    "gatsby-image": "^3.11.0",
-    "gatsby-plugin-mdx": "^3.13.0",
-    "gatsby-plugin-sharp": "^4.13.0",
-    "gatsby-plugin-styled-components": "^5.13.0",
-    "gatsby-remark-images": "^6.13.0",
-    "gatsby-source-filesystem": "^4.13.0",
-    "gatsby-transformer-sharp": "^4.13.0",
-    "prism-react-renderer": "^1.3.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
-    "react-live": "^2.4.1",
-    "react-seo-component": "^2.0.2",
-    "styled-components": "^5.3.5"
-  },
   "scripts": {
-    "dev": "gatsby develop -p 9988 -o"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "lint": "next lint",
+    "typecheck": "tsc"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "classnames": "^2.3.1",
+    "date-fns": "^2.28.0",
+    "gray-matter": "^4.0.3",
+    "next": "^12.2.2",
+    "next-themes": "^0.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.1",
+    "typescript": "^4.7.4"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@netlify/plugin-nextjs": "^4.12.1",
+    "@types/node": "^18.0.3",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "autoprefixer": "^10.4.7",
+    "eslint": "^8.19.0",
+    "eslint-config-next": "^12.2.2",
+    "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
+    "tailwindcss": "^3.1.4",
+    "typescript": "^4.7.4"
   }
 }
