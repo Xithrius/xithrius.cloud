@@ -2,19 +2,18 @@
 
 html,
 body {
-  /* background-color: #212627; */
-  background-color: #c7cde4;
-  padding: 0;
-  margin: 0;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: #c7cde4;
+  color: #3b4345;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+[data-theme="dark"],
+[data-theme="dark"] body {
+  background: #212627;
+  color: #b8c0d3;
 }
 
-* {
-  box-sizing: border-box;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
