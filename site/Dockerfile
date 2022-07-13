@@ -1,10 +1,11 @@
-FROM node:17.9
+FROM node:17.9-slim
 
 WORKDIR /site
 
-COPY package*.json ./
+COPY package.json .
+COPY yarn.lock .
 
-RUN yarn i
+RUN yarn install
 
 COPY . .
 
@@ -14,4 +15,4 @@ ENV PORT=8001
 
 EXPOSE 8001
 
-CMD ["npm", "run", "start"]
+CMD ["yarn", "start", "-p", "8001"]
