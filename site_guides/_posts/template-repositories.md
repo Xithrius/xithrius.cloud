@@ -10,13 +10,13 @@ Template repositories are very useful if you have many projects to create with t
 
 You can transfer a regular repository into a template repository by going to the repository, clicking on `Settings`, and then on the button below.
 
-![Template button](./static/template-repositories/button.png)
+![Template button](/images/posts/template-repositories/button.png)
 
 After you make a template repository, it will show up in the list similar to the one below the next time you want to create a new repository.
 
 After you make a template repository, it will show up in the drop down list below during the next time you decide to create a new repository.
 
-![Template list](./static/template-repositories/list.png)
+![Template list](/images/posts/template-repositories/list.png)
 
 ## Useful files
 
