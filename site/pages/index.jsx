@@ -15,16 +15,28 @@ export default function Home() {
         <p className={styles.description}>Rustacean, Pythonista, Triager.</p>
 
         <div className={styles.menu}>
-          <a href="https://guides.xithrius.cloud" target="_blank">
+          <a
+            href="https://guides.xithrius.cloud"
+            target="_blank"
+            rel="noreferrer"
+          >
             Guides
           </a>
-          <a href="https://todo.xithrius.cloud" target="_blank">
+          <a
+            href="https://todo.xithrius.cloud"
+            target="_blank"
+            rel="noreferrer"
+          >
             ToDo
           </a>
-          <a href="https://github.com/Xithrius" target="_blank">
+          <a
+            href="https://github.com/Xithrius"
+            target="_blank"
+            rel="noreferrer"
+          >
             GitHub
           </a>
-          <a href="https://twitch.tv/Xithrius" target="_blank">
+          <a href="https://twitch.tv/Xithrius" target="_blank" rel="noreferrer">
             Twitch
           </a>
           <a href="https://www.youtube.com/channel/UCD97h_kt9b3dhHPaDpsHevA">
