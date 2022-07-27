@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { SiGithub, SiTwitch, SiYoutube, SiGitea } from "react-icons/si";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -15,18 +14,13 @@ export default function Home() {
 
         <p className={styles.description}>Rustacean, Pythonista, Triager.</p>
 
-        <div className={styles.icons}>
-          <a href="https://github.com/Xithrius">
-            <SiGithub />
-          </a>
-          <a href="https://git.xithrius.cloud/">
-            <SiGitea />
-          </a>
-          <a href="https://twitch.tv/Xithrius">
-            <SiTwitch />
-          </a>
+        <div className={styles.menu}>
+          <a href="https://guides.xithrius.cloud">Guides</a>
+          <a href="https://todo.xithrius.cloud">ToDo</a>
+          <a href="https://github.com/Xithrius">GitHub</a>
+          <a href="https://twitch.tv/Xithrius">Twitch</a>
           <a href="https://www.youtube.com/channel/UCD97h_kt9b3dhHPaDpsHevA">
-            <SiYoutube />
+            YouTube
           </a>
         </div>
       </main>
