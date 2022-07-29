@@ -11,10 +11,10 @@ jobs:
 
     strategy:
       fail-fast: false
-    
-      matrix: { dir: ['site', 'site_guides'] }
 
-    steps:        
+      matrix: { dir: ["site", "site_guides", "site_projects"] }
+
+    steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
@@ -26,7 +26,7 @@ jobs:
       - name: Install dependencies
         working-directory: ${{ matrix.dir }}
         run: yarn install
-        
+
       - name: Install dependencies
         working-directory: ${{ matrix.dir }}
         run: yarn lint
