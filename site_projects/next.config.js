@@ -2,4 +2,7 @@
 module.exports = {
   reactStrictMode: true,
   swcMinify: true,
-}
+  images: {
+    domains: ["opengraph.githubassets.com"],
+  },
+};
