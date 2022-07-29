@@ -18,7 +18,7 @@ export async function getStaticProps() {
         generateProjectHtml(projectName)
       ),
     },
-    revalidate: 1,
+    revalidate: 3600,
   };
 }
 
@@ -37,6 +37,7 @@ export default function Home({ GithubInfo }) {
               width="400"
               height="200"
               src={element.image}
+              alt="..."
             />
           </Link>
         ))}
