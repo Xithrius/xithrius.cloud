@@ -1,0 +1,28 @@
+.container {
+  position: absolute;
+  height: 6rem;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  border-top: solid 1px;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons svg {
+  height: clamp(0.1rem, 3vw, 2rem);
+  width: clamp(0.1rem, 3vw, 2rem);
+  transition: 0.4s ease-in-out;
+}
+
+.icons svg:hover {
+  transform: translate(0, -5px);
+  transition: 0.4s ease-in-out;
+}
