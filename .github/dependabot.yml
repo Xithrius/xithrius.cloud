@@ -4,17 +4,23 @@ updates:
   - package-ecosystem: "npm"
     directory: "site/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
     open-pull-requests-limit: 5
 
   - package-ecosystem: "npm"
     directory: "site_guides/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
     open-pull-requests-limit: 5
 
   - package-ecosystem: "npm"
     directory: "site_projects/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: "npm"
+    directory: "site_templates/"
+    schedule:
+      interval: "monthly"
     open-pull-requests-limit: 5
