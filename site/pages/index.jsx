@@ -22,6 +22,13 @@ export default function Home() {
               Projects
             </a>
             <a
+              href="https://templates.xithrius.cloud"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Templates
+            </a>
+            <a
               href="https://guides.xithrius.cloud"
               target="_blank"
               rel="noreferrer"
@@ -48,13 +55,6 @@ export default function Home() {
               rel="noreferrer"
             >
               GPG
-            </a>
-            <a
-              href="https://templates.xithrius.cloud"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Templates
             </a>
           </div>
         </main>
