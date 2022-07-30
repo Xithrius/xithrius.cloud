@@ -28,7 +28,7 @@ export async function getStaticProps() {
         getGitHubInfo(templateName)
       ),
     },
-    revalidate: 86400,
+    revalidate: 3600,
   };
 }
 
