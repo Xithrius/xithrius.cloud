@@ -1,10 +1,16 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 
-const projects = ["twitch-tui", "xithrius.cloud"];
+const githubProjects = [
+  "twitch-tui",
+  "xithrius.cloud",
+  "Xythrion",
+  "timezone-tracker",
+  "markdown-table-rs",
+  "CompetitiveProgramming",
+];
 
-function generateProjectHtml(name) {
+function getGitHubInfo(name) {
   const link = `https://github.com/Xithrius/${name}`;
   const image = `https://opengraph.githubassets.com/f46d3d21c0c43e565e27e314eb51c91b17f78342c1c4de976401d50a39d1a674/Xithrius/${name}`;
 
@@ -14,8 +20,8 @@ function generateProjectHtml(name) {
 export async function getStaticProps() {
   return {
     props: {
-      GithubInfo: projects.map((projectName) =>
-        generateProjectHtml(projectName)
+      GithubInfo: githubProjects.map((projectName) =>
+        getGitHubInfo(projectName)
       ),
     },
     revalidate: 3600,
@@ -29,15 +35,16 @@ export default function Home({ GithubInfo }) {
         <title>projects.xithrius.cloud</title>
         <link rel="icon" href="/logo.png" />
       </Head>
-      <div className="p-10 flex flex-wrap h-screen w-screen content-start justify-center items-center gap-10">
+      <div className="flex h-24 w-full items-center justify-center border-b text-5xl">
+        Project Repositories
+      </div>
+      <div className="flex h-screen w-screen flex-wrap content-start items-center justify-center gap-10 p-10">
         {GithubInfo.map((element) => (
           <Link href={element.link} key={element.name}>
-            <Image
-              className="rounded-md"
-              width="400"
-              height="200"
+            <img
               src={element.image}
-              alt="..."
+              alt={element.name}
+              className="duration-40 h-[200px] w-[400px] cursor-pointer rounded-md ring-current ring-offset-2 ease-in-out hover:ring-2 hover:duration-75"
             />
           </Link>
         ))}

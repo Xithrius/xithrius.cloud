@@ -46,6 +46,19 @@ services:
     ports:
       - "8002:8002"
 
+  site_templates:
+    <<: *default
+
+    build:
+      context: site_templates
+      dockerfile: Dockerfile
+
+    depends_on:
+      - nginx
+
+    ports:
+      - "8003:8003"
+
   postgres:
     <<: *default
 
