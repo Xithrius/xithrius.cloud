@@ -50,11 +50,11 @@ export default function Home() {
               Dotfiles
             </a>
             <a
-              href="https://gpg.xithrius.cloud"
+              href="https://info.xithrius.cloud"
               target="_blank"
               rel="noreferrer"
             >
-              GPG
+              Info
             </a>
           </div>
         </main>
