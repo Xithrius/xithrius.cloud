@@ -17,6 +17,10 @@ body {
   color: #3b4345;
 }
 
+a {
+  border-bottom: solid 1px;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
