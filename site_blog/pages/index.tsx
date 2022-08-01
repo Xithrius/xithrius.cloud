@@ -17,7 +17,7 @@ export default function Index({ allPosts }: Props) {
   return (
     <>
       <Head>
-        <title>guides.xithrius.cloud</title>
+        <title>blog.xithrius.cloud</title>
         <link rel="icon" href="/logo.png" />
       </Head>
       <Layout>

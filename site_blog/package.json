@@ -1,5 +1,5 @@
 {
-  "name": "site_guides",
+  "name": "site_blog",
   "private": true,
   "scripts": {
     "dev": "next dev",
