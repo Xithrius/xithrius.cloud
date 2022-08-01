@@ -44,7 +44,7 @@ export default function Home({ GithubInfo }) {
             <img
               src={element.image}
               alt={element.name}
-              className="duration-40 h-[200px] w-[400px] cursor-pointer rounded-md ring-current ring-offset-2 ease-in-out hover:ring-2 hover:duration-75"
+              className="h-[200px] w-[400px] cursor-pointer rounded-md ring-current ring-offset-2 hover:ring-2"
             />
           </Link>
         ))}

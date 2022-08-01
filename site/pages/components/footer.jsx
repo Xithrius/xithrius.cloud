@@ -5,34 +5,29 @@ import {
   SiYoutube,
   SiTwitter,
 } from "react-icons/si";
-import styles from "../../styles/Footer.module.css";
+import LinkItem from "./links";
 
-const Footer = ({}) => {
-  return (
-    <div className={styles.container}>
-      <div className={styles.icons}>
-        <a href="https://github.com/Xithrius" target="_blank" rel="noreferrer">
-          <SiGithub />
-        </a>
-        <a href="https://git.xithrius.cloud/" target="_blank" rel="noreferrer">
-          <SiGitea />
-        </a>
-        <a href="https://twitch.tv/Xithrius" target="_blank" rel="noreferrer">
-          <SiTwitch />
-        </a>
-        <a
-          href="https://www.youtube.com/channel/UCD97h_kt9b3dhHPaDpsHevA"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <SiYoutube />
-        </a>
-        <a href="https://twitter.com/Xithrius" target="_blank" rel="noreferrer">
-          <SiTwitter />
-        </a>
-      </div>
+const items = [
+  { key: "https://github.com/Xithrius", item: <SiGithub /> },
+  { key: "https://git.xithrius.cloud/", item: <SiGitea /> },
+  { key: "https://twitch.tv/Xithrius", item: <SiTwitch /> },
+  { key: "https://tinyy.io/0YYSUgPn", item: <SiYoutube /> },
+  { key: "https://twitter.com/Xithrius", item: <SiTwitter /> },
+];
+
+const Footer = () => (
+  <div className="absolute inset-x-0 bottom-0 h-24 w-full border-t border-current">
+    <div className="mt-8 flex items-center justify-center">
+      {items.map(({ key, item }) => (
+        <LinkItem
+          key={key}
+          href={key}
+          item={item}
+          tailwind="hover:-translate-y-1 scale-[2] mx-5"
+        />
+      ))}
     </div>
-  );
-};
+  </div>
+);
 
 export default Footer;
