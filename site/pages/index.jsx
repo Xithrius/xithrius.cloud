@@ -1,65 +1,31 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import Footer from "./components/footer";
+import LinkItem from "./components/links";
+
+const items = ["Projects", "Templates", "Guides", "ToDo", "Dotfiles", "Info"];
 
 export default function Home() {
   return (
-    <div>
-      <div className={styles.container}>
-        <Head>
-          <title>xithrius.cloud</title>
-          <link rel="icon" href="/logo.png" />
-        </Head>
-        <main className={styles.main}>
-          <h1 className={styles.title}>Xithrius</h1>
-          <p className={styles.description}>Rustacean, Pythonista, Triager.</p>
-          <div className={styles.menu}>
-            <a
-              href="https://projects.xithrius.cloud"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Projects
-            </a>
-            <a
-              href="https://templates.xithrius.cloud"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Templates
-            </a>
-            <a
-              href="https://guides.xithrius.cloud"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Guides
-            </a>
-            <a
-              href="https://todo.xithrius.cloud"
-              target="_blank"
-              rel="noreferrer"
-            >
-              ToDo
-            </a>
-            <a
-              href="https://dots.xithrius.cloud"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Dotfiles
-            </a>
-            <a
-              href="https://info.xithrius.cloud"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Info
-            </a>
-          </div>
-        </main>
-      </div>
+    <>
+      <Head>
+        <title>xithrius.cloud</title>
+        <link rel="icon" href="/logo.png" />
+      </Head>
+      <main className="flex min-h-screen flex-1 flex-col items-center justify-center text-center font-['Turret_Road']">
+        <h1 className="m-0 text-[10vw] leading-[1.15]">Xithrius</h1>
+        <p className="text-[3vw]">Rustacean, Pythonista, Triager.</p>
+        <div className="mt-4 flex w-3/5 justify-center border-t border-solid border-current py-5 font-['Montserrat'] text-[1.3vw]">
+          {items.map((element) => (
+            <LinkItem
+              href={`https://${element.toLowerCase()}.xithrius.cloud`}
+              key={element}
+              item={element}
+              tailwind="hover:-translate-y-1 mx-5"
+            />
+          ))}
+        </div>
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }
