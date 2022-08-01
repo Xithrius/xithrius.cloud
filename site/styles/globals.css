@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Turret+Road:wght@200&display=swap");
 
-body {
+* {
   transition: 150ms ease-in-out;
 }
 
