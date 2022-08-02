@@ -5,8 +5,13 @@
 .markdown p,
 .markdown ul,
 .markdown ol,
-.markdown blockquote {
-  @apply my-6;
+.markdown blockquote
+{
+  @apply mt-6;
+}
+
+.markdown pre {
+  @apply rounded outline-1 outline outline-offset-8 mt-3 mb-10
 }
 
 .markdown a {
@@ -14,9 +19,9 @@
 }
 
 .markdown h2 {
-  @apply mt-12 mb-4 text-3xl leading-snug;
+  @apply mb-4 text-3xl leading-snug;
 }
 
 .markdown h3 {
-  @apply mt-8 mb-4 text-2xl leading-snug;
+  @apply mb-4 text-2xl leading-snug;
 }
