@@ -8,23 +8,20 @@ type Props = {
   slug: string;
 };
 
-const PostPreview = ({
-  title,
-  date,
-  excerpt,
-  slug,
-}: Props) => {
+const PostPreview = ({ title, date, excerpt, slug }: Props) => {
   return (
     <div>
-      <h3 className="text-3xl mb-3 leading-snug">
+      <h3 className="mb-3 text-3xl leading-snug">
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
-          <a className="hover:underline">{title}</a>
+          <a className="opacity-50 hover:opacity-100">{title}</a>
         </Link>
       </h3>
-      <div className="text-lg mb-4">
-        <DateFormatter dateString={date} />
+      <div className="opacity-50">
+        <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>
+        <div className="mb-4 text-lg">
+          <DateFormatter dateString={date} />
+        </div>
       </div>
-      <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
     </div>
   );
 };

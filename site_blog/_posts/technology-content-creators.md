@@ -1,6 +1,6 @@
 ---
 title: "Technology video creators that are actually good"
-description: "Content that doesn't drain your energy."
+excerpt: "Content that doesn't drain your energy."
 date: "2022-04-22"
 ---
 

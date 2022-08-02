@@ -11,19 +11,21 @@ type Props = {
 const HeroPost = ({ title, date, excerpt, slug }: Props) => {
   return (
     <section>
-      <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
+      <div className="mb-20 md:mb-28 md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8">
         <div>
-          <h3 className="mb-4 text-4xl lg:text-5xl leading-tight">
+          <h3 className="mb-4 text-4xl leading-tight lg:text-5xl">
             <Link as={`/posts/${slug}`} href="/posts/[slug]">
-              <a className="hover:underline">{title}</a>
+              <a className="opacity-50 hover:opacity-100">{title}</a>
             </Link>
           </h3>
-          <div className="mb-4 md:mb-0 text-lg">
-            <DateFormatter dateString={date} />
+          <div className="opacity-50">
+            <div>
+              <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>
+            </div>
+            <div className="mb-4 text-lg md:mb-0">
+              <DateFormatter dateString={date} />
+            </div>
           </div>
-        </div>
-        <div>
-          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
         </div>
       </div>
     </section>
