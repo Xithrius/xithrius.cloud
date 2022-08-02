@@ -9,6 +9,10 @@
   @apply my-6;
 }
 
+.markdown a {
+  @apply underline hover:opacity-75;
+}
+
 .markdown h2 {
   @apply mt-12 mb-4 text-3xl leading-snug;
 }
