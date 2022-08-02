@@ -4,6 +4,7 @@ import Link from "next/link";
 const githubProjects = [
   "twitch-tui",
   "xithrius.cloud",
+  "titan.xithrius.cloud",
   "Xythrion",
   "timezone-tracker",
   "markdown-table-rs",

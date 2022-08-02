@@ -10,7 +10,7 @@
 }
 
 .markdown a {
-  @apply underline hover:opacity-75;
+  @apply underline underline-offset-[6px] hover:opacity-75;
 }
 
 .markdown h2 {
