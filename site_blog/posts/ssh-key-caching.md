@@ -19,7 +19,7 @@ If your ssh agent isn't initiated at startup, here's what I prefer to use as a c
 
 ### `~/.config/systemd/user/ssh-agent.service`
 
-```conf
+```toml
 [Unit]
 Description=SSH key agent
 

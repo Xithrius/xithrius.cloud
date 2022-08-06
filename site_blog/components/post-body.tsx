@@ -1,4 +1,5 @@
-import markdownStyles from "./markdown-styles.module.css";
+import markdownStyles from "../styles/markdown-styles.module.css";
+import "prismjs/plugins/line-numbers/prism-line-numbers.js"
 
 type Props = {
   content: string;
@@ -6,7 +7,7 @@ type Props = {
 
 const PostBody = ({ content }: Props) => {
   return (
-    <div className="max-w-2xl mx-auto">
+    <div className="max-w-2xl mx-auto line-numbers">
       <div
         className={markdownStyles["markdown"]}
         dangerouslySetInnerHTML={{ __html: content }}
