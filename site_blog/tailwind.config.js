@@ -1,6 +1,6 @@
 module.exports = {
   content: ["./components/**/*.tsx", "./pages/**/*.tsx"],
-  darkMode: "class",
+  darkMode: "media",
   theme: {},
   plugins: [require("@tailwindcss/typography")],
 };
