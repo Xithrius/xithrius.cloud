@@ -1,18 +1,21 @@
-import markdownStyles from "../styles/markdown-styles.module.css";
-import "prismjs/plugins/line-numbers/prism-line-numbers.js"
-
 type Props = {
   content: string;
 };
 
 const PostBody = ({ content }: Props) => {
   return (
-    <div className="max-w-2xl mx-auto line-numbers">
-      <div
-        className={markdownStyles["markdown"]}
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
-    </div>
+    <div
+      className="
+      prose
+      mx-auto
+      max-w-2xl
+      prose-code:before:content-none
+      prose-code:after:content-none
+      prose-xith
+      dark:prose-invert
+      "
+      dangerouslySetInnerHTML={{ __html: content }}
+    />
   );
 };
 
