@@ -2656,11 +2656,6 @@ next@^12.2.2:
     "@next/swc-win32-ia32-msvc" "12.2.3"
     "@next/swc-win32-x64-msvc" "12.2.3"
 
-nightwind@^1.1.12:
-  version "1.1.12"
-  resolved "https://registry.yarnpkg.com/nightwind/-/nightwind-1.1.12.tgz#ee8147abd41746b19e85916ca5ff92e6fd05621b"
-  integrity sha512-iJGJxeglk3vrRyFDH7shinvKuN/EcIbBtNVkko0Zni/XGVSHrBH0rsvqgp2HhkIf5B7iZU+2+kGhS2oItBnASQ==
-
 node-abi@^3.3.0:
   version "3.22.0"
   resolved "https://registry.yarnpkg.com/node-abi/-/node-abi-3.22.0.tgz#00b8250e86a0816576258227edbce7bbe0039362"

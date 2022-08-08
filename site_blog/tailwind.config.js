@@ -15,7 +15,7 @@ module.exports = {
       outline: ["focus-visible"],
       transitionProperty: ["motion-reduce"],
       typography: ({ theme }) => ({
-        dark: {
+        xith: {
           css: {
             // Light mode prose colors
             "--tw-prose-body": theme("colors.light-fg"),
