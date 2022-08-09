@@ -7,8 +7,10 @@ module.exports = {
       colors: {
         "dark-bg": "#212627",
         "dark-fg": "#b8c0d3",
+        "dark-link": "#96b8e8",
         "light-bg": "#c7cde4",
         "light-fg": "#3b4345",
+        "light-link": "#1460c4",
       },
       textDecoration: ["focus-visible"],
       textColor: ["group-focus"],
@@ -21,7 +23,7 @@ module.exports = {
             "--tw-prose-body": theme("colors.light-fg"),
             "--tw-prose-headings": theme("colors.light-fg"),
             "--tw-prose-lead": theme("colors.light-fg"),
-            "--tw-prose-links": theme("colors.light-fg"),
+            "--tw-prose-links": theme("colors.light-link"),
             "--tw-prose-bold": theme("colors.light-fg"),
             "--tw-prose-counters": theme("colors.light-fg"),
             "--tw-prose-bullets": theme("colors.light-fg"),
@@ -39,7 +41,7 @@ module.exports = {
             "--tw-prose-invert-body": theme("colors.dark-fg"),
             "--tw-prose-invert-headings": theme("colors.dark-fg"),
             "--tw-prose-invert-lead": theme("colors.dark-fg"),
-            "--tw-prose-invert-links": theme("colors.dark-fg"),
+            "--tw-prose-invert-links": theme("colors.dark-link"),
             "--tw-prose-invert-bold": theme("colors.dark-fg"),
             "--tw-prose-invert-counters": theme("colors.dark-fg"),
             "--tw-prose-invert-bullets": theme("colors.dark-fg"),
@@ -52,6 +54,18 @@ module.exports = {
             "--tw-prose-invert-pre-bg": theme("colors.dark-fg"),
             "--tw-prose-invert-th-borders": theme("colors.dark-fg"),
             "--tw-prose-invert-td-borders": theme("colors.dark-fg"),
+          },
+        },
+        DEFAULT: {
+          css: {
+            a: {
+              "border-bottom-width": "1px",
+              "text-decoration-line": "none",
+              "border-color": theme("colors.light-link"),
+              ".dark &": {
+                "border-color": theme("colors.dark-link"),
+              },
+            },
           },
         },
       }),
