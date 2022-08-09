@@ -23,6 +23,9 @@ export default function Index({ allPosts }: Props) {
       <Layout>
         <Container>
           <Intro />
+          <h2 className="mb-8 text-5xl font-bold leading-tight tracking-tighter md:text-5xl">
+            Most recent post
+          </h2>
           {heroPost && (
             <HeroPost
               title={heroPost.title}
