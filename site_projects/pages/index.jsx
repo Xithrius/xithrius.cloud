@@ -3,6 +3,7 @@ import Link from "next/link";
 
 const githubProjects = [
   "twitch-tui",
+  "weather-tui",
   "xithrius.cloud",
   "titan.xithrius.cloud",
   "Xythrion",
