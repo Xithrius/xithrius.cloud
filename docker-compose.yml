@@ -20,12 +20,26 @@ services:
       - "80:80"
       - "443:443"
 
+  watchtower:
+    <<: *default
+
+    image: containrrr/watchtower
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /root/.docker/config.json:/config.json
+
+    command: --interval 30
+
+    environment:
+      - WATCHTOWER_CLEANUP: true
+      - WATCHTOWER_INCLUDE_RESTARTING: true
+      - WATCHTOWER_REVIVE_STOPPED: true
+
   site:
     <<: *default
 
-    build:
-      context: site
-      dockerfile: Dockerfile
+    image: "ghcr.io/xithrius/site:latest"
 
     depends_on:
       - nginx
@@ -36,9 +50,7 @@ services:
   site_projects:
     <<: *default
 
-    build:
-      context: site_projects
-      dockerfile: Dockerfile
+    image: "ghcr.io/xithrius/site_projects:latest"
 
     depends_on:
       - nginx
@@ -49,9 +61,7 @@ services:
   site_templates:
     <<: *default
 
-    build:
-      context: site_templates
-      dockerfile: Dockerfile
+    image: "ghcr.io/xithrius/site_templates:latest"
 
     depends_on:
       - nginx
