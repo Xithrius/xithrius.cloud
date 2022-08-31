@@ -39,7 +39,7 @@ services:
   site:
     <<: *default
 
-    image: "ghcr.io/xithrius/site:latest"
+    image: "ghcr.io/Xithrius/site:latest"
 
     depends_on:
       - nginx
@@ -50,7 +50,7 @@ services:
   site_projects:
     <<: *default
 
-    image: "ghcr.io/xithrius/site_projects:latest"
+    image: "ghcr.io/Xithrius/site_projects:latest"
 
     depends_on:
       - nginx
@@ -61,7 +61,7 @@ services:
   site_templates:
     <<: *default
 
-    image: "ghcr.io/xithrius/site_templates:latest"
+    image: "ghcr.io/Xithrius/site_templates:latest"
 
     depends_on:
       - nginx
