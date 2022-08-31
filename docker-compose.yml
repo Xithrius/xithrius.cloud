@@ -32,9 +32,9 @@ services:
     command: --interval 30
 
     environment:
-      - WATCHTOWER_CLEANUP: true
-      - WATCHTOWER_INCLUDE_RESTARTING: true
-      - WATCHTOWER_REVIVE_STOPPED: true
+      WATCHTOWER_CLEANUP: true
+      WATCHTOWER_INCLUDE_RESTARTING: true
+      WATCHTOWER_REVIVE_STOPPED: true
 
   site:
     <<: *default
