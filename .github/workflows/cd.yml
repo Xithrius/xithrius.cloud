@@ -55,10 +55,10 @@ jobs:
           context: ${{ matrix.dir }}/
           file: ${{ matrix.dir }}/Dockerfile
           push: true
-          cache-from: type=registry,ref=ghcr.io/Xithrius/${{ matrix.dir }}:latest
+          cache-from: type=registry,ref=ghcr.io/xithrius/${{ matrix.dir }}:latest
           cache-to: type=inline
           tags: |
-            ghcr.io/Xithrius/${{ matrix.dir }}:latest
-            ghcr.io/Xithrius/${{ matrix.dir }}:${{ steps.sha_tag.outputs.tag }}
+            ghcr.io/xithrius/${{ matrix.dir }}:latest
+            ghcr.io/xithrius/${{ matrix.dir }}:${{ steps.sha_tag.outputs.tag }}
           build-args: |
             git_sha=${{ github.sha }}
