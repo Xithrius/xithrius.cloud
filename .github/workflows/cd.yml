@@ -54,7 +54,7 @@ jobs:
           cache-from: type=registry,ref=ghcr.io/Xithrius/${{ matrix.dir }}:latest
           cache-to: type=inline
           tags: |
-            ghcr.io/python-discord/${{ matrix.dir }}:latest
-            ghcr.io/python-discord/${{ matrix.dir }}:${{ steps.sha_tag.outputs.tag }}
+            ghcr.io/Xithrius/${{ matrix.dir }}:latest
+            ghcr.io/Xithrius/${{ matrix.dir }}:${{ steps.sha_tag.outputs.tag }}
           build-args: |
             git_sha=${{ github.sha }}
