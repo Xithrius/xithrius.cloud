@@ -4,10 +4,11 @@ import Link from "next/link";
 const githubProjects = [
   "twitch-tui",
   "weather-tui",
+  "reddit-tui",
+  "timezone-tracker",
   "xithrius.cloud",
   "titan.xithrius.cloud",
   "Xythrion",
-  "timezone-tracker",
   "markdown-table-rs",
   "CompetitiveProgramming",
 ];
