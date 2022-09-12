@@ -17,8 +17,7 @@ jobs:
     strategy:
       fail-fast: false
 
-      matrix:
-        { dir: ["site", "site_blog", "site_projects", "site_templates"] }
+      matrix: { dir: ["site", "site_blog", "site_projects", "site_templates"] }
 
     steps:
       - name: Checkout repository

@@ -30,10 +30,7 @@ export default function Post({ post, morePosts, preview }: Props) {
         ) : (
           <>
             <article className="mb-32">
-              <PostHeader
-                title={post.title}
-                date={post.date}
-              />
+              <PostHeader title={post.title} date={post.date} />
               <PostBody content={post.content} />
             </article>
           </>

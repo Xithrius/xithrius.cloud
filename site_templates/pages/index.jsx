@@ -25,7 +25,7 @@ export async function getStaticProps() {
   return {
     props: {
       GithubInfo: githubTemplates.map((templateName) =>
-        getGitHubInfo(templateName)
+        getGitHubInfo(templateName),
       ),
     },
     revalidate: 3600,

@@ -24,7 +24,7 @@ export async function getStaticProps() {
   return {
     props: {
       GithubInfo: githubProjects.map((projectName) =>
-        getGitHubInfo(projectName)
+        getGitHubInfo(projectName),
       ),
     },
     revalidate: 3600,
