@@ -6,7 +6,7 @@ const items = [
   "Projects",
   "Templates",
   "Blog",
-  "Startpage",
+  "Start",
   "ToDo",
   "Dotfiles",
   "Info",
