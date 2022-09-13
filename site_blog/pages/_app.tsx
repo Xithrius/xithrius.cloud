@@ -1,7 +1,7 @@
 import { AppProps } from "next/app";
 import "../styles/global.css";
 import { ThemeProvider } from "next-themes";
-import "prism-themes/themes/prism-one-dark.css"
+import "prism-themes/themes/prism-one-dark.css";
 
 export default function Site({ Component, pageProps }: AppProps) {
   return (

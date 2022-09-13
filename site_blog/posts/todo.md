@@ -4,18 +4,19 @@ excerpt: "A place to view what I must do"
 date: "2022-09-10"
 ---
 
-
 This was originally at [Xithrius/TODO](https://github.com/Xithrius/TODO) on GitHub, but that was boring so I decided to move it here for now while I construct another part of the site for a TODO listing.
 
 Pulled directly from my brain. If you have suggestions, [create an issue](https://github.com/Xithrius/TODO/issues/new).
 
 ### 2022 Objectives (made before the year starts):
+
 - [ ] A year-long contribution streak (attempts: 1), even if it's 1 commit a day on this TODO repository
 - [x] [Create a website with multiple subdomains for different services](https://github.com/Xithrius/xithrius.cloud)
 - [ ] Complete one of the years for [AoC](https://adventofcode.com/) (before the 2022 event starts)
 - [ ] Survive
 
 ### Projects:
+
 - [x] [Twitch TUI](https://github.com/Xithrius/twitch-tui)
 - [x] [Timezone tracker](https://github.com/Xithrius/timezone-tracker)
 - [ ] Rust `git diff` statistics crate

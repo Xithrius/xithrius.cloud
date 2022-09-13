@@ -2,9 +2,9 @@ name: Greetings
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
   issues:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   greeting:
@@ -13,8 +13,8 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-    - uses: actions/first-interaction@v1
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: 'Thank you for the issue! This issue will be addressed in a reasonable amount of time.'
-        pr-message: 'Thank you for the pull request! This contribution will be addressed in a reasonable amount of time.'
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: "Thank you for the issue! This issue will be addressed in a reasonable amount of time."
+          pr-message: "Thank you for the pull request! This contribution will be addressed in a reasonable amount of time."

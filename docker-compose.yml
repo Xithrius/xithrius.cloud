@@ -14,7 +14,7 @@ services:
     image: "nginx:latest"
 
     volumes:
-    - ./services/nginx/templates:/etc/nginx/templates
+      - ./services/nginx/templates:/etc/nginx/templates
 
     ports:
       - "80:80"
@@ -159,13 +159,13 @@ services:
     image: prom/node-exporter:v1.3.1
 
     command:
-      - '--path.procfs=/host/proc'
-      - '--path.rootfs=/rootfs'
-      - '--path.sysfs=/host/sys'
-      - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
+      - "--path.procfs=/host/proc"
+      - "--path.rootfs=/rootfs"
+      - "--path.sysfs=/host/sys"
+      - "--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)"
 
     volumes:
-      - '/:/host:ro,rslave'
+      - "/:/host:ro,rslave"
 
 volumes:
   grafana-storage:
