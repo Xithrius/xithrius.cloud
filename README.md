@@ -39,4 +39,10 @@ Personal website with the chaos of microservices.
  <td> Incremental Static Regeneration
  <td> All my repository templates
 
+<tr>
+ <td> site_start
+ <td> https://start.xithrius.cloud
+ <td> Static
+ <td> A very simple start page
+
 </table>
