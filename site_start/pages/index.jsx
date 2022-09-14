@@ -5,12 +5,12 @@ import { useEffect } from "react";
 
 const LINKS = [
   {
-    key: "g",
-    url: "github.com",
-  },
-  {
     key: "c",
     url: "dash.cloudflare.com",
+  },
+  {
+    key: "g",
+    url: "github.com",
   },
   {
     key: "n",
@@ -43,8 +43,7 @@ export default function Home() {
     return () => {
       window.removeEventListener("keypress", keyRouter);
     };
-  }),
-    [keyRouter];
+  }, [keyRouter]);
 
   return (
     <>
@@ -56,7 +55,7 @@ export default function Home() {
         <table className="table-auto">
           <tbody>
             {LINKS.map((link) => (
-              <tr key={link.key}>
+              <tr key={link.key} className="duration-300 transform hover:translate-x-5 ease-in-out">
                 <td className="px-4">{link.key}</td>
                 <td>
                   <BsArrowRight />
