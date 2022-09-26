@@ -1,6 +1,6 @@
 ---
 title: "What I shall do in the future"
-excerpt: "A place to view what I must do"
+excerpt: "A place to view what I must do."
 date: "2022-09-10"
 ---
 

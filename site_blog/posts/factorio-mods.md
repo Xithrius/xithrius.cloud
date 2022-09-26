@@ -1,6 +1,6 @@
 ---
 title: "A better vanilla-like Factorio experience"
-excerpt: "The factory must grow"
+excerpt: "The factory must grow."
 date: "2022-09-22"
 ---
 
