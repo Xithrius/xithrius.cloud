@@ -44,4 +44,10 @@ Personal website with the chaos of microservices.
  <td> Static
  <td> A very simple start page
 
+<tr>
+ <td> site_todo
+ <td> https://todo.xithrius.cloud
+ <td> Static
+ <td> What I'm going TODO this year
+
 </table>
