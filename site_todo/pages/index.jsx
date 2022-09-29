@@ -1,61 +1,77 @@
 import Head from "next/head";
-import { BsArrowRight } from "react-icons/bs";
+import { GrCheckmark } from "react-icons/io";
 
 const TODO = [
   {
-    desc: "Twitch TUI",
-    link: "https://github.com/Xithrius/twitch-tui",
+    desc: "A year-long contribution streak",
+  },
+  {
+    desc: "Create a website with multiple subdomains",
+    url: "https://github.com/Xithrius/xithrius.cloud",
     done: true,
-    maintained: true,
+  },
+  {
+    desc: "Complete one of the years for Advent of Code",
+  },
+  {
+    desc: "Twitch TUI",
+    url: "https://github.com/Xithrius/twitch-tui",
+    done: true,
   },
   {
     desc: "Timezone Tracker",
-    link: "https://github.com/Xithrius/timezone-tracker",
+    url: "https://github.com/Xithrius/timezone-tracker",
     done: true,
-    maintained: true,
   },
   {
     desc: "Git diff statistics crate",
   },
   {
     desc: "Markdown table generator",
-    link: "https://github.com/Xithrius/markdown-table-rs",
+    url: "https://github.com/Xithrius/markdown-table-rs",
     done: true,
-    maintained: true,
   },
   {
     desc: "Discord bot for graphing",
-    link: "https://github.com/Xithrius/Xythrion-legacy",
+    url: "https://github.com/Xithrius/Xythrion-legacy",
     done: true,
-    maintained: false,
   },
   {
     desc: "Make guides/blogs on website",
-    link: "https://github.com/Xithrius/xithrius.cloud/tree/main/site_blog",
+    url: "https://github.com/Xithrius/xithrius.cloud/tree/main/site_blog",
     done: true,
-    maintained: true,
   },
   {
     desc: "Control fan with ESP32 module, temp/humidity sensor",
   },
   {
     desc: "Create home server",
-    link: "https://github.com/Xithrius/titan.xithrius.cloud",
+    url: "https://github.com/Xithrius/titan.xithrius.cloud",
     done: true,
-    maintained: true,
   },
   {
     desc: "Gitea with woodpecker-ci, gitea-awesome",
   },
   {
     desc: "Create own polybar theme/config",
-    link: "https://github.com/Xithrius/dotfiles/tree/main/.config/polybar",
+    url: "https://github.com/Xithrius/dotfiles/tree/main/.config/polybar",
     done: true,
-    maintained: true,
   },
   {
-
-  }
+    desc: "Rust TUI template repository",
+    url: "https://github.com/Xithrius/rust-tui-project-template",
+    done: true,
+  },
+  {
+    desc: "Website counting towards Y3K",
+  },
+  {
+    desc: "Daily weather by some means of notification",
+  },
+  {
+    desc: "Get CD working on a VPS",
+    done: true,
+  },
 ];
 
 export default function Home() {
@@ -68,14 +84,22 @@ export default function Home() {
       <main className="flex min-h-screen flex-1 flex-col items-center justify-center text-center text-[2vh] subpixel-antialiased">
         <table className="table-auto">
           <tbody>
-            {LINKS.map((link) => (
-              <tr key={link.key} className="duration-300 transform hover:translate-x-5 ease-in-out">
-                <td className="px-4">{link.key}</td>
-                <td>
-                  <BsArrowRight />
+            {TODO.map((link) => (
+              <tr key={link.desc}>
+                <td className="px-4 py-2 text-right outline outline-1">
+                  {link.url ? (
+                    <a
+                      href={`https://${link.url}`}
+                      className="text-[#96b8e8] underline decoration-[#96b8e8] underline-offset-4"
+                    >
+                      {link.desc}
+                    </a>
+                  ) : (
+                    link.desc
+                  )}
                 </td>
-                <td className="px-4 text-start hover:underline hover:underline-offset-8">
-                  <a href={`https://${link.url}`}>{link.url}</a>
+                <td>
+
                 </td>
               </tr>
             ))}
