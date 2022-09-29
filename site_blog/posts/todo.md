@@ -17,18 +17,6 @@ Pulled directly from my brain. If you have suggestions, [create an issue](https:
 
 ### Projects:
 
-- [x] [Twitch TUI](https://github.com/Xithrius/twitch-tui)
-- [x] [Timezone tracker](https://github.com/Xithrius/timezone-tracker)
-- [ ] Rust `git diff` statistics crate
-- [x] [Markdown table generator](https://github.com/Xithrius/markdown-table-rs)
-- [ ] [Discord bot for graphing](https://github.com/Xithrius/Xythrion)
-- [x] [Make guides on website](https://github.com/Xithrius/xithrius.cloud/tree/main/site_blog)
-- [ ] Detect room temperature with ESP32 module, temp/humidity sensor
-  - [ ] During the summer, acquire window fan to be controlled with previously said electronics
-- [x] [Create a home server](https://github.com/Xithrius/titan.xithrius.cloud)
-- [x] [gitea](https://docs.gitea.io/en-us) server, because GitLab took too much system resources
-  - [ ] Add the [woodpecker-ci](https://github.com/woodpecker-ci/woodpecker) system
-  - [ ] Get a bunch of integrations from the [gitea-awesome](https://gitea.com/gitea/awesome-gitea) list
 - [x] Create own [polybar theme/config](https://github.com/Xithrius/dotfiles/tree/main/.config/polybar)
 - [x] [Rust TUI template repository](https://github.com/Xithrius/rust-tui-project-template)
 - [ ] A website which counts towards Y3K
