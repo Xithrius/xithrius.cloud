@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { GrCheckmark } from "react-icons/io";
+import BsArrowRight from "react-icons/bs";
 
 const TODO = [
   {
@@ -98,8 +98,8 @@ export default function Home() {
                     link.desc
                   )}
                 </td>
-                <td>
-
+                <td className="px-4 outline outline-1">
+                  {link.done ? "Done" : null}
                 </td>
               </tr>
             ))}
