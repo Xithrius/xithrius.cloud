@@ -83,6 +83,14 @@ export default function Home() {
       <main className="flex min-h-screen flex-1 flex-col items-center justify-center text-center text-[2vh] subpixel-antialiased">
         <table className="table-auto">
           <tbody>
+            <tr className="text-4xl">
+              <td className="pb-4">
+                <b>Goal</b>
+              </td>
+              <td className="pb-4">
+                <b>Status</b>
+              </td>
+            </tr>
             {TODO.map((link) => (
               <tr key={link.desc}>
                 <td className="px-4 py-2 text-right outline outline-1">

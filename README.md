@@ -48,6 +48,6 @@ Personal website with the chaos of microservices.
  <td> site_todo
  <td> https://todo.xithrius.cloud
  <td> Static
- <td> What I'm going TODO this year
+ <td> What I'm going TODO over the year(s)
 
 </table>

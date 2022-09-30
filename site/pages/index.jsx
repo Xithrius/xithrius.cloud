@@ -2,7 +2,7 @@ import Head from "next/head";
 import Footer from "./components/footer";
 import LinkItem from "./components/links";
 
-const items = ["Projects", "Templates", "Blog", "Start"];
+const items = ["Projects", "Templates", "ToDo", "Blog", "Start"];
 
 export default function Home() {
   return (
