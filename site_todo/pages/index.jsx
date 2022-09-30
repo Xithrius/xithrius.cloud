@@ -96,7 +96,7 @@ export default function Home() {
                 <td className="px-4 py-2 text-right outline outline-1">
                   {link.url ? (
                     <a
-                      href={`https://${link.url}`}
+                      href={link.url}
                       className="text-[#96b8e8] underline decoration-[#96b8e8] underline-offset-4"
                     >
                       {link.desc}
