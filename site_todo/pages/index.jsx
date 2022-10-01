@@ -1,5 +1,7 @@
 import Head from "next/head";
 
+import { BsCheck2 } from "react-icons/bs";
+
 const TODO = [
   {
     desc: "A year-long contribution streak",
@@ -108,7 +110,7 @@ export default function Home() {
                   )}
                 </td>
                 <td className="px-4 py-3">
-                  {link.done ? "Done" : null}
+                  {link.done ? BsCheck2() : null}
                 </td>
               </tr>
             ))}
