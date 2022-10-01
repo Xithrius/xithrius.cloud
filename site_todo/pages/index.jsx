@@ -80,20 +80,22 @@ export default function Home() {
         <title>todo.xithrius.cloud</title>
         <link rel="icon" href="/logo.png" />
       </Head>
-      <main className="flex min-h-screen flex-1 flex-col items-center justify-center text-center text-[2vh] subpixel-antialiased">
-        <table className="table-auto">
-          <tbody>
-            <tr className="text-4xl">
-              <td className="pb-4">
+      <main className="flex min-h-screen flex-1 flex-col items-center justify-center text-center text-[1rem] subpixel-antialiased">
+        <table className="table-auto border-collapse">
+          <thead className="font-bold">
+            <tr className="border-b-[#3c4445] border-b-2">
+              <td className="px-4 pb-2 pt-4 text-right border-r-[#3c4445] border-r-2">
                 <b>Goal</b>
               </td>
-              <td className="pb-4">
+              <td className="px-4 pb-2 pt-4">
                 <b>Status</b>
               </td>
             </tr>
+          </thead>
+          <tbody>
             {TODO.map((link) => (
-              <tr key={link.desc}>
-                <td className="px-4 py-2 text-right outline outline-1">
+              <tr className="stripe" key={link.desc}>
+                <td className="px-4 py-3 text-right border-r-[#3c4445] border-r-2 ">
                   {link.url ? (
                     <a
                       href={link.url}
@@ -105,11 +107,15 @@ export default function Home() {
                     link.desc
                   )}
                 </td>
-                <td className="px-4 outline outline-1">
+                <td className="px-4 py-3">
                   {link.done ? "Done" : null}
                 </td>
               </tr>
             ))}
+            {/* Empty row for padding */}
+            <tr>
+              <td className="px-4 py-2 text-right border-r-[#3c4445] border-r-2"></td>
+            </tr>
           </tbody>
         </table>
       </main>
