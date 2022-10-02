@@ -4,6 +4,9 @@ import { BsCheck2 } from "react-icons/bs";
 
 const TODO = [
   {
+    desc: "Survive 2022",
+  },
+  {
     desc: "A year-long contribution streak",
   },
   {
@@ -30,11 +33,6 @@ const TODO = [
   {
     desc: "Markdown table generator",
     url: "https://github.com/Xithrius/markdown-table-rs",
-    done: true,
-  },
-  {
-    desc: "Discord bot for graphing",
-    url: "https://github.com/Xithrius/Xythrion-legacy",
     done: true,
   },
   {
@@ -71,7 +69,16 @@ const TODO = [
   },
   {
     desc: "Get CD working on a VPS",
+    url: "https://github.com/Xithrius/xithrius.cloud/blob/main/docker-compose.yml#L23-L36",
     done: true,
+  },
+  {
+    desc: "Create an one-for-all package manager",
+    url: "https://github.com/Xithrius/nitride",
+  },
+  {
+    desc: "Discord bot for graphing",
+    url: "https://github.com/Xithrius/Xythrion",
   },
 ];
 
@@ -85,8 +92,8 @@ export default function Home() {
       <main className="flex min-h-screen flex-1 flex-col items-center justify-center text-center text-[1rem] subpixel-antialiased">
         <table className="table-auto border-collapse">
           <thead className="font-bold">
-            <tr className="border-b-[#3c4445] border-b-2">
-              <td className="px-4 pb-2 pt-4 text-right border-r-[#3c4445] border-r-2">
+            <tr className="border-b-2 border-b-[#3c4445]">
+              <td className="border-r-2 border-r-[#3c4445] px-4 pb-2 pt-4 text-right">
                 <b>Goal</b>
               </td>
               <td className="px-4 pb-2 pt-4">
@@ -97,7 +104,7 @@ export default function Home() {
           <tbody>
             {TODO.map((link) => (
               <tr className="stripe" key={link.desc}>
-                <td className="px-4 py-3 text-right border-r-[#3c4445] border-r-2 ">
+                <td className="border-r-2 border-r-[#3c4445] px-4 py-3 text-right ">
                   {link.url ? (
                     <a
                       href={link.url}
@@ -109,14 +116,12 @@ export default function Home() {
                     link.desc
                   )}
                 </td>
-                <td className="px-4 py-3">
-                  {link.done ? BsCheck2() : null}
-                </td>
+                <td className="px-4 py-3">{link.done ? BsCheck2() : null}</td>
               </tr>
             ))}
             {/* Empty row for padding */}
             <tr>
-              <td className="px-4 py-2 text-right border-r-[#3c4445] border-r-2"></td>
+              <td className="border-r-2 border-r-[#3c4445] px-4 py-2 text-right"></td>
             </tr>
           </tbody>
         </table>
