@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Footer from "./components/footer";
 import LinkItem from "./components/links";
+import ThemeSwitch from "./components/themeswitch";
 
 const items = ["Projects", "Templates", "ToDo", "Blog", "Start"];
 
@@ -23,6 +24,9 @@ export default function Home() {
               tailwind="hover:-translate-y-1 mx-5"
             />
           ))}
+        <div className="absolute right-8 top-8 flex justify-center">
+          <ThemeSwitch/>
+        </div>
         </div>
       </main>
       <Footer />
