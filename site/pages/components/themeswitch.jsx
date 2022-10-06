@@ -23,9 +23,9 @@ const ThemeSwitch = () => {
   }
 
   return (
-    <button className="h-8 w-8 relative transition-opacity duration-400" onClick={handleClick}>
-      <TbSun className={`absolute h-6 w-6 ${resolvedTheme === "light" ? "" : "rotate-180 opacity-0"}`} />
-      <TbMoon className={`absolute h-6 w-6 ${resolvedTheme === "dark" ? "" : "rotate-180 opacity-0"}`} />
+    <button className="h-6 w-6 transition-opacity duration-400" onClick={handleClick}>
+      <TbSun className={`absolute top-0 right-0 h-6 w-6 ${resolvedTheme === "light" ? "" : "rotate-180 opacity-0"}`} />
+      <TbMoon className={`absolute top-0 right-0 h-6 w-6 ${resolvedTheme === "dark" ? "" : "rotate-180 opacity-0"}`} />
     </button>
   )
 }

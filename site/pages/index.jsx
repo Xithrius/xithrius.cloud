@@ -24,7 +24,7 @@ export default function Home() {
               tailwind="hover:-translate-y-1 mx-5"
             />
           ))}
-        <div className="absolute right-6 top-4">
+        <div className="absolute right-8 top-8 flex justify-center">
           <ThemeSwitch/>
         </div>
         </div>
