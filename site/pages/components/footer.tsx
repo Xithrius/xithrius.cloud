@@ -1,10 +1,4 @@
-import {
-  SiGitea,
-  SiGithub,
-  SiTwitch,
-  SiYoutube,
-  SiTwitter,
-} from "react-icons/si";
+import { SiGitea, SiGithub, SiTwitch, SiYoutube, SiTwitter } from "react-icons/si";
 import LinkElem from "./links";
 
 const items = [
@@ -20,7 +14,7 @@ const Footer = () => (
     <div className="mt-8 flex items-center justify-center">
       {items.map((item) => (
         <div key={item.href} className="mx-5 scale-[2] hover:-translate-y-1">
-          <LinkElem {...item}/>
+          <LinkElem {...item} />
         </div>
       ))}
     </div>

@@ -21,12 +21,12 @@ export default function Home() {
               key={element}
               href={`https://${element.toLowerCase()}.xithrius.cloud`}
               elem={element}
-              className="hover:-translate-y-1 mx-5"
+              className="mx-5 hover:-translate-y-1"
             />
           ))}
-        <div className="absolute right-8 top-8 flex justify-center">
-          <ThemeSwitch/>
-        </div>
+          <div className="absolute right-8 top-8 flex justify-center">
+            <ThemeSwitch />
+          </div>
         </div>
       </main>
       <Footer />
