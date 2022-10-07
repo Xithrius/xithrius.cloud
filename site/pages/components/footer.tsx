@@ -18,13 +18,10 @@ const items = [
 const Footer = () => (
   <div className="absolute inset-x-0 bottom-0 h-24 w-full border-t border-current">
     <div className="mt-8 flex items-center justify-center">
-      {items.map(({ key, item }) => (
-        <LinkItem
-          key={key}
-          href={key}
-          item={item}
-          tailwind="hover:-translate-y-1 scale-[2] mx-5"
-        />
+      {items.map((key: string, item: string) => (
+        <div className="mx-5 scale-[2] hover:-translate-y-1">
+          <LinkItem href={key} item={item} />
+        </div>
       ))}
     </div>
   </div>
