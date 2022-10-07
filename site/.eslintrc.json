@@ -5,10 +5,7 @@
     "plugin:@typescript-eslint/recommended"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint/tslint"],
-  "rules": {
-    "@typescript-eslint/rule-name": "error"
-  },
+  "plugins": ["@typescript-eslint"],
   "parserOptions": {
     "project": "tsconfig.json"
   }
