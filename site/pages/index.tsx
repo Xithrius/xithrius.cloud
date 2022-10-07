@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Footer from "./components/footer";
-import LinkItem from "./components/links";
+import LinkElem from "./components/links";
 import ThemeSwitch from "./components/themeswitch";
 
 const items = ["Projects", "Templates", "ToDo", "Blog", "Start"];
@@ -17,10 +17,11 @@ export default function Home() {
         <p className="text-[3vw]">Rustacean, Pythonista, Triager.</p>
         <div className="mt-4 flex w-3/5 justify-center border-t border-solid border-current py-5 font-['Montserrat'] text-[1.3vw]">
           {items.map((element) => (
-            <LinkItem
+            <LinkElem
+              key={element}
               href={`https://${element.toLowerCase()}.xithrius.cloud`}
-              item={element}
-              tailwind="hover:-translate-y-1 mx-5"
+              elem={element}
+              className="hover:-translate-y-1 mx-5"
             />
           ))}
         <div className="absolute right-8 top-8 flex justify-center">

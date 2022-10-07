@@ -1,12 +1,13 @@
-type Props = {
+interface LinkElemProps {
   href: string;
-  item: any;
-};
+  elem: JSX.Element | string;
+  className?: string;
+}
 
-const LinkItem = ({ href, item }: Props) => (
-  <a href={href} target="_blank" rel="noreffer">
-    {item}
+const LinkElem = ({ href, elem, className }: LinkElemProps) => (
+  <a href={href} target="_blank" rel="noreferrer" className={className}>
+    {elem}
   </a>
 );
 
-export default LinkItem;
+export default LinkElem;
