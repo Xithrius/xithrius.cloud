@@ -6,6 +6,7 @@ import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
 import Post from "../interfaces/post";
 import Head from "next/head";
+import ThemeSwitch from "../components/themeswitch";
 
 type Props = {
   allPosts: Post[];
@@ -14,6 +15,7 @@ type Props = {
 export default function Index({ allPosts }: Props) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
+
   return (
     <>
       <Head>
@@ -37,18 +39,15 @@ export default function Index({ allPosts }: Props) {
           {morePosts.length > 0 && <MorePosts posts={morePosts} />}
         </Container>
       </Layout>
+      <div className="absolute right-8 top-8 flex justify-center">
+        <ThemeSwitch />
+      </div>
     </>
   );
 }
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
-    "title",
-    "date",
-    "slug",
-    "coverImage",
-    "excerpt",
-  ]);
+  const allPosts = getAllPosts(["title", "date", "slug", "coverImage", "excerpt"]);
 
   return {
     props: { allPosts },
