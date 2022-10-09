@@ -1,6 +1,7 @@
 import Head from "next/head";
-
 import { BsCheck2 } from "react-icons/bs";
+
+import ThemeSwitch from "./components/themeswitch";
 
 const TODO = [
   {
@@ -108,7 +109,7 @@ export default function Home() {
                   {link.url ? (
                     <a
                       href={link.url}
-                      className="text-[#96b8e8] underline decoration-[#96b8e8] underline-offset-4"
+                      className="text-[#4280b3] underline decoration-[#4280b3] underline-offset-4"
                     >
                       {link.desc}
                     </a>
@@ -116,7 +117,7 @@ export default function Home() {
                     link.desc
                   )}
                 </td>
-                <td className="px-4 py-3">{link.done ? BsCheck2() : null}</td>
+                <td className="px-4 py-3">{link.done ? <BsCheck2 /> : undefined}</td>
               </tr>
             ))}
             {/* Empty row for padding */}
@@ -125,6 +126,9 @@ export default function Home() {
             </tr>
           </tbody>
         </table>
+        <div className="absolute right-8 top-8 flex justify-center">
+          <ThemeSwitch />
+        </div>
       </main>
     </>
   );
