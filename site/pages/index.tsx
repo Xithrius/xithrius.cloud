@@ -3,7 +3,7 @@ import Footer from "./components/footer";
 import LinkElem from "./components/links";
 import ThemeSwitch from "./components/themeswitch";
 
-const items = ["Projects", "Templates", "ToDo", "Blog", "Start"];
+const items = ["Projects", "ToDo", "Blog", "Start"];
 
 export default function Home() {
   return (

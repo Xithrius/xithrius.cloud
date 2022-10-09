@@ -10,7 +10,20 @@ const githubProjects = [
   "titan.xithrius.cloud",
   "Xythrion",
   "markdown-table-rs",
-  "CompetitiveProgramming",
+  "competitive-programming",
+];
+
+const githubTemplates = [
+  "rust-binary-project-template",
+  "rust-library-project-template",
+  "rust-aoc-template",
+  "rust-tui-project-template",
+  "nextjs-project-template-for-github",
+  "nextjs-project-template",
+  "cpp-project-template",
+  "c-project-template",
+  "python-project-template",
+  "general-project-template",
 ];
 
 function getGitHubInfo(name) {
@@ -23,15 +36,14 @@ function getGitHubInfo(name) {
 export async function getStaticProps() {
   return {
     props: {
-      GithubInfo: githubProjects.map((projectName) =>
-        getGitHubInfo(projectName)
-      ),
+      projects: githubProjects.map((name) => getGitHubInfo(name)),
+      templates: githubTemplates.map((name) => getGitHubInfo(name)),
     },
     revalidate: 3600,
   };
 }
 
-export default function Home({ GithubInfo }) {
+export default function Home({ projects, templates }) {
   return (
     <>
       <Head>
@@ -41,8 +53,22 @@ export default function Home({ GithubInfo }) {
       <div className="flex h-24 w-full items-center justify-center border-b text-5xl">
         Project Repositories
       </div>
-      <div className="flex h-screen w-screen flex-wrap content-start items-center justify-center gap-10 p-10">
-        {GithubInfo.map((element) => (
+      <div className="flex w-screen flex-wrap content-start items-center justify-center gap-10 p-10">
+        {projects.map((element) => (
+          <Link href={element.link} key={element.name}>
+            <img
+              src={element.image}
+              alt={element.name}
+              className="h-[200px] w-[400px] cursor-pointer rounded-md ring-current ring-offset-2 hover:ring-2"
+            />
+          </Link>
+        ))}
+      </div>
+      <div className="flex h-24 w-full items-center justify-center border-b text-5xl">
+        Template Repositories
+      </div>
+      <div className="flex w-screen flex-wrap content-start items-center justify-center gap-10 p-10">
+        {templates.map((element) => (
           <Link href={element.link} key={element.name}>
             <img
               src={element.image}

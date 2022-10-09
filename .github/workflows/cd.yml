@@ -22,7 +22,7 @@ jobs:
       fail-fast: false
 
       # site_blog is not included due to it being built and deployed on Netlify
-      matrix: { dir: ["site", "site_projects", "site_templates"] }
+      matrix: { dir: ["site", "site_projects"] }
 
     steps:
       - name: Create SHA Container Tag

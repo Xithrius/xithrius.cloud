@@ -57,17 +57,6 @@ services:
     ports:
       - "8002:8002"
 
-  site_templates:
-    <<: *default
-
-    image: "ghcr.io/xithrius/site_templates:latest"
-
-    depends_on:
-      - nginx
-
-    ports:
-      - "8003:8003"
-
   postgres:
     <<: *default
 
