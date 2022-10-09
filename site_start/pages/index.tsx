@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { BsArrowRight } from "react-icons/bs";
 import { useEffect } from "react";
+import ThemeSwitch from "./components/themeswitch";
 
 const LINKS = [
   {
@@ -29,7 +30,7 @@ const LINKS = [
 export default function Home() {
   const router = useRouter();
 
-  const keyRouter = (e) => {
+  const keyRouter = (e: any) => {
     LINKS.forEach((link) => {
       if (e.key === link.key) {
         router.push(`https://${link.url}`);
@@ -55,7 +56,7 @@ export default function Home() {
         <table className="table-auto">
           <tbody>
             {LINKS.map((link) => (
-              <tr key={link.key} className="duration-300 transform hover:translate-x-5 ease-in-out">
+              <tr key={link.key} className="transform duration-300 ease-in-out hover:translate-x-5">
                 <td className="px-4">{link.key}</td>
                 <td>
                   <BsArrowRight />
@@ -67,6 +68,9 @@ export default function Home() {
             ))}
           </tbody>
         </table>
+        <div className="absolute right-8 top-8 flex justify-center">
+          <ThemeSwitch />
+        </div>
       </main>
     </>
   );

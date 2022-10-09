@@ -26,7 +26,13 @@ const githubTemplates = [
   "general-project-template",
 ];
 
-function getGitHubInfo(name) {
+interface InfoProps {
+  name: string;
+  link: string;
+  image: string;
+}
+
+function getGitHubInfo(name: string): InfoProps {
   const link = `https://github.com/Xithrius/${name}`;
   const image = `https://opengraph.githubassets.com/f46d3d21c0c43e565e27e314eb51c91b17f78342c1c4de976401d50a39d1a674/Xithrius/${name}`;
 
@@ -43,7 +49,12 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ projects, templates }) {
+interface HomeProps {
+  projects: Array<InfoProps>;
+  templates: Array<InfoProps>;
+}
+
+export default function Home({ projects, templates }: HomeProps) {
   return (
     <>
       <Head>
