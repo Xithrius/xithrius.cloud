@@ -9,6 +9,7 @@ import { getPostBySlug, getAllPosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import markdownToHtml from "../../lib/markdownToHtml";
 import type PostType from "../../interfaces/post";
+import ThemeSwitch from "../../components/themeswitch";
 
 type Props = {
   post: PostType;
@@ -22,21 +23,26 @@ export default function Post({ post, morePosts, preview }: Props) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout preview={preview}>
-      <Container>
-        <Header />
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article className="mb-32">
-              <PostHeader title={post.title} date={post.date} />
-              <PostBody content={post.content} />
-            </article>
-          </>
-        )}
-      </Container>
-    </Layout>
+    <>
+      <Layout preview={preview}>
+        <Container>
+          <Header />
+          {router.isFallback ? (
+            <PostTitle>Loading…</PostTitle>
+          ) : (
+            <>
+              <article className="mb-32">
+                <PostHeader title={post.title} date={post.date} />
+                <PostBody content={post.content} />
+              </article>
+            </>
+          )}
+        </Container>
+      </Layout>
+      <div className="absolute right-8 top-8 flex justify-center">
+        <ThemeSwitch />
+      </div>
+    </>
   );
 }
 

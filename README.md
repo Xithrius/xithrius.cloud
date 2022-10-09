@@ -30,13 +30,7 @@ Personal website with the chaos of microservices.
  <td> site_projects
  <td> https://projects.xithrius.cloud
  <td> Incremental Static Regeneration
- <td> A place to show some of my projects
-
-<tr>
- <td> site_templates
- <td> https://templates.xithrius.cloud
- <td> Incremental Static Regeneration
- <td> All my repository templates
+ <td> Project/template repository showcase
 
 <tr>
  <td> site_start

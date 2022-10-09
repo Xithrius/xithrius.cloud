@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./components/**/*.jsx", "./pages/**/*.jsx"],
+  content: ["./components/**/*.tsx", "./pages/**/*.tsx"],
   darkMode: "class",
   theme: {},
   plugins: [],
