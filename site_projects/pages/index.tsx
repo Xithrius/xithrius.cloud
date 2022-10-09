@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import ThemeSwitch from "./components/themeswitch";
 
 const githubProjects = [
   "twitch-tui",
@@ -61,7 +62,7 @@ export default function Home({ projects, templates }: HomeProps) {
         <title>projects.xithrius.cloud</title>
         <link rel="icon" href="/logo.png" />
       </Head>
-      <div className="flex h-24 w-full items-center justify-center border-b text-5xl">
+      <div className="flex h-24 w-full items-center justify-center text-5xl underline decoration-solid decoration-1 underline-offset-8">
         Project Repositories
       </div>
       <div className="flex w-screen flex-wrap content-start items-center justify-center gap-10 p-10">
@@ -75,7 +76,7 @@ export default function Home({ projects, templates }: HomeProps) {
           </Link>
         ))}
       </div>
-      <div className="flex h-24 w-full items-center justify-center border-b text-5xl">
+      <div className="flex h-24 w-full items-center justify-center text-5xl underline decoration-solid decoration-1 underline-offset-8">
         Template Repositories
       </div>
       <div className="flex w-screen flex-wrap content-start items-center justify-center gap-10 p-10">
@@ -88,6 +89,9 @@ export default function Home({ projects, templates }: HomeProps) {
             />
           </Link>
         ))}
+      </div>
+      <div className="absolute right-8 top-8 flex justify-center">
+        <ThemeSwitch />
       </div>
     </>
   );
