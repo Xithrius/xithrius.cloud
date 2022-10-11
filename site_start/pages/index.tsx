@@ -18,6 +18,10 @@ const LINKS = [
     url: "notion.so",
   },
   {
+    key: "o",
+    url: "overleaf.com",
+  },
+  {
     key: "w",
     url: "wolframalpha.com",
   },
@@ -30,21 +34,21 @@ const LINKS = [
 export default function Home() {
   const router = useRouter();
 
-  const keyRouter = (e: any) => {
-    LINKS.forEach((link) => {
-      if (e.key === link.key) {
-        router.push(`https://${link.url}`);
-      }
-    });
-  };
-
   useEffect(() => {
+    const keyRouter = (e: KeyboardEvent) => {
+      LINKS.forEach((link) => {
+        if (e.key === link.key) {
+          router.push(`https://${link.url}`);
+        }
+      });
+    };
+
     window.addEventListener("keypress", keyRouter);
 
     return () => {
       window.removeEventListener("keypress", keyRouter);
     };
-  }, [keyRouter]);
+  }, [router]);
 
   return (
     <>
