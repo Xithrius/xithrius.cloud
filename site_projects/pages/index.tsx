@@ -5,7 +5,6 @@ import ThemeSwitch from "./components/themeswitch";
 const githubProjects = [
   "twitch-tui",
   "weather-tui",
-  "reddit-tui",
   "timezone-tracker",
   "xithrius.cloud",
   "titan.xithrius.cloud",

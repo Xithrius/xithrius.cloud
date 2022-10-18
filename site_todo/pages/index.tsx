@@ -81,6 +81,12 @@ const TODO = [
     desc: "Discord bot for graphing",
     url: "https://github.com/Xithrius/Xythrion",
   },
+  {
+    desc: "Fullstack calendar application",
+  },
+  {
+    desc: "IRC in wasm",
+  },
 ];
 
 export default function Home() {
