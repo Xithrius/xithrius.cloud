@@ -7,6 +7,7 @@ const githubProjects = [
   "weather-tui",
   "timezone-tracker",
   "xithrius.cloud",
+  "nitride",
   "titan.xithrius.cloud",
   "Xythrion",
   "markdown-table-rs",
