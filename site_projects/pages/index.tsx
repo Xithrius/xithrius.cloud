@@ -19,7 +19,6 @@ const githubTemplates = [
   "rust-library-project-template",
   "rust-aoc-template",
   "rust-tui-project-template",
-  "nextjs-project-template-for-github",
   "nextjs-project-template",
   "cpp-project-template",
   "c-project-template",
