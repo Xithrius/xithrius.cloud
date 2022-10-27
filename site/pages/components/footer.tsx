@@ -5,7 +5,7 @@ const items = [
   { href: "https://github.com/Xithrius", elem: <SiGithub /> },
   { href: "https://git.xithrius.cloud/", elem: <SiGitea /> },
   { href: "https://twitch.tv/Xithrius", elem: <SiTwitch /> },
-  { href: "https://tinyy.io/0YYSUgPn", elem: <SiYoutube /> },
+  { href: "https://www.youtube.com/@Xithrius", elem: <SiYoutube /> },
   { href: "https://twitter.com/Xithrius", elem: <SiTwitter /> },
 ];
 
