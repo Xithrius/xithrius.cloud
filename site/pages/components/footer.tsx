@@ -1,4 +1,4 @@
-import { SiGitea, SiGithub, SiTwitch, SiYoutube, SiTwitter } from "react-icons/si";
+import { SiGitea, SiGithub, SiTwitch, SiYoutube } from "react-icons/si";
 import LinkElem from "./links";
 
 const items = [
@@ -6,7 +6,6 @@ const items = [
   { href: "https://git.xithrius.cloud/", elem: <SiGitea /> },
   { href: "https://twitch.tv/Xithrius", elem: <SiTwitch /> },
   { href: "https://www.youtube.com/@Xithrius", elem: <SiYoutube /> },
-  { href: "https://twitter.com/Xithrius", elem: <SiTwitter /> },
 ];
 
 const Footer = () => (
