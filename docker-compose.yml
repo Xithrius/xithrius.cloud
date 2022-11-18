@@ -35,28 +35,6 @@ services:
       WATCHTOWER_INCLUDE_RESTARTING: "true"
       WATCHTOWER_REVIVE_STOPPED: "true"
 
-  site:
-    <<: *default
-
-    image: "ghcr.io/xithrius/site:latest"
-
-    depends_on:
-      - nginx
-
-    ports:
-      - "8001:8001"
-
-  site_projects:
-    <<: *default
-
-    image: "ghcr.io/xithrius/site_projects:latest"
-
-    depends_on:
-      - nginx
-
-    ports:
-      - "8002:8002"
-
   postgres:
     <<: *default
 

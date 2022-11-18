@@ -1,8 +1,0 @@
-server {
-    listen 80;
-    server_name projects.xithrius.cloud;
-
-    location / {
-        proxy_pass http://site_projects:8002;
-    }
-}

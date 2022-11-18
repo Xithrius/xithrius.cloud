@@ -1,10 +1,10 @@
-import Container from "../components/container";
-import MorePosts from "../components/more-posts";
-import HeroPost from "../components/hero-post";
-import Intro from "../components/intro";
-import Layout from "../components/layout";
-import { getAllPosts } from "../lib/api";
-import Post from "../interfaces/post";
+import Container from "./components/container";
+import MorePosts from "./components/more-posts";
+import HeroPost from "./components/hero-post";
+import Intro from "./components/intro";
+import Layout from "./components/layout";
+import { getAllPosts } from "./lib/api";
+import Post from "./interfaces/post";
 import Head from "next/head";
 import ThemeSwitch from "../components/themeswitch";
 

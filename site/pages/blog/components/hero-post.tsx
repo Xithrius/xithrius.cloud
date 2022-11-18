@@ -14,8 +14,12 @@ const HeroPost = ({ title, date, excerpt, slug }: Props) => {
       <div className="mb-20 md:mb-28 md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8">
         <div>
           <h3 className="mb-4 text-4xl leading-tight lg:text-5xl">
-            <Link as={`/posts/${slug}`} href="/posts/[slug]">
-              <a className="opacity-50 hover:opacity-100">{title}</a>
+            <Link
+              as={`blog/posts/${slug}`}
+              href="blog/posts/[slug]"
+              className="opacity-50 hover:opacity-100"
+            >
+              {title}
             </Link>
           </h3>
           <div className="opacity-50">
