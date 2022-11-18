@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { BsArrowRight } from "react-icons/bs";
 import { useEffect } from "react";
-import ThemeSwitch from "./components/themeswitch";
+import ThemeSwitch from "../components/themeswitch";
 
 const LINKS = [
   {
@@ -31,7 +31,7 @@ const LINKS = [
   },
 ];
 
-export default function Home() {
+export default function Start() {
   const router = useRouter();
 
   useEffect(() => {

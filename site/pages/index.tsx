@@ -19,7 +19,7 @@ export default function Home() {
           {items.map((element) => (
             <LinkElem
               key={element}
-              href={`https://${element.toLowerCase()}.xithrius.cloud`}
+              href={`https://xithrius.cloud/${element.toLowerCase()}`}
               elem={element}
               className="mx-5 hover:-translate-y-1"
             />

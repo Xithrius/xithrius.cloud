@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
-import ThemeSwitch from "./components/themeswitch";
+import ThemeSwitch from "../components/themeswitch";
+import Image from "next/image";
 
 const githubProjects = [
   "twitch-tui",
@@ -67,10 +68,12 @@ export default function Home({ projects, templates }: HomeProps) {
       <div className="flex w-screen flex-wrap content-start items-center justify-center gap-10 p-10">
         {projects.map((element) => (
           <Link href={element.link} key={element.name}>
-            <img
+            <Image
               src={element.image}
               alt={element.name}
-              className="h-[200px] w-[400px] cursor-pointer rounded-md ring-current ring-offset-2 hover:ring-2"
+              width={400}
+              height={200}
+              className="cursor-pointer rounded-md ring-current ring-offset-2 hover:ring-2"
             />
           </Link>
         ))}
@@ -81,10 +84,12 @@ export default function Home({ projects, templates }: HomeProps) {
       <div className="flex w-screen flex-wrap content-start items-center justify-center gap-10 p-10">
         {templates.map((element) => (
           <Link href={element.link} key={element.name}>
-            <img
+            <Image
               src={element.image}
               alt={element.name}
-              className="h-[200px] w-[400px] cursor-pointer rounded-md ring-current ring-offset-2 hover:ring-2"
+              width={400}
+              height={200}
+              className="cursor-pointer rounded-md ring-current ring-offset-2 hover:ring-2"
             />
           </Link>
         ))}
