@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import ThemeSwitch from "../components/themeswitch";
+import ThemeSwitch from "lib/components/themeswitch";
 
 const githubProjects = [
   "twitch-tui",

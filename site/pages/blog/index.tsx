@@ -1,12 +1,12 @@
-import Container from "./components/container";
-import MorePosts from "./components/more-posts";
-import HeroPost from "./components/hero-post";
-import Intro from "./components/intro";
-import Layout from "./components/layout";
-import { getAllPosts } from "./lib/api";
-import Post from "./interfaces/post";
+import Container from "lib/components/container";
+import MorePosts from "lib/components/more-posts";
+import HeroPost from "lib/components/hero-post";
+import Intro from "lib/components/intro";
+import Layout from "lib/components/layout";
+import { getAllPosts } from "lib/api";
+import Post from "lib/interfaces/post";
 import Head from "next/head";
-import ThemeSwitch from "../components/themeswitch";
+import ThemeSwitch from "lib/components/themeswitch";
 
 type Props = {
   allPosts: Post[];

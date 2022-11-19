@@ -1,15 +1,15 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
-import Container from "../components/container";
-import PostBody from "../components/post-body";
-import Header from "../components/header";
-import PostHeader from "../components/post-header";
-import Layout from "../components/layout";
-import { getPostBySlug, getAllPosts } from "../lib/api";
-import PostTitle from "../components/post-title";
-import markdownToHtml from "../lib/markdownToHtml";
-import type PostType from "../interfaces/post";
-import ThemeSwitch from "../../components/themeswitch";
+import Container from "lib/components/container";
+import PostBody from "lib/components/post-body";
+import Header from "lib/components/header";
+import PostHeader from "lib/components/post-header";
+import Layout from "lib/components/layout";
+import { getPostBySlug, getAllPosts } from "lib/api";
+import PostTitle from "lib/components/post-title";
+import markdownToHtml from "lib/markdownToHtml";
+import type PostType from "lib/interfaces/post";
+import ThemeSwitch from "lib/components/themeswitch";
 
 type Props = {
   post: PostType;

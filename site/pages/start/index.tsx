@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { BsArrowRight } from "react-icons/bs";
 import { useEffect } from "react";
-import ThemeSwitch from "../components/themeswitch";
+import ThemeSwitch from "lib/components/themeswitch";
 
 const LINKS = [
   {
