@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { BsCheck2 } from "react-icons/bs";
-
 import ThemeSwitch from "../components/themeswitch";
 
 const TODO = [
