@@ -15,23 +15,22 @@
   }
 
   body {
-    background: #212627;
-    color: #b8c0d3;
-  }
-
-  [data-theme="light"],
-  [data-theme="light"] body {
     background: #c7cde4;
     color: #3b4345;
+  }
+
+  body.dark {
+    background: #212627;
+    color: #b8c0d3;
   }
 }
 
 @layer utilities {
-  [data-theme="light"] tr.stripe:nth-of-type(2n) {
+  tr.stripe:nth-of-type(2n) {
     background-color: #b9bfd4;
   }
 
-  tr.stripe:nth-of-type(2n) {
+  .dark tr.stripe:nth-of-type(2n) {
     background-color: #24292a;
   }
 }
