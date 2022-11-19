@@ -1,6 +1,6 @@
 import Head from "next/head";
-import LinkElem from "./components/links";
-import ThemeSwitch from "./components/themeswitch";
+import LinkElem from "lib/components/links";
+import ThemeSwitch from "lib/components/themeswitch";
 import { SiGitea, SiGithub, SiTwitch, SiYoutube } from "react-icons/si";
 
 const sitePages = ["Projects", "ToDo", "Blog", "Start"];
