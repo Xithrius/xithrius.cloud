@@ -13,6 +13,17 @@
   html {
     font-family: "Montserrat", "Turret Road";
   }
+
+  body {
+    background: #212627;
+    color: #b8c0d3;
+  }
+
+  [data-theme="light"],
+  [data-theme="light"] body {
+    background: #c7cde4;
+    color: #3b4345;
+  }
 }
 
 @layer utilities {
