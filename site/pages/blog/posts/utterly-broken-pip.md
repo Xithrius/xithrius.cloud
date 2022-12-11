@@ -4,16 +4,9 @@ excerpt: "Fixing a majorly broken pip install."
 date: "2022-07-31"
 ---
 
-The following blog shows a (possibly not _the_) solution to the error I once encountered below, while installing a PyPI package.
+The following post shows a (possibly not _the_) solution to the error I once encountered below, while installing a PyPI package.
 
-<details>
-    <summary>
-        <code>
-        ImportError: cannot import name 'PythonVersion' from 'pip._vendor.packaging.tags'
-        </code>
-    </summary>
-
-```
+```bash
 Traceback (most recent call last):
   File "/usr/bin/pip", line 5, in <module>
     from pip._internal.cli.main import main
@@ -31,8 +24,6 @@ Traceback (most recent call last):
     from pip._vendor.packaging.tags import (
 ImportError: cannot import name 'PythonVersion' from 'pip._vendor.packaging.tags' (/home/xithrius/.local/lib/python3.10/site-packages/packaging/tags.py)
 ```
-
-</details>
 
 Head to [this](https://pip.pypa.io/en/stable/installation/#get-pip-py) section of the pip installation site, download then run the `get-pip.py` script.
 

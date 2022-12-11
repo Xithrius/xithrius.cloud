@@ -30,3 +30,12 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# nextra
+public/feed.xml
+
+.turbo
