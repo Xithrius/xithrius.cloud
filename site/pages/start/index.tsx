@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { BsArrowRight } from "react-icons/bs";
 import { useEffect } from "react";
 import ThemeSwitch from "lib/components/themeswitch";
-import ToHomepage from "lib/components/to-homepage";
+import TopLeftNavigation from "lib/components/top-left-nav";
 
 const LINKS = [
   {
@@ -61,7 +61,10 @@ export default function Start() {
         <table className="table-auto">
           <tbody>
             {LINKS.map((link) => (
-              <tr key={link.key} className="transform duration-300 ease-in-out hover:translate-x-5 text-2xl">
+              <tr
+                key={link.key}
+                className="transform text-2xl duration-300 ease-in-out hover:translate-x-5"
+              >
                 <td className="px-4">{link.key}</td>
                 <td>
                   <BsArrowRight />
@@ -74,7 +77,7 @@ export default function Start() {
           </tbody>
         </table>
         <ThemeSwitch />
-        <ToHomepage />
+        <TopLeftNavigation href="/">xithrius.cloud</TopLeftNavigation>
       </main>
     </>
   );

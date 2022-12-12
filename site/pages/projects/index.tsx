@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import ThemeSwitch from "lib/components/themeswitch";
-import ToHomepage from "lib/components/to-homepage";
+import TopLeftNavigation from "lib/components/top-left-nav";
 import Container from "lib/components/container";
 
 const githubProjects = [
@@ -98,7 +98,7 @@ export default function Home({ projects, templates }: HomeProps) {
           ))}
         </div>
         <ThemeSwitch />
-        <ToHomepage />
+        <TopLeftNavigation href="/">xithrius.cloud</TopLeftNavigation>
       </Container>
     </>
   );

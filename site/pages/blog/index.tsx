@@ -6,7 +6,7 @@ import { getAllPosts } from "lib/api";
 import Post from "lib/interfaces/post";
 import Head from "next/head";
 import ThemeSwitch from "lib/components/themeswitch";
-import ToHomepage from "lib/components/to-homepage";
+import TopLeftNavigation from "lib/components/top-left-nav";
 
 type Props = {
   allPosts: Post[];
@@ -26,7 +26,7 @@ export default function Index({ allPosts }: Props) {
         </Container>
       </Layout>
       <ThemeSwitch />
-      <ToHomepage />
+      <TopLeftNavigation href="/">xithrius.cloud</TopLeftNavigation>
     </>
   );
 }

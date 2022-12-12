@@ -1,6 +1,6 @@
 import DateFormatter from "./date-formatter";
 import PostTitle from "./post-title";
-import Link from "next/link";
+import TopLeftNavigation from "./top-left-nav";
 
 type Props = {
   title: string;
@@ -14,12 +14,7 @@ const PostHeader = ({ title, date }: Props) => {
       <div className="mx-auto max-w-2xl">
         <div className="flex-column mb-12 flex text-lg">
           <DateFormatter dateString={date} />
-          <Link
-            href="/blog"
-            className="ml-auto mr-5 underline decoration-dashed underline-offset-auto opacity-50 hover:opacity-100"
-          >
-            back
-          </Link>
+          <TopLeftNavigation href="/blog">back</TopLeftNavigation>
         </div>
       </div>
     </>

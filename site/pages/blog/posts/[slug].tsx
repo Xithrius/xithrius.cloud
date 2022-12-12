@@ -38,9 +38,7 @@ export default function Post({ post, preview }: Props) {
           )}
         </Container>
       </Layout>
-      <div className="absolute right-8 top-8 flex justify-center">
-        <ThemeSwitch />
-      </div>
+      <ThemeSwitch />
     </>
   );
 }
