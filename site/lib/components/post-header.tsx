@@ -12,11 +12,11 @@ const PostHeader = ({ title, date }: Props) => {
     <>
       <PostTitle>{title}</PostTitle>
       <div className="mx-auto max-w-2xl">
-        <div className="mb-12 text-lg">
+        <div className="flex-column mb-12 flex text-lg">
           <DateFormatter dateString={date} />
           <Link
             href="/blog"
-            className="opacity-50 hover:opacity-100 justify-end text-right items-end flex"
+            className="ml-auto mr-5 underline decoration-dashed underline-offset-auto opacity-50 hover:opacity-100"
           >
             back
           </Link>
