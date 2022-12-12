@@ -5,13 +5,10 @@ type Props = {
   posts: Post[];
 };
 
-const MorePosts = ({ posts }: Props) => {
+const ListPosts = ({ posts }: Props) => {
   return (
     <section>
-      <h2 className="mb-8 text-5xl font-bold leading-tight tracking-tighter md:text-5xl">
-        More posts
-      </h2>
-      <div className="mb-32 grid grid-cols-1 gap-y-20 md:grid-cols-2 md:gap-x-16 md:gap-y-32 lg:gap-x-32">
+      <div className="mb-32 grid grid-cols-1 gap-y-20">
         {posts.map((post) => (
           <PostPreview
             key={post.slug}
@@ -26,4 +23,4 @@ const MorePosts = ({ posts }: Props) => {
   );
 };
 
-export default MorePosts;
+export default ListPosts;

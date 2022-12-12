@@ -42,7 +42,7 @@ Of course this had to be said. I really like using neovim, but I keep running in
 
 Once I get a working setup that I'm satisfied with, I'll update my dotfiles, linked at the top of this page.
 
-For now, I'm using [vscode](https://github.com/Microsoft/vscode). The extensions and settings that I have configured can be found [here](https://blog.xithrius.cloud/posts/vscode-settings).
+For now, I'm using [vscode](https://github.com/Microsoft/vscode). The extensions and settings that I have configured can be found [here](https://xithrius.cloud/blog/posts/vscode-settings).
 
 # Ending notes
 

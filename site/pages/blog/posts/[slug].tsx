@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Container from "lib/components/container";
 import PostBody from "lib/components/post-body";
-import Header from "lib/components/header";
 import PostHeader from "lib/components/post-header";
 import Layout from "lib/components/layout";
 import { getPostBySlug, getAllPosts } from "lib/api";
@@ -27,7 +26,6 @@ export default function Post({ post, preview }: Props) {
     <>
       <Layout preview={preview}>
         <Container>
-          <Header />
           {router.isFallback ? (
             <PostTitle>Loading…</PostTitle>
           ) : (
