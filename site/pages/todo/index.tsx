@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { BsCheck2 } from "react-icons/bs";
 import ThemeSwitch from "lib/components/themeswitch";
+import ToHomepage from "lib/components/to-homepage";
 
 const TODO = [
   {
@@ -95,7 +96,7 @@ export default function Home() {
         <title>todo.xithrius.cloud</title>
         <link rel="icon" href="/logo.png" />
       </Head>
-      <main className="flex min-h-screen flex-1 flex-col items-center justify-center text-center text-[1rem] subpixel-antialiased">
+      <main className="flex min-h-screen flex-1 flex-col items-center justify-center text-center text-[1rem] subpixel-antialiased my-24">
         <table className="table-auto border-collapse">
           <thead className="font-bold">
             <tr className="border-b-2 border-b-[#3c4445]">
@@ -131,9 +132,8 @@ export default function Home() {
             </tr>
           </tbody>
         </table>
-        <div className="absolute right-8 top-8 flex justify-center">
-          <ThemeSwitch />
-        </div>
+        <ThemeSwitch />
+        <ToHomepage />
       </main>
     </>
   );

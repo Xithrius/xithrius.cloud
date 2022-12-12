@@ -30,9 +30,7 @@ export default function Home() {
               className="mx-5 hover:-translate-y-1"
             />
           ))}
-          <div className="absolute right-8 top-8 flex justify-center">
-            <ThemeSwitch />
-          </div>
+          <ThemeSwitch />
         </div>
       </main>
       <div className="absolute inset-x-0 bottom-0 h-24 w-full border-t border-current">

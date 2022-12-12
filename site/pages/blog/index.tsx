@@ -6,6 +6,7 @@ import { getAllPosts } from "lib/api";
 import Post from "lib/interfaces/post";
 import Head from "next/head";
 import ThemeSwitch from "lib/components/themeswitch";
+import ToHomepage from "lib/components/to-homepage";
 
 type Props = {
   allPosts: Post[];
@@ -24,9 +25,8 @@ export default function Index({ allPosts }: Props) {
           <ListPosts posts={allPosts} />
         </Container>
       </Layout>
-      <div className="absolute right-8 top-8 flex justify-center">
-        <ThemeSwitch />
-      </div>
+      <ThemeSwitch />
+      <ToHomepage />
     </>
   );
 }

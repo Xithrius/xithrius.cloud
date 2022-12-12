@@ -2,6 +2,8 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import ThemeSwitch from "lib/components/themeswitch";
+import ToHomepage from "lib/components/to-homepage";
+import Container from "lib/components/container";
 
 const githubProjects = [
   "twitch-tui",
@@ -62,41 +64,42 @@ export default function Home({ projects, templates }: HomeProps) {
         <title>projects.xithrius.cloud</title>
         <link rel="icon" href="/logo.png" />
       </Head>
-      <div className="flex h-24 w-full items-center justify-center text-5xl underline decoration-solid decoration-1 underline-offset-8">
-        Project Repositories
-      </div>
-      <div className="flex w-screen flex-wrap content-start items-center justify-center gap-10 p-10">
-        {projects.map((element) => (
-          <Link href={element.link} key={element.name}>
-            <Image
-              src={element.image}
-              alt={element.name}
-              width={400}
-              height={200}
-              className="cursor-pointer rounded-md ring-current ring-offset-2 hover:ring-2"
-            />
-          </Link>
-        ))}
-      </div>
-      <div className="flex h-24 w-full items-center justify-center text-5xl underline decoration-solid decoration-1 underline-offset-8">
-        Template Repositories
-      </div>
-      <div className="flex w-screen flex-wrap content-start items-center justify-center gap-10 p-10">
-        {templates.map((element) => (
-          <Link href={element.link} key={element.name}>
-            <Image
-              src={element.image}
-              alt={element.name}
-              width={400}
-              height={200}
-              className="cursor-pointer rounded-md ring-current ring-offset-2 hover:ring-2"
-            />
-          </Link>
-        ))}
-      </div>
-      <div className="absolute right-8 top-8 flex justify-center">
+      <Container>
+        <div className="flex h-24 w-full items-center justify-center text-5xl underline decoration-solid decoration-1 underline-offset-8">
+          Project Repositories
+        </div>
+        <div className="flex w-screen flex-wrap content-start items-center justify-center gap-10 p-10">
+          {projects.map((element) => (
+            <Link href={element.link} key={element.name}>
+              <Image
+                src={element.image}
+                alt={element.name}
+                width={400}
+                height={200}
+                className="cursor-pointer rounded-md ring-current ring-offset-2 hover:ring-2"
+              />
+            </Link>
+          ))}
+        </div>
+        <div className="flex h-24 w-full items-center justify-center text-5xl underline decoration-solid decoration-1 underline-offset-8">
+          Template Repositories
+        </div>
+        <div className="flex w-screen flex-wrap content-start items-center justify-center gap-10 p-10">
+          {templates.map((element) => (
+            <Link href={element.link} key={element.name}>
+              <Image
+                src={element.image}
+                alt={element.name}
+                width={400}
+                height={200}
+                className="cursor-pointer rounded-md ring-current ring-offset-2 hover:ring-2"
+              />
+            </Link>
+          ))}
+        </div>
         <ThemeSwitch />
-      </div>
+        <ToHomepage />
+      </Container>
     </>
   );
 }

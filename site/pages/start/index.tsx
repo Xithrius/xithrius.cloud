@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { BsArrowRight } from "react-icons/bs";
 import { useEffect } from "react";
 import ThemeSwitch from "lib/components/themeswitch";
+import ToHomepage from "lib/components/to-homepage";
 
 const LINKS = [
   {
@@ -56,11 +57,11 @@ export default function Start() {
         <title>start.xithrius.cloud</title>
         <link rel="icon" href="/logo.png" />
       </Head>
-      <main className="flex min-h-screen flex-1 flex-col items-center justify-center text-center text-[2vh] subpixel-antialiased">
+      <main className="flex min-h-screen flex-1 flex-col items-center justify-center text-center subpixel-antialiased">
         <table className="table-auto">
           <tbody>
             {LINKS.map((link) => (
-              <tr key={link.key} className="transform duration-300 ease-in-out hover:translate-x-5">
+              <tr key={link.key} className="transform duration-300 ease-in-out hover:translate-x-5 text-2xl">
                 <td className="px-4">{link.key}</td>
                 <td>
                   <BsArrowRight />
@@ -72,9 +73,8 @@ export default function Start() {
             ))}
           </tbody>
         </table>
-        <div className="absolute right-8 top-8 flex justify-center">
-          <ThemeSwitch />
-        </div>
+        <ThemeSwitch />
+        <ToHomepage />
       </main>
     </>
   );
