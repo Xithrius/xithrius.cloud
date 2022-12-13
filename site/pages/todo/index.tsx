@@ -38,7 +38,7 @@ const TODO = [
   },
   {
     desc: "Make guides/blogs on website",
-    url: "https://github.com/Xithrius/xithrius.cloud/tree/main/site_blog",
+    url: "https://github.com/Xithrius/xithrius.cloud/tree/main/site",
     done: true,
   },
   {
