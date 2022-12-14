@@ -1,18 +1,15 @@
 import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
-import rehypeFormat from "rehype-format";
 import rehypeStringify from "rehype-stringify";
-import prism from "remark-prism";
-import rehypeRaw from "rehype-raw";
+import rehypePrettyCode from "rehype-pretty-code";
 
 export default async function markdownToHtml(markdown: string) {
   const result = await unified()
     .use(remarkParse)
-    .use(prism)
     .use(remarkRehype, { allowDangerousHtml: true })
-    .use(rehypeRaw)
-    .use(rehypeFormat)
+    // available themes - https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-themes
+    .use(rehypePrettyCode, {theme: 'one-dark-pro'})
     .use(rehypeStringify)
     .process(markdown);
 
