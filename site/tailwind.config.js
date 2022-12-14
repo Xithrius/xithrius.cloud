@@ -50,7 +50,7 @@ module.exports = {
             "--tw-prose-invert-captions": theme("colors.dark-fg"),
             "--tw-prose-invert-code": theme("colors.dark-fg"),
             "--tw-prose-invert-pre-code": theme("colors.dark-fg"),
-            "--tw-prose-invert-pre-bg": theme("colors.dark-fg"),
+            "--tw-prose-invert-pre-bg": theme("colors.light-fg"),
             "--tw-prose-invert-th-borders": theme("colors.dark-fg"),
             "--tw-prose-invert-td-borders": theme("colors.dark-fg"),
           },
