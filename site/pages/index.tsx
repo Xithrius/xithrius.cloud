@@ -6,6 +6,7 @@ import Container from "lib/components/container";
 import { utcToZonedTime } from "date-fns-tz";
 import { useEffect, useState } from "react";
 import TopLeftNavigation from "lib/components/top-left-nav";
+import Image from "next/image";
 
 const sitePages = ["Projects", "ToDo", "Blog", "Start"];
 
@@ -37,9 +38,9 @@ const TimezonedDate = () => {
 
   return (
     <div>
-      <div>{dateTime.toDateString()}</div>
-      <div>{formatDateTime(dateTime)}</div>
-      <div>UTC - {dateTime.getTimezoneOffset() / 60}</div>
+      {`${dateTime.toDateString()} ${formatDateTime(dateTime)} UTC - ${
+        dateTime.getTimezoneOffset() / 60
+      }`}
     </div>
   );
 };
@@ -52,26 +53,28 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
       <Container>
-        <div className="font-['Turret_Road'] text-[10vw]">Xithrius</div>
-        <div className="border-t border-b border-current py-5">
-          <TimezonedDate />
-        </div>
-        <div className="mt-4 flex w-3/5 py-5 font-['Montserrat']">
-          {sitePages.map((element) => (
-            <LinkElem
-              key={element}
-              href={`/${element.toLowerCase()}`}
-              elem={element}
-              className="mx-5 hover:-translate-y-1"
-            />
-          ))}
-          <ThemeSwitch />
-        </div>
+        <main className="flex flex-1 flex-col items-center justify-center text-center -mt-20">
+          <Image src="/user_icon.svg" alt="Xithrius" width={512} height={512} />
+          <div className="flex w-3/5 justify-center border-t border-solid border-current text-[1.3vw] -mt-20 py-5">
+            {sitePages.map((element) => (
+              <LinkElem
+                key={element}
+                href={`/${element.toLowerCase()}`}
+                elem={element}
+                className="mx-5 hover:-translate-y-1"
+              />
+            ))}
+            <ThemeSwitch />
+          </div>
+        </main>
       </Container>
       <ThemeSwitch />
       <TopLeftNavigation href="https://github.com/Xithrius">
         <SiGithub />
       </TopLeftNavigation>
+      <div className="absolute left-8 bottom-8 flex justify-center">
+        <TimezonedDate />
+      </div>
     </>
   );
 }
