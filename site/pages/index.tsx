@@ -55,7 +55,7 @@ export default function Home() {
       <Container>
         <main className="flex flex-1 flex-col items-center justify-center text-center -mt-20">
           <Image src="/user_icon.svg" alt="Xithrius" width={512} height={512} />
-          <div className="flex w-3/5 justify-center border-t border-solid border-current text-[1.3vw] -mt-20 py-5">
+          <div className="flex w-3/5 justify-center border-t border-solid border-current text-xl -mt-20 py-5">
             {sitePages.map((element) => (
               <LinkElem
                 key={element}
