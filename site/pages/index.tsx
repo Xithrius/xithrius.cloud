@@ -36,13 +36,7 @@ const TimezonedDate = () => {
     return () => clearInterval(func);
   }, [dateTime]);
 
-  return (
-    <div>
-      {`${dateTime.toDateString()} ${formatDateTime(dateTime)} UTC - ${
-        dateTime.getTimezoneOffset() / 60
-      }`}
-    </div>
-  );
+  return <div>{`${dateTime.toDateString()} ${formatDateTime(dateTime)} UTC - 8`}</div>;
 };
 
 export default function Home() {
@@ -53,9 +47,9 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
       <Container>
-        <main className="flex flex-1 flex-col items-center justify-center text-center -mt-20">
+        <main className="-mt-20 flex flex-1 flex-col items-center justify-center text-center">
           <Image src="/user_icon.svg" alt="Xithrius" width={512} height={512} />
-          <div className="flex w-3/5 justify-center border-t border-solid border-current text-xl -mt-20 py-5">
+          <div className="-mt-20 flex w-3/5 justify-center border-t border-solid border-current py-5 text-xl">
             {sitePages.map((element) => (
               <LinkElem
                 key={element}
