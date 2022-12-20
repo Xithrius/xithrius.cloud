@@ -33,4 +33,12 @@
   .dark tr.stripe:nth-of-type(2n) {
     background-color: #24292a;
   }
+
+  div.card:hover {
+    background-color: #b9bfd4;
+  }
+
+  .dark div.card:hover {
+    background-color: #272d2e;
+  }
 }

@@ -5,7 +5,7 @@ interface LinkElemProps {
 }
 
 const LinkElem = ({ href, elem, className }: LinkElemProps) => (
-  <a href={href} target="_blank" rel="noreferrer" className={className}>
+  <a href={href} rel="noreferrer" className={className}>
     {elem}
   </a>
 );
