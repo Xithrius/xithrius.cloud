@@ -95,4 +95,4 @@ const todo = [
   },
 ];
 
-export { todo };
+export default todo;
