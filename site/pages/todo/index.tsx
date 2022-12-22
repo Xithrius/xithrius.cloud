@@ -2,7 +2,7 @@ import Head from "next/head";
 import { BsCheck2 } from "react-icons/bs";
 import ThemeSwitch from "lib/components/themeswitch";
 import TopLeftNavigation from "lib/components/top-left-nav";
-import todo from "./listing";
+import { todo } from "./listing";
 import Container from "lib/components/container";
 
 interface todoItem {
