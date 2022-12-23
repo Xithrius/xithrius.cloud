@@ -54,7 +54,7 @@ export default function Start() {
   return (
     <>
       <Head>
-        <title>start.xithrius.cloud</title>
+        <title>xithrius.cloud</title>
         <link rel="icon" href="/logo.png" />
       </Head>
       <main className="flex min-h-screen flex-1 flex-col items-center justify-center text-center subpixel-antialiased">

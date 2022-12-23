@@ -60,7 +60,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>todo.xithrius.cloud</title>
+        <title>xithrius.cloud</title>
         <link rel="icon" href="/logo.png" />
       </Head>
       <Container>

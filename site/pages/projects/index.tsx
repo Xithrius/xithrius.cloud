@@ -61,7 +61,7 @@ export default function Home({ projects, templates }: HomeProps) {
   return (
     <>
       <Head>
-        <title>projects.xithrius.cloud</title>
+        <title>xithrius.cloud</title>
         <link rel="icon" href="/logo.png" />
       </Head>
       <Container>
