@@ -36,7 +36,7 @@ const TimezonedDate = () => {
     return () => clearInterval(func);
   }, [dateTime]);
 
-  return <div>{`${dateTime.toDateString()} ${formatDateTime(dateTime)} UTC - 8`}</div>;
+  return <div>{`${dateTime.toDateString()} ${formatDateTime(dateTime)} UTC-8`}</div>;
 };
 
 export default function Home() {
@@ -66,7 +66,7 @@ export default function Home() {
       <TopLeftNavigation href="https://github.com/Xithrius">
         <SiGithub />
       </TopLeftNavigation>
-      <div className="absolute left-8 bottom-8 flex justify-center">
+      <div className="absolute left-8 bottom-8 flex justify-center font-mono">
         <TimezonedDate />
       </div>
     </>
