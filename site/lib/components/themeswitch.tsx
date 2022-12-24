@@ -7,7 +7,10 @@ const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    document.body.classList.add("transition-colors");
+    setMounted(true);
+  }, []);
 
   if (!mounted) {
     return null;
