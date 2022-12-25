@@ -61,7 +61,7 @@ export default function Home() {
                 key={element}
                 href={`/${element.toLowerCase()}`}
                 elem={element}
-                className="mx-5 opacity-50 hover:opacity-100"
+                className="mx-5 opacity-50 transition hover:opacity-100"
               />
             ))}
             <ThemeSwitch />
