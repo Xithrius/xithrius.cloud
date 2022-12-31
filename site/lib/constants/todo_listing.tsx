@@ -91,7 +91,8 @@ const todo = [
       { desc: "Get access to home server from anywhere with tailscale" },
       { desc: "User video game stats lookup" },
       { desc: "Gmail clone" },
-      { desc: "Steam game data sync" },
+      { desc: "Steam game data sync", url: "https://github.com/Xithrius/carbide" },
+      { desc: "File vault with encryption" },
     ],
   },
 ];
