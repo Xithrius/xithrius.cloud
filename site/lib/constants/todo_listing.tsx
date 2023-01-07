@@ -88,11 +88,12 @@ const todo = [
       },
       { desc: "Create systemd service(s) to alert when something happens" },
       { desc: "Take an online course for circuit analysis" },
-      { desc: "Get access to home server from anywhere with tailscale" },
+      { desc: "Get access to home server from anywhere", done: true },
       { desc: "User video game stats lookup" },
       { desc: "Gmail clone" },
       { desc: "Steam game data sync", url: "https://github.com/Xithrius/carbide" },
       { desc: "File vault with encryption" },
+      { desc: "X11 application launcher", url: "https://github.com/Xithrius/nitroxide" },
     ],
   },
 ];
