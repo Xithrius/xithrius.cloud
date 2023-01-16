@@ -4,6 +4,7 @@ const todo = [
     items: [
       {
         desc: "Survive",
+        done: true,
       },
       {
         desc: "A year-long contribution streak",
