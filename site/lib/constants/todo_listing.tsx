@@ -94,7 +94,7 @@ const todo = [
       { desc: "Gmail clone" },
       { desc: "Steam game data sync", url: "https://github.com/Xithrius/carbide" },
       { desc: "File vault with encryption" },
-      { desc: "X11 application launcher", url: "https://github.com/Xithrius/nitroxide" },
+      { desc: "File explorer", url: "https://github.com/Xithrius/nitroxide" },
     ],
   },
 ];

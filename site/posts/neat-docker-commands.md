@@ -1,7 +1,7 @@
 ---
 title: "Neat Docker commands"
 excerpt: "Docker does the do."
-date: "2022-01-22"
+date: "2023-01-22"
 ---
 
 With the docker command below, you're able to create an Ubuntu shell with the files contained in the current working directory. This is neat for quickly testing out something like a shell script on a different version of Ubuntu, or just seeing if your C program compiles at all somewhere else.
@@ -36,7 +36,7 @@ Then we'd be able to execute what's below to be able to get that `psql` shell, a
 docker exec -it a-postgres-container psql -U postgres
 ```
 
-Not all containers support this, but sometimes you're able to create a bash shell within a container with the following, where `a-container` is the name of the container.
+Not all containers support this, but sometimes you're able to create a bash shell within a container with the following, where `a-container` is the name of a container with an image, such as gitlab.
 
 ```
 docker exec -it a-container /bin/bash
