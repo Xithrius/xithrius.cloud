@@ -36,13 +36,11 @@ The shell that I use within kitty. Since functions are so easy to make, with a [
 
 Along with this, I recommend using [starship](https://github.com/starship/starship), since it makes the prompt that much better.
 
-# [neovim](https://github.com/neovim/neovim)
+# [Visaul Studio Code](https://github.com/Microsoft/vscode)
 
-Of course this had to be said. I really like using neovim, but I keep running into issues with not understanding how to configure things properly.
+Works well enough for now.
 
-Once I get a working setup that I'm satisfied with, I'll update my dotfiles, linked at the top of this page.
-
-For now, I'm using [vscode](https://github.com/Microsoft/vscode). The extensions and settings that I have configured can be found [here](https://xithrius.cloud/blog/posts/vscode-settings).
+The extensions and settings that I have configured can be found [here](https://xithrius.cloud/blog/posts/vscode-settings).
 
 # Ending notes
 
