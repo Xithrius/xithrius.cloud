@@ -15,9 +15,6 @@ const todo = [
         done: true,
       },
       {
-        desc: "Complete one of the years for Advent of Code",
-      },
-      {
         desc: "Twitch TUI",
         url: "https://github.com/Xithrius/twitch-tui",
         done: true,
@@ -26,9 +23,6 @@ const todo = [
         desc: "Timezone Tracker",
         url: "https://github.com/Xithrius/timezone-tracker",
         done: true,
-      },
-      {
-        desc: "Git diff statistics crate",
       },
       {
         desc: "Markdown table generator",
@@ -41,15 +35,9 @@ const todo = [
         done: true,
       },
       {
-        desc: "Control fan with ESP32 module, temp/humidity sensor",
-      },
-      {
         desc: "Create home server",
         url: "https://github.com/Xithrius/titan.xithrius.cloud",
         done: true,
-      },
-      {
-        desc: "Gitea with woodpecker-ci, gitea-awesome",
       },
       {
         desc: "Create own polybar theme/config",
@@ -60,12 +48,6 @@ const todo = [
         desc: "Rust TUI template repository",
         url: "https://github.com/Xithrius/rust-tui-project-template",
         done: true,
-      },
-      {
-        desc: "Website counting towards Y3K",
-      },
-      {
-        desc: "Daily weather by some means of notification",
       },
       {
         desc: "Get CD working on a VPS",
@@ -91,10 +73,22 @@ const todo = [
       { desc: "Take an online course for circuit analysis" },
       { desc: "Get access to home server from anywhere", done: true },
       { desc: "User video game stats lookup" },
-      { desc: "Gmail clone" },
+      { desc: "Gmail clone", done: true },
       { desc: "Steam game data sync", url: "https://github.com/Xithrius/carbide" },
       { desc: "File vault with encryption" },
       { desc: "File explorer", url: "https://github.com/Xithrius/nitroxide" },
+      {
+        desc: "Gitea with woodpecker-ci, gitea-awesome",
+      },
+      {
+        desc: "Control fan with ESP32 module, temp/humidity sensor",
+      },
+      {
+        desc: "Complete one of the years for Advent of Code",
+      },
+      {
+        desc: "Git diff statistics crate",
+      },
     ],
   },
 ];

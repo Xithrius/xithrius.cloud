@@ -4,9 +4,7 @@ excerpt: "Computer go brrr."
 date: "2022-10-16"
 ---
 
-If you'd like to see my dotfiles, [here they are](https://github.com/Xithrius/dotfiles). This repository is not updated often, so configs may be outdated.
-
-Either way, here's a bunch of different items that I customize my Arch install with.
+My dotfiles are located [here](https://github.com/Xithrius/dotfiles).
 
 # [i3wm](https://github.com/i3/i3)
 
