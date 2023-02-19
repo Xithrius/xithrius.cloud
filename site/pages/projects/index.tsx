@@ -7,26 +7,24 @@ import Container from "lib/components/container";
 
 const githubProjects = [
   "twitch-tui",
-  "weather-tui",
-  "timezone-tracker",
-  "xithrius.cloud",
-  "nitride",
-  "titan.xithrius.cloud",
   "Xythrion",
-  "markdown-table-rs",
+  "xithrius.cloud",
+  "titan.xithrius.cloud",
   "competitive-programming",
+  "nitroxide",
+  "timezone-tracker",
+  "gradient-skins",
 ];
 
 const githubTemplates = [
   "rust-binary-project-template",
   "rust-library-project-template",
-  "rust-aoc-template",
   "rust-tui-project-template",
+  "rust-aoc-template",
+  "python-project-template",
   "nextjs-project-template",
   "cpp-project-template",
   "c-project-template",
-  "python-project-template",
-  "general-project-template",
 ];
 
 interface InfoProps {
@@ -61,7 +59,7 @@ export default function Home({ projects, templates }: HomeProps) {
   return (
     <>
       <Head>
-        <title>projects.xithrius.cloud</title>
+        <title>xithrius.cloud</title>
         <link rel="icon" href="/logo.png" />
       </Head>
       <Container>

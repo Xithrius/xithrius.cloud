@@ -4,9 +4,7 @@ excerpt: "Computer go brrr."
 date: "2022-10-16"
 ---
 
-If you'd like to see my dotfiles, [here they are](https://github.com/Xithrius/dotfiles). This repository is not updated often, so configs may be outdated.
-
-Either way, here's a bunch of different items that I customize my Arch install with.
+My dotfiles are located [here](https://github.com/Xithrius/dotfiles).
 
 # [i3wm](https://github.com/i3/i3)
 
@@ -36,13 +34,11 @@ The shell that I use within kitty. Since functions are so easy to make, with a [
 
 Along with this, I recommend using [starship](https://github.com/starship/starship), since it makes the prompt that much better.
 
-# [neovim](https://github.com/neovim/neovim)
+# [Visaul Studio Code](https://github.com/Microsoft/vscode)
 
-Of course this had to be said. I really like using neovim, but I keep running into issues with not understanding how to configure things properly.
+Works well enough for now.
 
-Once I get a working setup that I'm satisfied with, I'll update my dotfiles, linked at the top of this page.
-
-For now, I'm using [vscode](https://github.com/Microsoft/vscode). The extensions and settings that I have configured can be found [here](https://xithrius.cloud/blog/posts/vscode-settings).
+The extensions and settings that I have configured can be found [here](https://xithrius.cloud/blog/posts/vscode-settings).
 
 # Ending notes
 

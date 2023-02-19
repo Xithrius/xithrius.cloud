@@ -27,14 +27,20 @@ const TimezonedDate = () => {
   };
 
   const [dateTime, setDateTime] = useState(newZonedDateTime());
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const func = setTimeout(() => {
       setDateTime(newZonedDateTime());
     }, 1000);
 
     return () => clearInterval(func);
   }, [dateTime]);
+
+  if (!mounted) {
+    return null;
+  }
 
   return <div>{`${dateTime.toDateString()} ${formatDateTime(dateTime)} UTC-8`}</div>;
 };
@@ -55,7 +61,7 @@ export default function Home() {
                 key={element}
                 href={`/${element.toLowerCase()}`}
                 elem={element}
-                className="mx-5 hover:-translate-y-1"
+                className="mx-5 opacity-50 transition hover:opacity-100"
               />
             ))}
             <ThemeSwitch />

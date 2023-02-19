@@ -7,7 +7,10 @@ const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    document.body.classList.add("transition-colors");
+    setMounted(true);
+  }, []);
 
   if (!mounted) {
     return null;
@@ -21,12 +24,12 @@ const ThemeSwitch = () => {
     <div className="absolute right-8 top-8 flex justify-center">
       <button className="duration-400 h-6 w-6 transition-opacity" onClick={handleClick}>
         <TbSun
-          className={`absolute top-0 right-0 h-6 w-6 ${
+          className={`absolute top-0 right-0 h-6 w-6 transition ${
             resolvedTheme === "light" ? "" : "rotate-180 opacity-0"
           }`}
         />
         <TbMoon
-          className={`absolute top-0 right-0 h-6 w-6 ${
+          className={`absolute top-0 right-0 h-6 w-6 transition ${
             resolvedTheme === "dark" ? "" : "rotate-180 opacity-0"
           }`}
         />
