@@ -9,7 +9,7 @@ module.exports = {
         "dark-fg": "#c0c5ce",
         "dark-code-bg": "#21262a",
         "light-bg": "#eff1f5",
-        "light-fg": "#565e65",
+        "light-fg": "#21262a",
         "light-code-bg": "#e8e9ea",
         link: "#4280b3",
       },
