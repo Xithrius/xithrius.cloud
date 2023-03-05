@@ -12,7 +12,7 @@ docker run -it -v "$PWD:/workspace" -w /workspace ubuntu:20.04 /bin/bash
 
 Another neat command gives you a `psql` shell in a postgres container. For example, if we were to have the `docker-compose.yml` file below,
 
-```yml
+```yaml
 version: "3.7"
 
 services:
