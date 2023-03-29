@@ -1,6 +1,5 @@
 ---
 title: "Technology video creators"
-excerpt: "Content that doesn't drain your energy."
 date: "2022-04-22"
 ---
 

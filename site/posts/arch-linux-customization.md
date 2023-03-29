@@ -1,6 +1,5 @@
 ---
 title: "Customization of Arch Linux"
-excerpt: "Computer go brrr."
 date: "2022-10-16"
 ---
 

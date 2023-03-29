@@ -1,6 +1,5 @@
 ---
 title: "Utterly broken pip"
-excerpt: "Fixing a majorly broken pip install."
 date: "2022-07-31"
 ---
 

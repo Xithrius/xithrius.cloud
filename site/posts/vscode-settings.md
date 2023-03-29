@@ -1,6 +1,5 @@
 ---
-title: "My VSCode settings and extensions"
-excerpt: "Productivity, yes."
+title: "VSCode settings and extensions"
 date: "2023-03-04"
 ---
 

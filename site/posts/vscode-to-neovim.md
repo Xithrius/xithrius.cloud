@@ -1,6 +1,5 @@
 ---
 title: "Migration from Visual Studio Code to Neovim"
-excerpt: "From electorn to the terminal"
 date: "2023-03-24"
 ---
 

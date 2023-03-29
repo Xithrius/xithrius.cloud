@@ -1,6 +1,5 @@
 ---
 title: "Neat Docker commands"
-excerpt: "Docker does the do."
 date: "2023-01-22"
 ---
 

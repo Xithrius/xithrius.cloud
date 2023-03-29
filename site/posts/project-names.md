@@ -1,6 +1,5 @@
 ---
 title: "A metric ton of project names"
-excerpt: "I gotta put them somewhere."
 date: "2022-12-24"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Fixing flashing electron apps in i3wm"
-excerpt: "Flashbang out."
 date: "2023-02-12"
 ---
 

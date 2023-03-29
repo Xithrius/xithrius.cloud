@@ -1,6 +1,5 @@
 ---
 title: "Windows 10 ISO download"
-excerpt: "Search engines have a hard time indexing this."
 date: "2022-10-16"
 ---
 

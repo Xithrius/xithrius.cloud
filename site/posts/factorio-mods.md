@@ -1,6 +1,5 @@
 ---
 title: "Increasing QOL in Factorio"
-excerpt: "The factory must grow."
 date: "2022-09-22"
 ---
 

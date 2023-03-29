@@ -1,6 +1,5 @@
 ---
 title: "CloudFlare Redirecting to an offsite URL"
-excerpt: "What'll it be?"
 date: "2022-09-25"
 ---
 

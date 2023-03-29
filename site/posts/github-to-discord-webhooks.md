@@ -1,6 +1,5 @@
 ---
-title: "GitHub updates in Discord channels"
-excerpt: "Get notified for specific events in a repository."
+title: "GitHub repository updates in Discord channels"
 date: "2022-10-16"
 ---
 

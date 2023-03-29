@@ -1,6 +1,5 @@
 ---
 title: "Modularity in Factorio"
-excerpt: "The factory must grow."
 date: "2023-03-28"
 ---
 

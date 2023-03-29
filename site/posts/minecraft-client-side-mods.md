@@ -1,6 +1,5 @@
 ---
 title: "Minecraft client side mods"
-excerpt: "All the mods"
 date: "2023-03-04"
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: "Caching SSH keys"
-excerpt: "Enter passphrase(s) once per session."
 date: "2022-08-02"
 ---
 

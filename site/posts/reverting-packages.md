@@ -1,6 +1,5 @@
 ---
 title: "Reverting yay and pacman packages"
-excerpt: "Back to a working version."
 date: "2023-02-03"
 ---
 

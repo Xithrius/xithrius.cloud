@@ -1,6 +1,5 @@
 ---
 title: "Rust tools with kickstart.nvim"
-excerpt: "Learning the hard way"
 date: "2023-03-25"
 ---
 
@@ -25,4 +24,3 @@ require("mason-lspconfig").setup_handlers {
 ```
 
 Credit goes to [this](https://github.com/nvim-lua/kickstart.nvim/pull/107#issuecomment-1368613366) PR comment.
-

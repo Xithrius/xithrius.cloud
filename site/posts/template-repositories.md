@@ -1,6 +1,5 @@
 ---
 title: "GitHub template repositories"
-excerpt: "Starting a new project with ease."
 date: "2022-04-08"
 ---
 
