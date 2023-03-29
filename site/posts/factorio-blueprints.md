@@ -1,14 +1,14 @@
 ---
 title: "Modularity in Factorio"
 excerpt: "The factory must grow."
-date: "2022-12-20"
+date: "2023-03-28"
 ---
 
 Blueprints that I find helpful are uploaded to [this repository](https://github.com/Xithrius/factorio-blueprints).
 
-I am placeholder text nothing to see here remove before merging into main.
+By putting blueprints into a single chunk, it is guaranteed that no matter where you are on the map, another chunk will connect exactly to it.
 
-An example of an unloading station:
+An example of an unloading station in one chunk:
 
 ![Unloading station](/images/posts/factorio-blueprints/unloading.png)
 
