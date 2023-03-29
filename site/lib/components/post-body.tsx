@@ -13,6 +13,7 @@ const PostBody = ({ content }: Props) => {
       prose-code:before:content-none
       prose-code:after:content-none
       dark:prose-invert
+      prose-code:mr-3
       "
       dangerouslySetInnerHTML={{ __html: content }}
     />

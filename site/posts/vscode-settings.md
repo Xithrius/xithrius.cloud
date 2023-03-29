@@ -1,10 +1,10 @@
 ---
 title: "My VSCode settings and extensions"
 excerpt: "Productivity, yes."
-date: "2022-09-24"
+date: "2023-03-04"
 ---
 
-Here are the current extensions that I use for Visual Studio Code:
+- [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens): Improve highlighting of errors, warnings and other language diagnostics.
 
 - [Atom Keymap](https://marketplace.visualstudio.com/items?itemName=ms-vscode.atom-keybindings): Popular Atom keybindings for Visual Studio Code
 
@@ -24,8 +24,6 @@ Here are the current extensions that I use for Visual Studio Code:
 
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme): Material Design Icons for Visual Studio Code.
 
-- [MDX](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx): Language support for MDX.
-
 - [One Dark Pro](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme): Atom‘s iconic One Dark theme for Visual Studio Code.
 
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode): Code formatter using prettier.
@@ -35,6 +33,10 @@ Here are the current extensions that I use for Visual Studio Code:
 - [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer): Rust language support for Visual Studio Code.
 
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss): Intelligent Tailwind CSS tooling for VS Code.
+
+- [Open in GitHub](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-open-in-github): Open the current project or file in github.com.
+
+- [Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff): A Visual Studio Code extension with support for the Ruff linter.
 
 Below is the JSON file for general settings, and the extensions from above. I use zen mode (similar to distraction-free mode in JetBrains products) so there's less unecessary components on the screen.
 
@@ -67,7 +69,6 @@ Below is the JSON file for general settings, and the extensions from above. I us
     "**/target/**": true
   },
   "rust-analyzer.diagnostics.enable": true,
-  "rust-analyzer.checkOnSave.command": "clippy",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "One Dark Pro Flat",
   "workbench.editor.wrapTabs": true,
@@ -75,7 +76,6 @@ Below is the JSON file for general settings, and the extensions from above. I us
   "debug.showBreakpointsInOverviewRuler": true,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
-  "atomKeymap.promptV3Features": true,
   "oneDarkPro.vivid": true,
   "files.autoSave": "afterDelay",
   "editor.renderWhitespace": "none",
@@ -83,12 +83,43 @@ Below is the JSON file for general settings, and the extensions from above. I us
   "workbench.startupEditor": "none",
   "diffEditor.ignoreTrimWhitespace": false,
   "workbench.sideBar.location": "right",
-  "window.menuBarVisibility": "hidden",
   "editor.smoothScrolling": true,
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromCodeNavigation": true,
   "zenMode.fullScreen": false,
   "zenMode.hideTabs": false,
-  "zenMode.hideLineNumbers": false
+  "zenMode.hideLineNumbers": false,
+  "eslint.validate": ["typescript", "typescriptreact"],
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "javascript.inlayHints.variableTypes.enabled": true,
+  "sqltools.highlightQuery": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "search.exclude": {
+    "**/dist/**": true,
+    "**/node_modules/**": true
+  },
+  "typescript.workspaceSymbols.scope": "currentProject",
+  "search.useGlobalIgnoreFiles": true,
+  "editor.inlayHints.fontSize": 13,
+  "workbench.colorCustomizations": {
+    "editorInlayHint.background": "#00000000",
+    "editorInlayHint.foreground": "#979696"
+  },
+  "window.menuBarVisibility": "toggle",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.idea": true,
+    "**/.pytest_cache": true,
+    "**/.venv": true,
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/coverage": true,
+    "**/.swc": true
+  },
+  "telemetry.telemetryLevel": "off"
 }
 ```

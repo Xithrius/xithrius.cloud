@@ -5,10 +5,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "dark-bg": "#212627",
-        "dark-fg": "#b8c0d3",
-        "light-bg": "#c7cde4",
-        "light-fg": "#3b4345",
+        "dark-bg": "#1c2023",
+        "dark-fg": "#c0c5ce",
+        "dark-code-bg": "#21262a",
+        "light-bg": "#eff1f5",
+        "light-fg": "#21262a",
+        "light-code-bg": "#e8e9ea",
         link: "#4280b3",
       },
       textDecoration: ["focus-visible"],
@@ -32,7 +34,7 @@ module.exports = {
             "--tw-prose-captions": theme("colors.light-fg"),
             "--tw-prose-code": theme("colors.light-fg"),
             "--tw-prose-pre-code": theme("colors.light-fg"),
-            "--tw-prose-pre-bg": theme("colors.light-fg"),
+            "--tw-prose-pre-bg": theme("colors.light-code-bg"),
             "--tw-prose-th-borders": theme("colors.light-fg"),
             "--tw-prose-td-borders": theme("colors.light-fg"),
 
@@ -50,7 +52,7 @@ module.exports = {
             "--tw-prose-invert-captions": theme("colors.dark-fg"),
             "--tw-prose-invert-code": theme("colors.dark-fg"),
             "--tw-prose-invert-pre-code": theme("colors.dark-fg"),
-            "--tw-prose-invert-pre-bg": theme("colors.light-fg"),
+            "--tw-prose-invert-pre-bg": theme("colors.dark-code-bg"),
             "--tw-prose-invert-th-borders": theme("colors.dark-fg"),
             "--tw-prose-invert-td-borders": theme("colors.dark-fg"),
           },

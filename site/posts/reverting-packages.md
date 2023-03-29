@@ -6,6 +6,8 @@ date: "2023-02-03"
 
 Having trouble with the current version of a package? Time to revert.
 
+Preface: the below commands can be easily executed with the [downgrade](https://aur.archlinux.org/packages/downgrade) AUR package. If you want to do the commands manually, continue reading.
+
 ## Pacman
 
 If you want to do this with pacman packages, look in the directory of `/var/cache/pacman/pkg`. Let's use [obs-studio](https://github.com/obsproject/obs-studio) as an example.
