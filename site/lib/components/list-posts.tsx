@@ -10,12 +10,7 @@ const ListPosts = ({ posts }: Props) => {
     <section>
       <div className="grid grid-cols-1">
         {posts.map((post) => (
-          <PostPreview
-            key={post.slug}
-            title={post.title}
-            date={post.date}
-            slug={post.slug}
-          />
+          <PostPreview key={post.slug} title={post.title} date={post.date} slug={post.slug} />
         ))}
       </div>
     </section>

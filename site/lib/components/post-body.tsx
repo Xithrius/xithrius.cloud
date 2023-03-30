@@ -10,10 +10,10 @@ const PostBody = ({ content }: Props) => {
       prose-xith
       mx-auto
       max-w-2xl
+      prose-code:mr-3
       prose-code:before:content-none
       prose-code:after:content-none
       dark:prose-invert
-      prose-code:mr-3
       "
       dangerouslySetInnerHTML={{ __html: content }}
     />

@@ -3,7 +3,7 @@ type Props = {
 };
 
 const Container = ({ children }: Props) => {
-  return <div className="container mx-auto place-content-center grid my-24">{children}</div>;
+  return <div className="container mx-auto my-24 grid place-content-center">{children}</div>;
 };
 
 export default Container;

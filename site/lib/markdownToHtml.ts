@@ -9,7 +9,7 @@ export default async function markdownToHtml(markdown: string) {
     .use(remarkParse)
     .use(remarkRehype, { allowDangerousHtml: true })
     // available themes - https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-themes
-    .use(rehypePrettyCode, {theme: 'one-dark-pro'})
+    .use(rehypePrettyCode, { theme: "one-dark-pro" })
     .use(rehypeStringify)
     .process(markdown);
 
