@@ -70,7 +70,7 @@ Below is the JSON file for general settings, and the extensions from above. I us
   "rust-analyzer.diagnostics.enable": true,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "One Dark Pro Flat",
-  "workbench.editor.wrapTabs": true,
+  "workbench.editor.wrapTabs": false,
   "debug.allowBreakpointsEverywhere": true,
   "debug.showBreakpointsInOverviewRuler": true,
   "explorer.confirmDragAndDrop": false,
@@ -81,7 +81,6 @@ Below is the JSON file for general settings, and the extensions from above. I us
   "editor.bracketPairColorization.enabled": true,
   "workbench.startupEditor": "none",
   "diffEditor.ignoreTrimWhitespace": false,
-  "workbench.sideBar.location": "right",
   "editor.smoothScrolling": true,
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromCodeNavigation": true,
@@ -119,6 +118,11 @@ Below is the JSON file for general settings, and the extensions from above. I us
     "**/coverage": true,
     "**/.swc": true
   },
-  "telemetry.telemetryLevel": "off"
+  "telemetry.telemetryLevel": "off",
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.visible": false,
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  }
 }
 ```
