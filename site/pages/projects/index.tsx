@@ -4,6 +4,7 @@ import Image from "next/image";
 import ThemeSwitch from "lib/components/themeswitch";
 import TopLeftNavigation from "lib/components/top-left-nav";
 import Container from "lib/components/container";
+import Stamp from "lib/components/stamp";
 
 const githubProjects = [
   "twitch-tui",
@@ -96,7 +97,9 @@ export default function Home({ projects, templates }: HomeProps) {
           ))}
         </div>
         <ThemeSwitch />
-        <TopLeftNavigation href="/">xithrius.cloud</TopLeftNavigation>
+        <TopLeftNavigation href="/">
+          <Stamp />
+        </TopLeftNavigation>
       </Container>
     </>
   );

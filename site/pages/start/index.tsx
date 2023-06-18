@@ -4,6 +4,7 @@ import { BsArrowRight } from "react-icons/bs";
 import { useEffect } from "react";
 import ThemeSwitch from "lib/components/themeswitch";
 import TopLeftNavigation from "lib/components/top-left-nav";
+import Stamp from "lib/components/stamp";
 
 const LINKS = [
   {
@@ -77,7 +78,9 @@ export default function Start() {
           </tbody>
         </table>
         <ThemeSwitch />
-        <TopLeftNavigation href="/">xithrius.cloud</TopLeftNavigation>
+        <TopLeftNavigation href="/">
+          <Stamp />
+        </TopLeftNavigation>
       </main>
     </>
   );

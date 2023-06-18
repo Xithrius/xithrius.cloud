@@ -6,7 +6,8 @@ import Container from "lib/components/container";
 import { utcToZonedTime } from "date-fns-tz";
 import { useEffect, useState } from "react";
 import TopLeftNavigation from "lib/components/top-left-nav";
-import Image from "next/image";
+import Stamp from "lib/components/stamp";
+// import Image from "next/image";
 
 const sitePages = ["Projects", "ToDo", "Blog", "Start"];
 
@@ -53,9 +54,12 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
       <Container>
-        <main className="-mt-20 flex flex-1 flex-col items-center justify-center text-center">
-          <Image src="/user_icon.svg" alt="Xithrius" width={512} height={512} />
-          <div className="-mt-20 flex w-3/5 justify-center border-t border-solid border-current py-5 text-xl">
+        <main className="flex flex-1 flex-col items-center justify-center text-center">
+          <div className="text-[10vw]">
+            <Stamp />
+          </div>
+
+          <div className="flex w-3/5 justify-center border-t border-solid border-current py-5 text-xl">
             {sitePages.map((element) => (
               <LinkElem
                 key={element}
@@ -72,7 +76,7 @@ export default function Home() {
       <TopLeftNavigation href="https://github.com/Xithrius">
         <SiGithub />
       </TopLeftNavigation>
-      <div className="absolute left-8 bottom-8 flex justify-center font-mono">
+      <div className="absolute bottom-8 left-8 flex justify-center font-mono">
         <TimezonedDate />
       </div>
     </>

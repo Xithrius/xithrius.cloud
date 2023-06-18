@@ -4,6 +4,7 @@ import ThemeSwitch from "lib/components/themeswitch";
 import TopLeftNavigation from "lib/components/top-left-nav";
 import Container from "lib/components/container";
 import todo from "lib/constants/todo_listing";
+import Stamp from "lib/components/stamp";
 
 interface todoItem {
   desc: string;
@@ -69,7 +70,9 @@ export default function Home() {
             return <TodoList key={e.year} year={e.year} items={e.items} />;
           })}
           <ThemeSwitch />
-          <TopLeftNavigation href="/">xithrius.cloud</TopLeftNavigation>
+          <TopLeftNavigation href="/">
+            <Stamp/>
+          </TopLeftNavigation>
         </main>
       </Container>
     </>
