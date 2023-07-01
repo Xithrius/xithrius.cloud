@@ -11,7 +11,7 @@ const PostHeader = ({ title, date }: Props) => {
   return (
     <>
       <PostTitle>{title}</PostTitle>
-      <div className="mx-auto max-w-2xl">
+      <div className="mx-auto max-w-2xl font-['Space_Mono']">
         <div className="flex-column mb-12 flex text-lg">
           <DateFormatter dateString={date} />
           <TopLeftNavigation href="/blog">back</TopLeftNavigation>
