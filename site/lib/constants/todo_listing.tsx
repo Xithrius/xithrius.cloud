@@ -60,7 +60,7 @@ const todo = [
     year: "2023",
     items: [
       { desc: "Survive again" },
-      { desc: "An actual full year contribution streak" },
+      { desc: "An actual full year contribution streak", done: true },
       {
         desc: "Create an one-for-all package manager",
         url: "https://github.com/Xithrius/nitride",
@@ -74,7 +74,7 @@ const todo = [
       { desc: "Get access to home server from anywhere", done: true },
       { desc: "User video game stats lookup" },
       { desc: "Gmail clone", done: true },
-      { desc: "Steam game data sync", url: "https://github.com/Xithrius/carbide" },
+      { desc: "Game config sync", url: "https://github.com/Xithrius/carbide" },
       { desc: "File vault with encryption" },
       { desc: "File explorer", url: "https://github.com/Xithrius/nitroxide" },
       {
@@ -89,6 +89,9 @@ const todo = [
       {
         desc: "Git diff statistics crate",
       },
+      {
+        desc: "Self-hostable RSS feed aggregator"
+      }
     ],
   },
 ];
