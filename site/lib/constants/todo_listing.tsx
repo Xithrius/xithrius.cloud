@@ -90,8 +90,9 @@ const todo = [
         desc: "Git diff statistics crate",
       },
       {
-        desc: "Self-hostable RSS feed aggregator"
-      }
+        desc: "TUI monitor for systemd services",
+        url: "https://github.com/Xithrius/systemd-tui",
+      },
     ],
   },
 ];

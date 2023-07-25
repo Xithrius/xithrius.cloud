@@ -7,8 +7,6 @@ date: "2023-03-04"
 
 - [Atom Keymap](https://marketplace.visualstudio.com/items?itemName=ms-vscode.atom-keybindings): Popular Atom keybindings for Visual Studio Code
 
-- [Better TOML](https://marketplace.visualstudio.com/items?itemName=bungcip.better-toml): Better TOML Language support.
-
 - [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb): A native debugger powered by LLDB. Debug C++, Rust and other compiled languages.
 
 - [Crates](https://marketplace.visualstudio.com/items?itemName=serayuzgur.crates): Helps Rust developers managing dependencies with Cargo.toml.
@@ -36,6 +34,8 @@ date: "2023-03-04"
 - [Open in GitHub](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-open-in-github): Open the current project or file in github.com.
 
 - [Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff): A Visual Studio Code extension with support for the Ruff linter.
+
+- [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml): Fully-featured TOML support
 
 Below is the JSON file for general settings, and the extensions from above. I use zen mode (similar to distraction-free mode in JetBrains products) so there's less unecessary components on the screen.
 
@@ -81,7 +81,6 @@ Below is the JSON file for general settings, and the extensions from above. I us
   "editor.bracketPairColorization.enabled": true,
   "workbench.startupEditor": "none",
   "diffEditor.ignoreTrimWhitespace": false,
-  "editor.smoothScrolling": true,
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromCodeNavigation": true,
   "zenMode.fullScreen": false,
@@ -90,7 +89,6 @@ Below is the JSON file for general settings, and the extensions from above. I us
   "eslint.validate": ["typescript", "typescriptreact"],
   "typescript.inlayHints.variableTypes.enabled": true,
   "javascript.inlayHints.variableTypes.enabled": true,
-  "sqltools.highlightQuery": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "search.exclude": {
     "**/dist/**": true,
