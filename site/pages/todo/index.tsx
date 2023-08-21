@@ -18,7 +18,7 @@ interface todoProps {
 }
 
 const TodoList = ({ year, items }: todoProps) => (
-  <div className="min-h-full">
+  <div>
     <div className="mb-5 flex justify-center text-3xl">{year}</div>
     <table className="table-auto border-collapse">
       <thead className="font-bold">
@@ -65,13 +65,15 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
       <Container>
-        <main className="flex w-screen flex-wrap content-start items-center justify-center gap-10 p-10 text-[1rem]">
-          {todo.map((e) => {
-            return <TodoList key={e.year} year={e.year} items={e.items} />;
-          })}
+        <main className="flex w-screen flex-col flex-wrap items-center justify-center gap-10 p-10 text-[1rem]">
+          {todo
+            .map((e) => {
+              return <TodoList key={e.year} year={e.year} items={e.items} />;
+            })
+            .reverse()}
           <ThemeSwitch />
           <TopLeftNavigation href="/">
-            <Stamp/>
+            <Stamp />
           </TopLeftNavigation>
         </main>
       </Container>
