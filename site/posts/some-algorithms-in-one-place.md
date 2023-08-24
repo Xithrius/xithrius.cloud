@@ -44,7 +44,7 @@ Node* reverse(Node* head) {
         prev = node;
         node = next;
     }
-    
+
     return prev;
 }
 ```
@@ -83,4 +83,3 @@ int main() {
 ```
 
 - Merge sort (todo)
-

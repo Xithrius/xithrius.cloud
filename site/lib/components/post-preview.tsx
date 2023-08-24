@@ -15,7 +15,7 @@ const PostPreview = ({ title, date, slug }: Props) => {
           <div className="opacity-50">
             <DateFormatter dateString={date} />
           </div>
-          <h3 className="mx-2 transition hover:underline underline-offset-2">{title}</h3>
+          <h3 className="mx-2 underline-offset-2 transition hover:underline">{title}</h3>
         </div>
       </div>
     </Link>

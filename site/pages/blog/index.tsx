@@ -30,6 +30,9 @@ export default function Index({ allPosts }: Props) {
       <TopLeftNavigation href="/">
         <Stamp />
       </TopLeftNavigation>
+      <div className="absolute bottom-8 right-8 flex justify-center">
+        <a href="/feed.xml">RSS</a>
+      </div>
     </>
   );
 }

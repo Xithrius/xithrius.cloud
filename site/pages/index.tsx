@@ -54,7 +54,7 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
       <Container>
-        <main className="flex flex-1 flex-col items-center justify-center text-center my-24">
+        <main className="my-24 flex flex-1 flex-col items-center justify-center text-center">
           <div className="text-[10vw]">
             <Stamp />
           </div>
