@@ -21,7 +21,7 @@ async function generate() {
 
       feed.item({
         title: frontmatter.data.title,
-        url: "/posts/" + name.replace(/\.mdx?/, ""),
+        url: "/blog/posts/" + name.replace(/\.mdx?/, ""),
         date: frontmatter.data.date,
         description: frontmatter.data.description,
         author: frontmatter.data.author,
