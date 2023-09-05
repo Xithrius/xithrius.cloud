@@ -10,7 +10,7 @@ type Props = {
 const PostPreview = ({ title, date, slug }: Props) => {
   return (
     <Link as={`blog/posts/${slug}`} href="blog/posts/[slug]">
-      <div className="p-1 pl-4 font-['Space_Mono']">
+      <div className="p-1 pl-4 ">
         <div className="flex flex-row">
           <div className="opacity-50">
             <DateFormatter dateString={date} />

@@ -10,7 +10,6 @@ const PostBody = ({ content }: Props) => {
       prose-xith
       mx-auto
       max-w-2xl
-      font-['Space_Mono']
       dark:prose-invert
       prose-code:before:content-none
       prose-code:after:content-none

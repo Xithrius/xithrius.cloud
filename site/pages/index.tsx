@@ -76,7 +76,7 @@ export default function Home() {
       <TopLeftNavigation href="https://github.com/Xithrius">
         <SiGithub />
       </TopLeftNavigation>
-      <div className="absolute bottom-8 left-8 flex justify-center font-mono">
+      <div className="absolute bottom-8 left-8 flex justify-center">
         <TimezonedDate />
       </div>
     </>

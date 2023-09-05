@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Turret+Road:wght@200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&family=Turret+Road:wght@200&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,7 +6,7 @@
 
 @layer base {
   html {
-    font-family: "Montserrat", "Turret Road", "Space Mono";
+    font-family: "JetBrains Mono", "Turret Road";
   }
 
   body {
