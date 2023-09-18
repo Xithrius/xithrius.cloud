@@ -74,12 +74,9 @@ const todo = [
       { desc: "Get access to home server from anywhere", done: true },
       { desc: "User video game stats lookup" },
       { desc: "Gmail clone", done: true },
-      { desc: "Game config sync", url: "https://github.com/Xithrius/carbide" },
+      { desc: "Game config sync", url: "https://github.com/Xithrius/alacrite" },
       { desc: "File vault with encryption" },
       { desc: "File explorer", url: "https://github.com/Xithrius/nitroxide" },
-      {
-        desc: "Gitea with woodpecker-ci, gitea-awesome",
-      },
       {
         desc: "Control fan with ESP32 module, temp/humidity sensor",
       },
@@ -87,11 +84,10 @@ const todo = [
         desc: "Complete one of the years for Advent of Code",
       },
       {
-        desc: "Git diff statistics crate",
+        desc: "Create QOL scripts for remote server interactions",
       },
       {
-        desc: "TUI monitor for systemd services",
-        url: "https://github.com/Xithrius/systemd-tui",
+        desc: "Perfect current i3wm config looks and workflows",
       },
     ],
   },
