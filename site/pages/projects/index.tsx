@@ -24,6 +24,7 @@ const githubTemplates = [
   "rust-aoc-template",
   "python-project-template",
   "nextjs-project-template",
+  "nextjs-fastapi-auth-template",
   "cpp-project-template",
   "c-project-template",
 ];
