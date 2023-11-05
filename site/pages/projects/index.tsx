@@ -9,6 +9,7 @@ import Stamp from "lib/components/stamp";
 const githubProjects = [
   "twitch-tui",
   "Xythrion",
+  "Ordis",
   "xithrius.cloud",
   "titan.xithrius.cloud",
   "competitive-programming",
@@ -19,14 +20,8 @@ const githubProjects = [
 
 const githubTemplates = [
   "rust-binary-project-template",
-  "rust-library-project-template",
-  "rust-tui-project-template",
-  "rust-aoc-template",
-  "python-project-template",
-  "nextjs-project-template",
   "nextjs-fastapi-auth-template",
-  "cpp-project-template",
-  "c-project-template",
+  "python-project-template",
 ];
 
 interface InfoProps {
