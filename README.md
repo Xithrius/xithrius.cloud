@@ -1,6 +1,6 @@
 # xithrius.cloud
 
-Personal website with the chaos of microservices.
+Personal portfolio website.
 
 [![CI](https://github.com/Xithrius/xithrius.cloud/actions/workflows/ci.yml/badge.svg)](https://github.com/Xithrius/xithrius.cloud/actions/workflows/ci.yml)
 [![Lines of code](https://tokei.rs/b1/github/Xithrius/xithrius.cloud?category=code)](https://github.com/Xithrius/xithrius.cloud)
