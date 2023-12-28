@@ -1,12 +1,12 @@
 <template>
   <NuxtLink :to="article._path" class="group">
     <article>
-      <div className="p-1 pl-4">
-        <div className="flex flex-row">
-          <div className="opacity-50">
+      <div class="p-1 pl-4">
+        <div class="flex flex-row">
+          <div class="opacity-50">
             {{ getReadableDate(article.date) }}
           </div>
-          <h3 className="mx-2 underline-offset-2 transition hover:underline">
+          <h3 class="mx-2 underline-offset-2 transition hover:underline">
             {{ article.title }}
           </h3>
         </div>
