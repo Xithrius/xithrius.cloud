@@ -5,14 +5,16 @@
     >
       <span
         class="font-medium text-sm text-gray-600 dark:text-gray-500 bg-gray-50 dark:bg-black pr-4"
-        >{{ title }}</span
-      >
+      >{{ title }}</span>
     </div>
   </li>
 </template>
 
 <script lang="ts" setup>
 defineProps({
-  title: String,
-});
+  title: {
+    type: String,
+    required: true,
+  },
+})
 </script>

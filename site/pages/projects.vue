@@ -17,11 +17,11 @@
 
 <script setup>
 useSeoMeta({
-  title: "Projects & Templates | Xithrius",
-  description: "Projects showcase and templates for repositories",
-});
+  title: 'Projects & Templates | Xithrius',
+  description: 'Projects showcase and templates for repositories',
+})
 
-const { data: projects } = await useAsyncData("projects-all", () =>
-  queryContent("/projects").find()
-);
+const { data: projects } = await useAsyncData('projects-all', () =>
+  queryContent('/projects').find()
+)
 </script>
