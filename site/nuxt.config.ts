@@ -1,5 +1,10 @@
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+    timeline: {
+      enabled: true,
+    },
+  },
   modules: [
     "@nuxt/ui",
     "nuxt-icon",
@@ -20,7 +25,7 @@ export default defineNuxtConfig({
         class: "h-full",
       },
       bodyAttrs: {
-        class: "antialiased bg-gray-50 dark:bg-black min-h-screen",
+        class: "antialiased dark:bg-zinc-900 min-h-screen",
       },
     },
   },
@@ -37,5 +42,15 @@ export default defineNuxtConfig({
       "JetBrains+Mono": [200],
     },
     download: true,
+  },
+  colorMode: {
+    preference: "system",
+    fallback: "light",
+    hid: "nuxt-color-mode-script",
+    globalName: "__NUXT_COLOR_MODE__",
+    componentName: "ColorScheme",
+    classPrefix: "",
+    classSuffix: "-mode",
+    storageKey: "nuxt-color-mode",
   },
 });
