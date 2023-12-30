@@ -9,3 +9,10 @@
     </div>
   </main>
 </template>
+
+<script setup>
+useSeoMeta({
+  title: 'xithrius.cloud',
+})
+
+</script>

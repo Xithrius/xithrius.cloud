@@ -11,7 +11,7 @@
 
 <script setup>
 useSeoMeta({
-  title: 'Blog posts | Xithrius',
+  title: 'Blog posts | xithrius.cloud',
   description: 'Blog posts, guides, and fixes',
 })
 

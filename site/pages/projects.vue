@@ -16,7 +16,7 @@
 
 <script setup>
 useSeoMeta({
-  title: 'Projects & Templates | Xithrius',
+  title: 'Projects & Templates | xithrius.cloud',
   description: 'Projects showcase and templates for repositories',
 })
 

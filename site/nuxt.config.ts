@@ -21,6 +21,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in', duration: 150 },
     head: {
+      link: [{ rel: 'icon', href: '/favicon.ico' }],
       htmlAttrs: {
         lang: 'en',
         class: 'h-full',

@@ -16,7 +16,7 @@
 
 <script setup>
 useSeoMeta({
-  title: 'ToDo | Xithrius',
+  title: 'ToDo | xithrius.cloud',
   description: 'Tasks and Goals for the future',
 })
 
