@@ -1,11 +1,25 @@
+<script setup lang="ts">
+useHead({
+  meta: [
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+  ],
+  link: [
+    { rel: 'icon', href: '/favicon.ico' }
+  ],
+  htmlAttrs: {
+    lang: 'en'
+  }
+})
+
+</script>
+
 <template>
   <NuxtLoadingIndicator color="#14b8a6" />
-  <AppNavbar />
-  <div class="h-32" />
-  <UContainer>
-    <NuxtPage />
-  </UContainer>
-  <div class="h-32" />
+  <NuxtLayout>
+    <UContainer>
+      <NuxtPage />
+    </UContainer>
+  </NuxtLayout>
 </template>
 
 <style>

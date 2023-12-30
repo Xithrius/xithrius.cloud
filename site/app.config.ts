@@ -1,4 +1,7 @@
 export default defineAppConfig({
+  globals: {
+    title: 'site',
+  },
   ui: {
     primary: 'red',
     gray: 'cool',

@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/content',
     '@vueuse/nuxt',
+    '@vueuse/motion/nuxt',
   ],
   ui: {
     icons: ['heroicons', 'lucide'],
@@ -27,6 +28,7 @@ export default defineNuxtConfig({
       bodyAttrs: {
         class: 'antialiased dark:bg-zinc-900 min-h-screen',
       },
+      viewport: 'width=device-width, initial-scale=1',
     },
   },
   content: {

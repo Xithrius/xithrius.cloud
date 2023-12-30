@@ -1,15 +1,13 @@
 <template>
   <NuxtLink :to="article._path" class="group">
     <article>
-      <div class="p-1 pl-4">
-        <div class="flex flex-row">
-          <div class="opacity-50">
-            {{ getReadableDate(article.date) }}
-          </div>
-          <h3 class="mx-2 underline-offset-2 transition hover:underline">
-            {{ article.title }}
-          </h3>
+      <div class="flex flex-row">
+        <div class="opacity-50">
+          {{ getReadableDate(article.date) }}
         </div>
+        <h3 class="mx-2 underline-offset-2 transition hover:underline">
+          {{ article.title }}
+        </h3>
       </div>
     </article>
   </NuxtLink>

@@ -1,9 +1,8 @@
 <template>
   <main class="min-h-screen">
     <AppHeader
-      class="mb-12"
+      class="mb-16"
       title="Projects & Templates"
-      :description="description"
     />
     <div class="space-y-4">
       <AppProjectCard
