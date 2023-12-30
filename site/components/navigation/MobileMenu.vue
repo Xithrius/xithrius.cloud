@@ -1,16 +1,14 @@
 <script setup lang="ts">
-import type { NavigationItem } from '~~/types'
-
-const items: NavigationItem[] = [
-  { name: 'Home', path: '/', icon: 'solar:home-smile-outline' },
+const items = [
+  { label: 'Home', to: '/', icon: 'solar:home-smile-outline' },
   {
-    name: 'Blog',
-    path: '/posts',
+    label: 'Blog',
+    to: '/posts',
     icon: 'solar:document-add-outline',
   },
   {
-    name: 'Projects',
-    path: '/projects',
+    label: 'Projects',
+    to: '/projects',
     icon: 'solar:folder-with-files-outline',
   },
 ]
@@ -25,7 +23,6 @@ const toggle = () => {
 	subMenuOpen.value = false
 }
 
-// Watch route changes and close the menu
 watch(
 	() => route.path,
 	() => {
@@ -33,7 +30,6 @@ watch(
 	},
 )
 
-// Disbale scrolling when the menu is open
 watch(
 	() => isOpen.value,
 	(newVal) => {
@@ -64,7 +60,8 @@ watch(
       }"
       :leave="{
         opacity: 0,
-        x: 400,
+        y: 0,
+        x: -400,
         scale: 1,
         transition: {
           duration: 150,
@@ -76,7 +73,20 @@ watch(
         <AppThemeToggle />
       </div>
       <div class="flex flex-col justify-center h-full px-6 space-y-12">
-        <NavigationMobileMenuItem v-for="item in items" :key="item.name" :item="item" @close="toggle" />
+        <UVerticalNavigation
+          :links="items"
+          :ui="{
+            wrapper: 'border-s border-gray-200 dark:border-gray-800 space-y-2',
+            base: 'group block border-s -ms-px lg:leading-4 before:hidden',
+            padding: 'p-6 ps-4',
+            rounded: '',
+            font: '',
+            ring: '',
+            size: 'text-2xl',
+            active: 'text-primary-500 dark:text-primary-400 border-current font-semibold',
+            inactive: 'border-transparent hover:border-gray-400 dark:hover:border-gray-500 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300'
+          }"
+        />
       </div>
     </Motionable>
 
