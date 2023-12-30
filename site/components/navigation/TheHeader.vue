@@ -2,17 +2,22 @@
 import type { NavigationItem } from '~/types'
 
 const items: NavigationItem[] = [
-  { name: 'Home', path: '/', icon: 'solar:home-smile-outline' },
   {
-    name: 'Blog',
-    path: '/posts',
-    icon: 'solar:document-add-outline',
+    label: 'Home',
+    to: '/',
   },
   {
-    name: 'Projects',
-    path: '/projects',
-    icon: 'solar:folder-with-files-outline',
+    label: 'Blog',
+    to: '/posts',
   },
+  {
+    label: 'Projects',
+    to: '/projects',
+  },
+  {
+    label: 'ToDo',
+    to: '/todo',
+  }
 ]
 </script>
 
@@ -23,19 +28,16 @@ const items: NavigationItem[] = [
     <div
       class="flex items-center dark:bg-zinc-900 bg-zinc-200 justify-between py-2 px-6 md:flex-1 rounded-lg shadow-md"
     >
-      <NuxtLink
-        href="https://github.com/Xithrius"
-      >
-        <Icon
-          aria-hidden="true"
-          name="iconoir:github"
-          class="w-5 h-5"
-        />
+      <NuxtLink href="https://github.com/Xithrius">
+        <Icon aria-hidden="true" name="iconoir:github" class="w-5 h-5" />
       </NuxtLink>
-      <nav class="hidden md:flex md:space-x-4 lg:space-x-6" aria-label="Global navigation">
+      <nav
+        class="hidden md:flex md:space-x-4 lg:space-x-6"
+        aria-label="Global navigation"
+      >
         <NavigationMenuItem
           v-for="item in items"
-          :key="item.name"
+          :key="item.label"
           :item="item"
         />
       </nav>

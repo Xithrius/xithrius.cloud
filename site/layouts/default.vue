@@ -7,7 +7,7 @@
       <NavigationTheHeader />
     </div>
 
-    <div class="relative pt-8">
+    <div class="relative py-8">
       <slot />
     </div>
   </div>

@@ -1,16 +1,23 @@
 <script setup lang="ts">
-const items = [
-  { label: 'Home', to: '/', icon: 'solar:home-smile-outline' },
+import type { NavigationItem } from '~/types'
+
+const items: NavigationItem[] = [
+  {
+    label: 'Home',
+    to: '/',
+  },
   {
     label: 'Blog',
     to: '/posts',
-    icon: 'solar:document-add-outline',
   },
   {
     label: 'Projects',
     to: '/projects',
-    icon: 'solar:folder-with-files-outline',
   },
+  {
+    label: 'ToDo',
+    to: '/todo',
+  }
 ]
 
 const route = useRoute()

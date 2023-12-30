@@ -7,11 +7,11 @@ defineProps<{
 </script>
 <template>
   <NuxtLink
-    :href="item.path"
+    :href="item.to"
     class="relative px-3 py-4 flex items-center justify-center transition hover:text-primary-400 dark:hover:text-primary-400"
     active-class="text-primary-500 dark:text-primary-500"
     :target="'_self'"
   >
-    {{ item.name }}
+    {{ item.label }}
   </NuxtLink>
 </template>

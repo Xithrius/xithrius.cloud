@@ -1,5 +1,4 @@
 export interface NavigationItem {
-  name: string;
-  path: string;
-  icon?: string | null;
+  label: string;
+  to: string;
 }
