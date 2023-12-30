@@ -6,7 +6,7 @@
     external
   >
     <div class="max-w-sm">
-      <h3 class="font-medium group-hover:text-primary-600">
+      <h3 class="font-medium group-hover:text-primary-500">
         {{ project.name }}
       </h3>
       <p class="text-gray-400 text-sm">

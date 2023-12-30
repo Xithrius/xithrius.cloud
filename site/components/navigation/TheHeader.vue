@@ -21,13 +21,18 @@ const items: NavigationItem[] = [
     class="relative w-full mx-auto space-y-4 md:flex md:items-center md:space-y-0 md:gap-x-4"
   >
     <div
-      class="flex items-center bg-gray-900 justify-between py-2 px-6 md:flex-1 rounded-card"
+      class="flex items-center dark:bg-zinc-900 bg-zinc-200 justify-between py-2 px-6 md:flex-1 rounded-lg shadow-md"
     >
-      <NuxtLink href="/" class="py-2">
-        <Logo class="h-6 text-white" />
-        <span class="sr-only">{{ title }}</span>
+      <NuxtLink
+        href="https://github.com/Xithrius"
+      >
+        <Icon
+          aria-hidden="true"
+          name="iconoir:github"
+          class="w-5 h-5"
+        />
       </NuxtLink>
-      <nav class="hidden md:flex md:space-x-4 lg:space-x-6" aria-label="Global">
+      <nav class="hidden md:flex md:space-x-4 lg:space-x-6" aria-label="Global navigation">
         <NavigationMenuItem
           v-for="item in items"
           :key="item.name"

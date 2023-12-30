@@ -56,25 +56,26 @@ watch(
       :enter="{
         opacity: 1,
         y: 0,
+        x: 0,
         scale: 1,
         transition: {
-          duration: 300,
+          duration: 150,
         },
       }"
       :leave="{
         opacity: 0,
-        y: 400,
-        scale: 0.9,
+        x: 400,
+        scale: 1,
         transition: {
-          duration: 300,
+          duration: 150,
         },
       }"
-      class="fixed inset-0 z-50 flex flex-col w-full h-full bg-gray-50 dark:bg-gray-800"
+      class="fixed inset-0 z-50 flex flex-col w-full h-full bg-white dark:bg-zinc-800"
     >
       <div class="relative w-full px-6 pt-6 flex justify-between border-b dark:border-gray-700 items-start">
         <AppThemeToggle />
       </div>
-      <div class="flex flex-col justify-center h-full px-6 space-y-4">
+      <div class="flex flex-col justify-center h-full px-6 space-y-12">
         <NavigationMobileMenuItem v-for="item in items" :key="item.name" :item="item" @close="toggle" />
       </div>
     </Motionable>
@@ -83,7 +84,7 @@ watch(
       :class="{
         'bg-primary': isOpen || !isOpen,
       }"
-      class="fixed z-50 p-4 text-white transition duration-300 shadow-md md:hidden bottom-4 right-4 bg-primary hover:bg-opacity-75 rounded-button"
+      class="fixed z-50 p-4 text-white transition duration-300 shadow-md md:hidden bottom-4 right-4 bg-primary hover:bg-opacity-75 rounded-lg"
       @click="toggle"
     >
       <div>
