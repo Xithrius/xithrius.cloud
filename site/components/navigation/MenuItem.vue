@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationItem } from '~~/types'
+import type { NavigationItem } from '~/types/navigation'
 
 defineProps<{
   item: NavigationItem;

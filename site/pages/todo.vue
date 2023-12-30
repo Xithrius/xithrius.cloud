@@ -8,7 +8,7 @@
       <AppToDoTable
         v-for="(todo, id) in todos"
         :key="id"
-        :todo="todo.todo"
+        :todo="todo"
       />
     </div>
   </main>

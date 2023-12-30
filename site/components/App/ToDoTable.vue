@@ -21,7 +21,7 @@ defineProps({
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in todo" :key="item.desc">
+        <tr v-for="item in todo.todo" :key="item.desc">
           <td>
             <Icon v-if="item.done" name="heroicons:check" class="w-6 h-6" />
           </td>
