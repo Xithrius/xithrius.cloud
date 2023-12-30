@@ -1,6 +1,6 @@
 # xithrius.cloud
 
-Personal portfolio website.
+Personal portfolio website, written in Nuxt.
 
 [![CI](https://github.com/Xithrius/xithrius.cloud/actions/workflows/ci.yml/badge.svg)](https://github.com/Xithrius/xithrius.cloud/actions/workflows/ci.yml)
 [![Lines of code](https://tokei.rs/b1/github/Xithrius/xithrius.cloud?category=code)](https://github.com/Xithrius/xithrius.cloud)
@@ -10,32 +10,22 @@ Personal portfolio website.
 <table>
 <tr>
 <td> <b>Domain</b>
-<td> <b>Rendering type</b>
 <td> <b>Description</b>
 
 <tr>
  <td> https://xithrius.cloud
- <td> Server Side Rendering
- <td> Links to all other subdomains, homepage
+ <td> Homepage, with navigation to all other parts of the site
 
 <tr>
  <td> https://xithrius.cloud/blog
- <td> Static
- <td> I like to write guides, and things that I've recently discovered
+ <td> Blogs, guides, and fixes
 
 <tr>
  <td> https://xithrius.cloud/projects
- <td> Incremental Static Regeneration
  <td> Project/template repository showcase
 
 <tr>
- <td> https://xithrius.cloud/start
- <td> Static
- <td> A very simple start page
-
-<tr>
  <td> https://xithrius.cloud/todo
- <td> Static
- <td> What I'm going TODO over the year(s)
+ <td> What is to come in the future
 
 </table>
