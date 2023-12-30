@@ -8,7 +8,7 @@ export interface HorizontalNavigationProps {
 	];
 }
 
-const props = defineProps<HorizontalNavigationProps>()
+defineProps<HorizontalNavigationProps>()
 </script>
 
 <template>

@@ -52,8 +52,7 @@ export interface PageBlock {
 				| BlockStep
 				| BlockTeam
 				| BlockTestimonial
-				| BlockVideo
-		  )[]
+				| BlockVideo)[]
 		| null;
 	pages_id?: (string | Page) | null;
 	sort?: number | null;

@@ -1,14 +1,14 @@
 <script setup lang="ts">
 const subMenuOpen = ref(false)
 
-const props = defineProps({
+defineProps({
 	item: {
 		type: Object,
 		required: true,
 	},
 })
 
-const emit = defineEmits(['close'])
+defineEmits(['close'])
 </script>
 <template>
   <button class="flex items-center rounded-md" @click="subMenuOpen = !subMenuOpen">

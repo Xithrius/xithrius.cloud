@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import type { NavigationItem } from '~~/types'
 
-const route = useRoute()
-
-const props = defineProps<{
+defineProps<{
   item: NavigationItem;
 }>()
 </script>

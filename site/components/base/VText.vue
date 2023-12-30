@@ -5,7 +5,7 @@ export interface TextProps {
 	textColor?: 'default' | 'light';
 }
 
-const props = withDefaults(defineProps<TextProps>(), {
+withDefaults(defineProps<TextProps>(), {
 	as: 'p',
 	size: 'sm',
 	textColor: 'default',

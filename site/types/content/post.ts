@@ -1,4 +1,4 @@
-import type { User, File } from '../system'
+import type { File } from '../system'
 import type { SEO } from '../meta'
 import type { Category, Team } from '../content'
 

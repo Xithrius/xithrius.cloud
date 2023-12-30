@@ -70,8 +70,7 @@ export interface OsProposalBlock {
 				| BlockRichtext
 				| BlockStep
 				| BlockTeam
-				| BlockVideo
-		  )[]
+				| BlockVideo)[]
 		| null;
 	collection?: string | null;
 }
