@@ -1,0 +1,30 @@
+{
+  "todo": [
+    {
+      "desc": "Survive yet again"
+    },
+    {
+      "desc": "Rewrite this site in Nuxt"
+    },
+    {
+      "desc": "Get Ordis (Warframe market bot) into a production state",
+      "url": "https://github.com/Xithrius/Ordis"
+    },
+    {
+      "desc": "Get Xythrion (General utility bot) into a production state",
+      "url": "https://github.com/Xithrius/Xythrion"
+    },
+    {
+      "desc": "Adafruit Metro ESP32-S2 to provide temperature readings (through Circuit Python)"
+    },
+    {
+      "desc": "Automate repetitive workflow setups for i3wm"
+    },
+    {
+      "desc": "Kitty terminal framework for setting up projects via config files"
+    },
+    {
+      "desc": "Complete a modern C++ course"
+    }
+  ]
+}

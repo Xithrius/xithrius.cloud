@@ -1,0 +1,37 @@
+{
+  "todo": [
+    { "desc": "Survive again" },
+    { "desc": "An actual full year contribution streak", "done": true },
+    {
+      "desc": "Create an one-for-all package manager",
+      "url": "https://github.com/Xithrius/nitride"
+    },
+    {
+      "desc": "Discord bot for graphing",
+      "url": "https://github.com/Xithrius/Xythrion"
+    },
+    { "desc": "Create systemd service(s) to alert when something happens" },
+    { "desc": "Take an online course for circuit analysis" },
+    { "desc": "Get access to home server from anywhere", "done": true },
+    { "desc": "User video game stats lookup" },
+    { "desc": "Gmail clone", "done": true },
+    {
+      "desc": "Game config sync",
+      "url": "https://github.com/Xithrius/alacrite"
+    },
+    { "desc": "File vault with encryption" },
+    { "desc": "File explorer", "url": "https://github.com/Xithrius/nitroxide" },
+    {
+      "desc": "Control fan with ESP32 module, temp/humidity sensor"
+    },
+    {
+      "desc": "Complete one of the years for Advent of Code"
+    },
+    {
+      "desc": "Create QOL scripts for remote server interactions"
+    },
+    {
+      "desc": "Perfect current i3wm config looks and workflows"
+    }
+  ]
+}
