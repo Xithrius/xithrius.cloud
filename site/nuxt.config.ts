@@ -43,6 +43,7 @@ export default defineNuxtConfig({
       Inter: [400, 500, 600, 700, 800, 900],
       'Turret+Road': [200],
       'JetBrains+Mono': [200],
+      monospace: [200],
     },
     download: true,
   },
