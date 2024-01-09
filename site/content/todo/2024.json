@@ -4,7 +4,8 @@
       "desc": "Survive yet again"
     },
     {
-      "desc": "Rewrite this site in Nuxt"
+      "desc": "Rewrite this site in Nuxt",
+      "done": true
     },
     {
       "desc": "Get Ordis (Warframe market bot) into a production state",
@@ -25,6 +26,13 @@
     },
     {
       "desc": "Complete a modern C++ course"
+    },
+    {
+      "desc": "General config file sync",
+      "url": "https://github.com/Xithrius/alacrite"
+    },
+    {
+      "desc": "Search engine that summarizes results via LLM(s)"
     }
   ]
 }

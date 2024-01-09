@@ -1,6 +1,6 @@
 {
   "todo": [
-    { "desc": "Survive again" },
+    { "desc": "Survive again", "done": true },
     { "desc": "An actual full year contribution streak", "done": true },
     {
       "desc": "Create an one-for-all package manager",
