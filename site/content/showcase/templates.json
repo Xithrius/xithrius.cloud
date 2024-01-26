@@ -1,0 +1,14 @@
+{
+  "repositories": [
+    {
+      "name": "nextjs-fastapi-auth-template",
+      "url": "https://github.com/Xithrius/nextjs-fastapi-auth-template",
+      "description": "Next.js, FastAPI-users, iron-session, and SQLAlchemy"
+    },
+    {
+      "name": "rust-binary-project-template",
+      "url": "https://github.com/Xithrius/rust-binary-project-template",
+      "description": "A template for Rust binary projects"
+    }
+  ]
+}

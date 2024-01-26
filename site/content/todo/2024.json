@@ -28,11 +28,11 @@
       "desc": "Complete a modern C++ course"
     },
     {
-      "desc": "General config file sync",
-      "url": "https://github.com/Xithrius/alacrite"
+      "desc": "General config file sync"
     },
     {
-      "desc": "Search engine that summarizes results via LLM(s)"
+      "desc": "Search engine that summarizes results via LLM(s)",
+      "url": "https://github.com/Xithrius/Solarius"
     }
   ]
 }

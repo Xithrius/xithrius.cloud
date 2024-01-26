@@ -1,0 +1,54 @@
+{
+  "repositories": [
+    {
+      "name": "twitch-tui",
+      "url": "https://github.com/Xithrius/twitch-tui",
+      "description": "Twitch chat in the terminal"
+    },
+    {
+      "name": "xithrius.cloud",
+      "url": "https://github.com/Xithrius/xithrius.cloud",
+      "description": "Personal portfolio website"
+    },
+    {
+      "name": "Solarius",
+      "url": "https://github.com/Xithrius/Solarius",
+      "description": "Summarizing results of your favorite search engines"
+    },
+    {
+      "name": "Xythrion",
+      "url": "https://github.com/Xithrius/Xythrion",
+      "description": "Discord graphing bot"
+    },
+    {
+      "name": "Competitive programming",
+      "url": "https://github.com/Xithrius/competitive-programming",
+      "description": "Competitive programming on different platforms"
+    },
+    {
+      "name": "Gradient skins",
+      "url": "https://github.com/Xithrius/gradient-skins",
+      "description": "Generate gradient Minecraft skins with ease"
+    },
+    {
+      "name": "Nitroxide",
+      "url": "https://github.com/Xithrius/nitroxide",
+      "description": "Another modern file explorer"
+    },
+    {
+      "name": "Ordis",
+      "url": "https://github.com/Xithrius/Ordis",
+      "description": "Cephalon Ordis from Warframe as a Discord bot"
+    },
+    {
+      "name": "timezone-tracker",
+      "url": "https://github.com/Xithrius/timezone-tracker",
+      "description": "Converting/tracking timezones of others relative to your local time"
+    },
+    {
+      "name": "titan.xithrius.cloud",
+      "url": "https://github.com/Xithrius/titan.xithrius.cloud",
+      "description": "Home server setup"
+    }
+  ]
+}

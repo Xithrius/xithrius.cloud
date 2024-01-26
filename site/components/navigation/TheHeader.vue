@@ -11,8 +11,8 @@ const items: NavigationItem[] = [
     to: '/posts',
   },
   {
-    label: 'Projects',
-    to: '/projects',
+    label: 'Showcase',
+    to: '/showcase',
   },
   {
     label: 'ToDo',

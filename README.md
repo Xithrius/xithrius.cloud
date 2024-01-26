@@ -21,7 +21,7 @@ Personal portfolio website, written in Nuxt.
  <td> Blogs, guides, and fixes
 
 <tr>
- <td> https://xithrius.cloud/projects
+ <td> https://xithrius.cloud/showcase
  <td> Project/template repository showcase
 
 <tr>
