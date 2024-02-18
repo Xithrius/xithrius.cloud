@@ -10,3 +10,4 @@ Places to practice competitive programming, and/or to prepare for programming in
 - [Codewars](https://www.codewars.com/)
 - [Kattis](https://open.kattis.com/)
 - [Hackerrank](https://www.hackerrank.com/)
+- [CSES](https://cses.fi/)

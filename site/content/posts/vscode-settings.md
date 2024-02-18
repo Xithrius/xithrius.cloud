@@ -71,6 +71,15 @@ Below is the JSON file for general settings, and the extensions from above. I us
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "One Dark Pro Flat",
   "workbench.editor.wrapTabs": false,
+  "workbench.panel.defaultLocation": "right",
+  "workbench.startupEditor": "none",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
+  "workbench.colorCustomizations": {
+    "editorInlayHint.background": "#00000000",
+    "editorInlayHint.foreground": "#979696"
+  },
+  "workbench.sideBar.location": "right",
   "debug.allowBreakpointsEverywhere": true,
   "debug.showBreakpointsInOverviewRuler": true,
   "explorer.confirmDragAndDrop": false,
@@ -79,17 +88,12 @@ Below is the JSON file for general settings, and the extensions from above. I us
   "files.autoSave": "afterDelay",
   "editor.renderWhitespace": "none",
   "editor.bracketPairColorization.enabled": true,
-  "workbench.startupEditor": "none",
   "diffEditor.ignoreTrimWhitespace": false,
-  "workbench.editor.enablePreview": false,
-  "workbench.editor.enablePreviewFromCodeNavigation": true,
   "zenMode.fullScreen": false,
-  "zenMode.hideTabs": false,
   "zenMode.hideLineNumbers": false,
   "eslint.validate": ["typescript", "typescriptreact"],
   "typescript.inlayHints.variableTypes.enabled": true,
   "javascript.inlayHints.variableTypes.enabled": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "search.exclude": {
     "**/dist/**": true,
     "**/node_modules/**": true
@@ -97,15 +101,6 @@ Below is the JSON file for general settings, and the extensions from above. I us
   "typescript.workspaceSymbols.scope": "currentProject",
   "search.useGlobalIgnoreFiles": true,
   "editor.inlayHints.fontSize": 13,
-  "workbench.colorCustomizations": {
-    "editorInlayHint.background": "#00000000",
-    "editorInlayHint.foreground": "#979696"
-  },
-  "window.menuBarVisibility": "toggle",
-  "editor.cursorSmoothCaretAnimation": "on",
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.python"
-  },
   "files.exclude": {
     "**/__pycache__": true,
     "**/.idea": true,
@@ -114,13 +109,28 @@ Below is the JSON file for general settings, and the extensions from above. I us
     "**/node_modules": true,
     "**/.next": true,
     "**/coverage": true,
-    "**/.swc": true
+    "**/.swc": true,
+    "**/.mypy_cache": true,
+    "**/.ruff_cache": true,
+    "**/.pdm-python": true
   },
   "telemetry.telemetryLevel": "off",
-  "workbench.sideBar.location": "right",
-  "workbench.activityBar.visible": false,
   "[cpp]": {
     "editor.defaultFormatter": "xaver.clang-format"
-  }
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "python.testing.pytestArgs": ["."],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "python.languageServer": "Pylance",
+  "window.menuBarVisibility": "toggle",
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "python.analysis.autoFormatStrings": true,
+  "window.density.editorTabHeight": "compact"
 }
 ```

@@ -9,11 +9,13 @@
     },
     {
       "desc": "Get Ordis (Warframe market bot) into a production state",
-      "url": "https://github.com/Xithrius/Ordis"
+      "url": "https://github.com/Xithrius/Ordis",
+      "done": true
     },
     {
       "desc": "Get Xythrion (General utility bot) into a production state",
-      "url": "https://github.com/Xithrius/Xythrion"
+      "url": "https://github.com/Xithrius/Xythrion",
+      "done": true
     },
     {
       "desc": "Adafruit Metro ESP32-S2 to provide temperature readings (through Circuit Python)"
