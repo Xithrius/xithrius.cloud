@@ -1,13 +1,10 @@
 <script setup lang="ts">
 useHead({
-  meta: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-  ],
+  meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
   htmlAttrs: {
-    lang: 'en'
-  }
+    lang: 'en',
+  },
 })
-
 </script>
 
 <template>

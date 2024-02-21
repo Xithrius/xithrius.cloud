@@ -7,12 +7,14 @@
         <HomeIntro />
       </div>
     </div>
+    <CommandPalette />
   </main>
 </template>
 
 <script setup>
+import CommandPalette from '~/components/navigation/CommandPalette.vue'
+
 useSeoMeta({
   title: 'xithrius.cloud',
 })
-
 </script>
