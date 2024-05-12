@@ -1,24 +1,24 @@
 <script setup lang="ts">
-import type { NavigationItem } from '~/types/navigation'
+import type { NavigationItem } from "~/types/navigation";
 
 const items: NavigationItem[] = [
   {
-    label: 'Home',
-    to: '/',
+    label: "Home",
+    to: "/",
   },
   {
-    label: 'Blog',
-    to: '/posts',
+    label: "Blog",
+    to: "/posts",
   },
   {
-    label: 'Showcase',
-    to: '/showcase',
+    label: "Showcase",
+    to: "/showcase",
   },
   {
-    label: 'ToDo',
-    to: '/todo',
-  }
-]
+    label: "ToDo",
+    to: "/todo",
+  },
+];
 </script>
 
 <template>

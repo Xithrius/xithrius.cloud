@@ -16,11 +16,11 @@
 
 <script setup>
 useSeoMeta({
-  title: 'ToDo | xithrius.cloud',
-  description: 'Tasks and Goals for the future',
-})
+  title: "ToDo | xithrius.cloud",
+  description: "Tasks and Goals for the future",
+});
 
-const { data: todos } = await useAsyncData('todo-all', () =>
-  queryContent('/todo').sort({title: -1}).find()
-)
+const { data: todos } = await useAsyncData("todo-all", () =>
+  queryContent("/todo").sort({ title: -1 }).find(),
+);
 </script>

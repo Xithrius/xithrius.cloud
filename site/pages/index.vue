@@ -12,7 +12,6 @@
 
 <script setup>
 useSeoMeta({
-  title: 'xithrius.cloud',
-})
-
+  title: "xithrius.cloud",
+});
 </script>

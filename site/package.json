@@ -8,34 +8,26 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint .",
-    "format": "eslint . --fix",
-    "typecheck": "nuxt typecheck"
+    "typecheck": "nuxt typecheck",
+    "lint": "biome check ./",
+    "format": "biome format --write ./",
+    "check": "biome check --apply ./",
+    "check-unsafe": "biome check --apply-unsafe ./",
+    "ci": "biome ci ./"
   },
   "dependencies": {
     "@nuxt/content": "^2.12.1",
-    "@nuxthq/studio": "^1.0.15",
-    "@nuxtjs/fontaine": "^0.4.1",
-    "@nuxtjs/google-fonts": "^3.2.0",
-    "nuxt": "^3.11.2",
-    "nuxt-icon": "^0.6.10",
-    "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.14",
-    "@iconify-json/lucide": "^1.1.187",
     "@nuxt/image": "^1.7.0",
     "@nuxt/ui": "^2.16.0",
-    "vue-use-fixed-header": "^2.0.3",
-    "@iconify-json/heroicons": "^1.1.21",
-    "@iconify-json/simple-icons": "^1.1.101",
-    "@nuxt/ui-pro": "^1.2.0",
-    "nuxt-og-image": "^3.0.0-rc.53",
-    "estree-walker": "3.0.3",
-    "@vueuse/motion": "^2.1.0"
+    "@nuxtjs/color-mode": "^3.4.1",
+    "@nuxtjs/fontaine": "^0.4.1",
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "@vueuse/motion": "^2.1.0",
+    "nuxt": "^3.11.2",
+    "vue-use-fixed-header": "^2.0.3"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "^0.3.12",
-    "@nuxtjs/color-mode": "^3.4.1",
-    "eslint": "^9.2.0",
+    "@biomejs/biome": "1.7.3",
     "typescript": "^5.4.5",
     "vue-tsc": "^2.0.17"
   }

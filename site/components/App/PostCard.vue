@@ -19,14 +19,14 @@ defineProps({
     type: Object,
     required: true,
   },
-})
+});
 
 const getReadableDate = (dateString) => {
-  const date = new Date(dateString)
-  return date.toLocaleDateString('en-US', {
-    year: '2-digit',
-    month: '2-digit',
-    day: '2-digit',
-  })
-}
+  const date = new Date(dateString);
+  return date.toLocaleDateString("en-US", {
+    year: "2-digit",
+    month: "2-digit",
+    day: "2-digit",
+  });
+};
 </script>

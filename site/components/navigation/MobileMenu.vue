@@ -1,52 +1,52 @@
 <script setup lang="ts">
-import type { NavigationItem } from '~/types/navigation'
+import type { NavigationItem } from "~/types/navigation";
 
 const items: NavigationItem[] = [
   {
-    label: 'Home',
-    to: '/',
+    label: "Home",
+    to: "/",
   },
   {
-    label: 'Blog',
-    to: '/posts',
+    label: "Blog",
+    to: "/posts",
   },
   {
-    label: 'Showcase',
-    to: '/showcase',
+    label: "Showcase",
+    to: "/showcase",
   },
   {
-    label: 'ToDo',
-    to: '/todo',
-  }
-]
+    label: "ToDo",
+    to: "/todo",
+  },
+];
 
-const route = useRoute()
+const route = useRoute();
 
-const isOpen = ref(false)
-const subMenuOpen = ref(false)
+const isOpen = ref(false);
+const subMenuOpen = ref(false);
 
 const toggle = () => {
-	isOpen.value = !isOpen.value
-	subMenuOpen.value = false
-}
+  isOpen.value = !isOpen.value;
+  subMenuOpen.value = false;
+};
 
 watch(
-	() => route.path,
-	() => {
-		isOpen.value = false
-	},
-)
+  () => route.path,
+  () => {
+    isOpen.value = false;
+  },
+);
 
 watch(
-	() => isOpen.value,
-	(newVal) => {
-		if (newVal) {
-			document.body.style.overflow = 'hidden'
-		} else {
-			document.body.style.overflow = 'auto'
-		}
-	},
-)
+  () => isOpen.value,
+  (newVal) => {
+    if (newVal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  },
+);
 </script>
 <template>
   <div class="md:hidden">

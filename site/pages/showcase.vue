@@ -21,11 +21,11 @@
 
 <script setup>
 useSeoMeta({
-  title: 'Showcase | xithrius.cloud',
-  description: 'Showcase of projects and templates',
-})
+  title: "Showcase | xithrius.cloud",
+  description: "Showcase of projects and templates",
+});
 
-const { data: repo_list } = await useAsyncData('showcase-all', () =>
-  queryContent('/showcase').find()
-)
+const { data: repo_list } = await useAsyncData("showcase-all", () =>
+  queryContent("/showcase").find(),
+);
 </script>

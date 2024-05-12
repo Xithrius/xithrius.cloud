@@ -1,12 +1,12 @@
 export default defineAppConfig({
   globals: {
-    title: 'site',
+    title: "site",
   },
   ui: {
-    primary: 'red',
-    gray: 'cool',
+    primary: "red",
+    gray: "cool",
     container: {
-      constrained: 'max-w-2xl',
+      constrained: "max-w-2xl",
     },
   },
-})
+});

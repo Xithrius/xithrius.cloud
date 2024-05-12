@@ -11,11 +11,11 @@
 
 <script setup>
 useSeoMeta({
-  title: 'Blog posts | xithrius.cloud',
-  description: 'Blog posts, guides, and fixes',
-})
+  title: "Blog posts | xithrius.cloud",
+  description: "Blog posts, guides, and fixes",
+});
 
-const { data: posts } = await useAsyncData('all-posts', () =>
-  queryContent('/posts').sort({ date: -1 }).find()
-)
+const { data: posts } = await useAsyncData("all-posts", () =>
+  queryContent("/posts").sort({ date: -1 }).find(),
+);
 </script>
