@@ -18,7 +18,7 @@
       "done": true
     },
     {
-      "desc": "Adafruit Metro ESP32-S2 to provide temperature readings (through Circuit Python)"
+      "desc": "ESP32 module to provide datetime/temperature through LCD display"
     },
     {
       "desc": "Automate repetitive workflow setups for i3wm"
