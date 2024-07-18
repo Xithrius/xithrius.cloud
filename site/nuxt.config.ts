@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "@vueuse/motion/nuxt",
     "@nuxtjs/color-mode",
   ],
+
   app: {
     pageTransition: { name: "page", mode: "out-in", duration: 150 },
     head: {
@@ -23,11 +24,13 @@ export default defineNuxtConfig({
       viewport: "width=device-width, initial-scale=1",
     },
   },
+
   content: {
     highlight: {
       theme: "github-dark",
     },
   },
+
   googleFonts: {
     display: "swap",
     families: {
@@ -37,6 +40,7 @@ export default defineNuxtConfig({
     },
     download: true,
   },
+
   colorMode: {
     preference: "system",
     fallback: "light",
@@ -46,5 +50,11 @@ export default defineNuxtConfig({
     classPrefix: "",
     classSuffix: "",
     storageKey: "nuxt-color-mode",
+  },
+
+  mdc: {
+    highlight: {
+      langs: ["toml", "cpp", "bash", "sh", "properties", "json", "yaml", "lua"],
+    },
   },
 });

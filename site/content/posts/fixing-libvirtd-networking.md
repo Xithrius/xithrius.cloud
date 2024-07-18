@@ -1,16 +1,17 @@
 ---
-title: "Possible solution to fixing libvirt disconnects"
-date: "2024-06-18"
+title: "Fixing virtmanager virtualized network not connecting"
+date: "2024-07-14"
 ---
 
-Although the virtual network may be working in your KVM/QEMU instance manager, you still might not get a connection through. This is a recent problem on (at least) arch, possibly due to some package upgrade.
+Although the virtual network may be working in your KVM/QEMU instance manager, you still might not get a connection through. Here is a solution:
 
-This might solve the issue:
+On your host system, change `firewall_backend` in `/etc/libvirt/network.conf` from `nftables` to `iptables`.
 
-```bash
-sudo systemctl start iptables.service
-sudo systemctl enable iptables.service
+If you want to be extra sure in your changes, restart the `iptables` and `libvirtd` services:
+
+```sh
 sudo systemctl restart libvirtd.service
+sudo systemctl restart iptables.service
 ```
 
-source: https://bbs.archlinux.org/viewtopic.php?id=296590
+source: https://bbs.archlinux.org/viewtopic.php?id=291898

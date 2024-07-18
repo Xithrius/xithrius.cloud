@@ -7,16 +7,16 @@ This is a basically an even shorter read of [this](https://wiki.archlinux.org/ti
 
 To have your ssh agent remember keys throughout your current session, do the following:
 
-### `~/.ssh/config`
+## `~/.ssh/config`
 
-```
+```properties
 Host *
     AddKeysToAgent yes
 ```
 
 If your ssh agent isn't initiated at startup, here's what I prefer to use as a config file with `systemd`.
 
-### `~/.config/systemd/user/ssh-agent.service`
+## `~/.config/systemd/user/ssh-agent.service`
 
 ```toml
 [Unit]
@@ -34,7 +34,7 @@ WantedBy=default.target
 
 Do the following to start the agent now, and enable it on startup.
 
-```
+```sh
 systemctl enable --user ssh-agent.service
 systemctl start --user ssh-agent.service
 ```

@@ -11,7 +11,7 @@ So, I decided to avoid this for the time being. The next thing is to use a compo
 
 There are two solutions using picom. Either turn on fading in your config at (most likely) `~/.config/picom/picom.conf` in the fading section with whatever delays of steps you like, or the following, which makes transitioning between windows "instant" (50ms), so no flashbang is included:
 
-```
+```toml
 fading = true;
 fade-in-step = 1;
 fade-out-step = 1;

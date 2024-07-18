@@ -16,6 +16,7 @@
     "ci": "biome ci ./"
   },
   "dependencies": {
+    "@nuxt-themes/typography": "^1.0.1",
     "@nuxt/content": "^2.12.1",
     "@nuxt/image": "^1.7.0",
     "@nuxt/ui": "^2.16.0",
