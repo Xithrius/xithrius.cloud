@@ -7,7 +7,7 @@ Let me know if you use any of these or find that it already exists so I can remo
 
 ## Names of chemical compounds
 
-deuterated, carbide, inconel, invar, silicide, heptoxide, superoxide, austenitic, cementite, ferrocene, telluride, suboxide, carborane, triflate, tosylate, sulfonamide, carbamate, hydrazide, benzene, sulfamic, sulfamate, borane, cubane, FOOF, azidoazide, anthracene, arsenide, covar, pearlite, martensite, ledeburite, molybdate, chromate, magnetite, hematite, malachite, disilane, phosphine, nitrous, germane
+Deuterated, carbide, inconel, invar, silicide, heptoxide, superoxide, austenitic, cementite, ferrocene, telluride, suboxide, carborane, triflate, tosylate, sulfonamide, carbamate, hydrazide, benzene, sulfamic, sulfamate, borane, cubane, FOOF, azidoazide, anthracene, arsenide, covar, pearlite, martensite, ledeburite, molybdate, chromate, magnetite, hematite, malachite, disilane, phosphine, nitrous, germane
 
 ## Terraria Calamity characters
 

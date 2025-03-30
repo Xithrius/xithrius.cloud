@@ -1,7 +1,8 @@
 {
   "todo": [
     {
-      "desc": "Survive yet again"
+      "desc": "Survive yet again",
+      "done": true
     },
     {
       "desc": "Rewrite this site in Nuxt",
@@ -21,7 +22,8 @@
       "desc": "ESP32 module to provide datetime/temperature through LCD display"
     },
     {
-      "desc": "Automate repetitive workflow setups for i3wm"
+      "desc": "Automate repetitive workflow setups for i3wm",
+      "done": true
     },
     {
       "desc": "Complete a modern C++ course"
@@ -31,7 +33,8 @@
     },
     {
       "desc": "Search engine that summarizes results via LLM(s)",
-      "url": "https://github.com/Xithrius/Solarius"
+      "url": "https://github.com/Xithrius/Solarius",
+      "done": true
     }
   ]
 }

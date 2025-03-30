@@ -33,7 +33,7 @@ The shell that I use within kitty. Since functions are so easy to make, with a [
 
 Along with this, I recommend using [starship](https://github.com/starship/starship), since it makes the prompt that much better.
 
-## [Visaul Studio Code](https://github.com/Microsoft/vscode)
+## [Visual Studio Code](https://github.com/Microsoft/vscode)
 
 Works well enough for now.
 
