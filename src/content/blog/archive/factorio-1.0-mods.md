@@ -1,9 +1,10 @@
 ---
 title: "Increasing QOL in Factorio"
 pubDate: "2022-09-22"
+archiveReason: "2.0 is out, a lot of these mods are no longer needed. a new list will be made in the future."
 ---
 
-This is a list of mods that I use for Factorio. As I find more nice QOL ones, they will be added to this list.
+This is a list of mods that I used for Factorio 1.0.
 
 - [AfraidOfTheDark](https://mods.factorio.com/mod/AfraidOfTheDark)
 - [alien-biomes](https://mods.factorio.com/mod/alien-biomes)

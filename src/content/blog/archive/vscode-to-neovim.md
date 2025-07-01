@@ -1,6 +1,7 @@
 ---
 title: "Migration from Visual Studio Code to Neovim"
 pubDate: "2023-03-24"
+archiveReason: "I no longer use Neovim as my main editor."
 ---
 
 ![Alpha dashboard](/images/posts/vscode-to-neovim/alpha-dashboard.png)

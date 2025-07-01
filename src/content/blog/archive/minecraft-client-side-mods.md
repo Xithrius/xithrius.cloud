@@ -1,6 +1,7 @@
 ---
 title: "Minecraft client side mods"
 pubDate: "2023-03-04"
+archiveReason: "This list is from 2023, Minecraft 1.19. Perhaps I'll create a new list in the future."
 ---
 
 All of these mods are meant to be used by Vanilla Minecraft 1.19.3 with the [Prism Launcher](https://github.com/PrismLauncher/PrismLauncher).

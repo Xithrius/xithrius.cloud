@@ -1,6 +1,7 @@
 ---
 title: "Neat Docker commands"
 pubDate: "2023-01-22"
+archiveReason: "These are pretty basic commands. Go deeper in a new blog post in the future."
 ---
 
 With the docker command below, you're able to create an Ubuntu shell with the files contained in the current working directory. This is neat for quickly testing out something like a shell script on a different version of Ubuntu, or just seeing if your C program compiles at all somewhere else.

@@ -1,6 +1,7 @@
 ---
 title: "Rust tools with kickstart.nvim"
 pubDate: "2023-03-25"
+archiveReason: "Probably outdated, and I no longer use Neovim as my main editor."
 ---
 
 I had a problem recently with [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) where I wasn't able to get inlay hints working from [rust-tools.nvim](https://github.com/simrat39/rust-tools.nvim).

@@ -3,9 +3,9 @@ title: "Reverting yay and pacman packages"
 pubDate: "2023-02-03"
 ---
 
-Having trouble with the current version of a package? Time to revert.
+## Downgrade
 
-Preface: the below commands can be easily executed with the [downgrade](https://aur.archlinux.org/packages/downgrade) AUR package. If you want to do the commands manually, continue reading.
+Simply install [downgrade](https://aur.archlinux.org/packages/downgrade) through your AUR package manager of choice, such as yay: `yay downgrade`. Then, for basic usage run it with the package you want to revert -- `downgrade obs-studio`. Select the version you want to go back to, and follow the instructions from that point forward.
 
 ## Pacman
 

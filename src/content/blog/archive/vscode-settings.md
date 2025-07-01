@@ -1,6 +1,7 @@
 ---
 title: "VSCode settings and extensions"
 pubDate: "2023-03-04"
+archiveReason: "Old settings. Will create a new blog post later on with descriptions of how things work together."
 ---
 
 - [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens): Improve highlighting of errors, warnings and other language diagnostics.
