@@ -37,7 +37,7 @@ Along with this, I recommend using [starship](https://github.com/starship/starsh
 
 Works well enough for now.
 
-The extensions and settings that I have configured can be found [here](https://xithrius.cloud/blog/posts/vscode-settings).
+The extensions and settings that I have configured can be found [here](https://xithrius.cloud/blog/vscode-settings).
 
 ## Ending notes
 

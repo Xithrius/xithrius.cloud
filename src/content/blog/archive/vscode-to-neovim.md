@@ -4,7 +4,7 @@ pubDate: "2023-03-24"
 archiveReason: "I no longer use Neovim as my main editor."
 ---
 
-![Alpha dashboard](/images/posts/vscode-to-neovim/alpha-dashboard.png)
+![Alpha dashboard](/images/blog/archive/vscode-to-neovim/alpha-dashboard.png)
 
 Preface: current dotfiles can be seen for neovim specifically [here](https://github.com/Xithrius/dotfiles/tree/main/.config/nvim).
 
