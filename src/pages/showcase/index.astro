@@ -18,14 +18,19 @@ const showcase = await Promise.all(
 <PageLayout title={SHOWCASE.TITLE} description={SHOWCASE.DESCRIPTION}>
   <TopLayout>
     <div class="animate page-heading">
-      {SHOWCASE.TITLE}
+      <h1 class="text-3xl font-semibold text-black dark:text-white">
+        {SHOWCASE.TITLE}
+      </h1>
     </div>
   </TopLayout>
   <BottomLayout>
     <ul>
       {
         showcase.map((entry) => (
-          <li class="animate border-b border-black/10 dark:border-white/25 mt-4 py-8 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none">
+          <li class="animate mt-4 py-8 first-of-type:mt-0 first-of-type:pt-0">
+            <h2 class="text-2xl border-b border-black/10 dark:border-white/25 pb-4 mb-4">
+              {entry.slug.charAt(0).toUpperCase() + entry.slug.slice(1)}
+            </h2>
             <article class="prose dark:prose-invert">
               <entry.Content />
             </article>

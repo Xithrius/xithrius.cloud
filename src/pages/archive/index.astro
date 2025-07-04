@@ -16,19 +16,17 @@ const estimated_initial_size =
 
 <PageLayout title={BLOG.TITLE}>
   <TopLayout>
-    <div class="animate">
-      <h1 class="text-3xl font-semibold text-black dark:text-white">
-        {BLOG.TITLE}
-      </h1>
+    <div class="animate page-heading">
+      <h1 class="text-3xl font-semibold text-black dark:text-white">Archive</h1>
     </div>
+    <BottomLayout>
+      <div
+        id="search-collection-wrapper"
+        class="animate"
+        style={{ minHeight: `${estimated_initial_size}px` }}
+      >
+        <SearchCollection client:load entry_name={"posts"} data={posts} />
+      </div>
+    </BottomLayout>
   </TopLayout>
-  <BottomLayout>
-    <div
-      id="search-collection-wrapper"
-      class="animate"
-      style={{ minHeight: `${estimated_initial_size}px` }}
-    >
-      <SearchCollection client:load entry_name={"posts"} data={posts} />
-    </div>
-  </BottomLayout>
 </PageLayout>

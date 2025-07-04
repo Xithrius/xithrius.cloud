@@ -20,15 +20,19 @@ todo.sort((a, b) => b.slug.localeCompare(a.slug));
 <PageLayout title={TODO.TITLE} description={TODO.DESCRIPTION}>
   <TopLayout>
     <div class="animate page-heading">
-      {TODO.TITLE}
+      <h1 class="text-3xl font-semibold text-black dark:text-white">
+        {TODO.TITLE}
+      </h1>
     </div>
   </TopLayout>
   <BottomLayout>
     <ul>
       {
         todo.map((entry) => (
-          <li class="animate border-b border-black/10 dark:border-white/25 mt-4 py-8 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none">
-            <h1 class="text-2xl text-center">{entry.slug}</h1>
+          <li class="animate mt-4 py-8 first-of-type:mt-0 first-of-type:pt-0">
+            <h2 class="text-2xl border-b border-black/10 dark:border-white/25 pb-4 mb-4">
+              {entry.slug.charAt(0).toUpperCase() + entry.slug.slice(1)}
+            </h2>
             <article class="prose dark:prose-invert">
               <entry.Content />
             </article>
