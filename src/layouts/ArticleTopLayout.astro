@@ -58,9 +58,7 @@ const repoUrl = collection === "showcase" ? data.repoUrl : null;
   <h1 class="text-3xl font-semibold text-black dark:text-white mt-2">
     {title}
   </h1>
-  <div class="mt-1">
-    {summary}
-  </div>
+  {summary !== "undefined" && <div class="mt-1">{summary}</div>}
   {
     repoUrl && (
       <div class="mt-4 flex flex-wrap gap-2">
