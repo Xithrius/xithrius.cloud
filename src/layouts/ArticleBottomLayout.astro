@@ -1,0 +1,16 @@
+---
+import type { CollectionItem } from "@components/SearchCollection";
+
+type Props = {
+  entry: CollectionItem;
+};
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<div>
+  <article>
+    <Content />
+  </article>
+</div>

@@ -1,39 +1,100 @@
 ---
-const today = new Date();
+import { SITE, SOCIALS } from "@consts";
+import Container from "@components/Container.astro";
 ---
 
-<footer>
-  &copy; {today.getFullYear()} Xithrius. All rights reserved.
-  <div class="social-links">
-    <a href="https://github.com/Xithrius" target="_blank">
-      <span class="sr-only">Go to Xithrius' GitHub</span>
-      <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
-        ><path
-          fill="currentColor"
-          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-        ></path></svg
-      >
-    </a>
+<footer class="relative bg-white dark:bg-black">
+  <div class="animate">
+    <section class="py-5">
+      <Container size="md">
+        <div class="flex items-center justify-center sm:justify-end">
+          <button
+            id="back-to-top"
+            aria-label="Back to top of page"
+            class="group flex w-fit p-1.5 gap-1.5 text-sm items-center border rounded hover:bg-black/5 hover:dark:bg-white/10 border-black/15 dark:border-white/20 transition-colors duration-300 ease-in-out"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="stroke-current group-hover:stroke-black group-hover:dark:stroke-white rotate-90"
+            >
+              <line
+                x1="19"
+                y1="12"
+                x2="5"
+                y2="12"
+                class="scale-x-0 group-hover:scale-x-100 translate-x-3 group-hover:translate-x-0 transition-all duration-300 ease-in-out"
+              ></line>
+              <polyline
+                points="12 19 5 12 12 5"
+                class="translate-x-1 group-hover:translate-x-0 transition-all duration-300 ease-in-out"
+              ></polyline>
+            </svg>
+            <div
+              class="w-full group-hover:text-black group-hover:dark:text-white transition-colors duration-300 ease-in-out"
+            >
+              Back to top
+            </div>
+          </button>
+        </div>
+      </Container>
+    </section>
+
+    <section
+      class="py-5 overflow-hidden whitespace-nowrap border-t border-black/10 dark:border-white/25"
+    >
+      <Container size="md">
+        <div class="h-full grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div
+            class="order-2 sm:order-1 flex flex-col items-center justify-center sm:items-start"
+          >
+            <div class="text-sm mt-2">&copy; 2024 | All rights reserved</div>
+          </div>
+
+          <div class="order-1 sm:order-2 flex justify-center sm:justify-end">
+            <div class="flex flex-wrap gap-1 items-center justify-center">
+              {
+                SOCIALS.map((SOCIAL) => (
+                  <a
+                    href={SOCIAL.HREF}
+                    target="_blank"
+                    aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`}
+                    class="group size-10 rounded-full p-2 items-center justify-center hover:bg-black/5 dark:hover:bg-white/20  blend"
+                  >
+                    <svg class="size-full fill-current group-hover:fill-black group-hover:dark:fill-white blend">
+                      <use href={`/social.svg#${SOCIAL.ICON}`} />
+                    </svg>
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </Container>
+    </section>
   </div>
 </footer>
-<style>
-  footer {
-    padding: 2em 1em 6em 1em;
-    background: linear-gradient(var(--gray-gradient)) no-repeat;
-    color: rgb(var(--gray));
-    text-align: center;
+
+<script is:inline>
+  function goBackToTop(event) {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    margin-top: 1em;
+
+  function initializeBackToTop() {
+    const backToTop = document.getElementById("back-to-top");
+    backToTop?.addEventListener("click", goBackToTop);
   }
-  .social-links a {
-    text-decoration: none;
-    color: rgb(var(--gray));
-  }
-  .social-links a:hover {
-    color: rgb(var(--gray-dark));
-  }
-</style>
+
+  document.addEventListener("astro:after-swap", initializeBackToTop);
+  initializeBackToTop();
+</script>

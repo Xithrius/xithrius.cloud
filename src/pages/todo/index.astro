@@ -1,0 +1,40 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import TopLayout from "@layouts/TopLayout.astro";
+import BottomLayout from "@layouts/BottomLayout.astro";
+import { TODO } from "@consts";
+
+const collection = await getCollection("todo");
+
+const todo = await Promise.all(
+  collection.map(async (item) => {
+    const { Content } = await item.render();
+    return { ...item, Content };
+  })
+);
+
+todo.sort((a, b) => b.slug.localeCompare(a.slug));
+---
+
+<PageLayout title={TODO.TITLE} description={TODO.DESCRIPTION}>
+  <TopLayout>
+    <div class="animate page-heading">
+      {TODO.TITLE}
+    </div>
+  </TopLayout>
+  <BottomLayout>
+    <ul>
+      {
+        todo.map((entry) => (
+          <li class="animate border-b border-black/10 dark:border-white/25 mt-4 py-8 first-of-type:mt-0 first-of-type:pt-0 last-of-type:border-none">
+            <h1 class="text-2xl text-center">{entry.slug}</h1>
+            <article class="prose dark:prose-invert">
+              <entry.Content />
+            </article>
+          </li>
+        ))
+      }
+    </ul>
+  </BottomLayout>
+</PageLayout>
