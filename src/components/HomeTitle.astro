@@ -1,0 +1,48 @@
+---
+import { SITE } from "@consts";
+---
+
+<div
+  class="animated-gradient
+  text-[10vw]
+  md:text-[15vw]
+  lg:text-[10vw]
+  tracking-tight
+  uppercase"
+>
+  {SITE.TITLE}
+</div>
+
+<style>
+  div {
+    font-family: "Turret Road", sans-serif;
+  }
+
+  .animated-gradient {
+    background: linear-gradient(
+      45deg,
+      #dc2626,
+      #db2777,
+      #ec4899,
+      #f97316,
+      #dc2626
+    );
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientShift 10s ease-in-out infinite;
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+</style>

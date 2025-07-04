@@ -1,0 +1,34 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import TopLayout from "@layouts/TopLayout.astro";
+import BottomLayout from "@layouts/BottomLayout.astro";
+import SearchCollection from "@components/SearchCollection";
+import { BLOG } from "@consts";
+
+const posts = (await getCollection("blog"))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const estimated_initial_size =
+  28 + posts.length * 158 + (posts.length - 1) * 12;
+---
+
+<PageLayout title={BLOG.TITLE}>
+  <TopLayout>
+    <div class="animate page-heading">
+      <h1 class="text-3xl font-semibold text-black dark:text-white">
+        {BLOG.TITLE}
+      </h1>
+    </div>
+  </TopLayout>
+  <BottomLayout>
+    <div
+      id="search-collection-wrapper"
+      class="animate"
+      style={{ minHeight: `${estimated_initial_size}px` }}
+    >
+      <SearchCollection client:load entry_name={"posts"} data={posts} />
+    </div>
+  </BottomLayout>
+</PageLayout>

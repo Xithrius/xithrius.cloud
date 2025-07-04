@@ -4,9 +4,8 @@
     "esbenp.prettier-vscode",
     "christian-kohler.npm-intellisense",
     "dbaeumer.vscode-eslint",
-    "vue.volar",
-    "vue.vscode-typescript-vue-plugin",
     "rvest.vs-code-prettier-eslint",
-    "nuxtr.nuxtr-vscode"
+    "astro-build.astro-vscode",
+    "unifiedjs.vscode-mdx"
   ]
 }
