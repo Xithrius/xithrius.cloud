@@ -4,7 +4,6 @@ import PageLayout from "@layouts/PageLayout.astro";
 import TopLayout from "@layouts/TopLayout.astro";
 import BottomLayout from "@layouts/BottomLayout.astro";
 import SearchCollection from "@components/SearchCollection";
-import { BLOG } from "@consts";
 
 const posts = (await getCollection("archive")).sort(
   (a, b) => b.data.date.getTime() - a.data.date.getTime()
