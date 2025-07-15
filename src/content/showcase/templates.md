@@ -3,5 +3,5 @@
 
 | Template                                                       | Description                                          |
 | -------------------------------------------------------------- | ---------------------------------------------------- |
-| [Next.js FastAPI Authentication](nextjs-fastapi-auth-template) | Next.js, FastAPI-users, iron-session, and SQLAlchemy |
-| [Rust Binary Project](rust-binary-project-template)            | A template for Rust binary projects                  |
+| [Next.js FastAPI Authentication][nextjs-fastapi-auth-template] | Next.js, FastAPI-users, iron-session, and SQLAlchemy |
+| [Rust Binary Project][rust-binary-project-template]            | A template for Rust binary projects                  |

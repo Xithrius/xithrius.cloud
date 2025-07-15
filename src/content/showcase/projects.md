@@ -6,8 +6,8 @@
 
 | Project                              | Description                                                         |
 | ------------------------------------ | ------------------------------------------------------------------- |
-| [Twitch TUI](twitch-tui)             | Twitch chat in the terminal                                         |
-| [Daemos](daemos)                     | Local-only music player                                             |
-| [xithrius.cloud](xithrius.cloud)     | Personal portfolio website                                          |
-| [Gradient skins](gradient-skins)     | Generate gradient Minecraft skins with ease                         |
-| [timezone-tracker](timezone-tracker) | Converting/tracking timezones of others relative to your local time |
+| [Twitch TUI][twitch-tui]             | Twitch chat in the terminal                                         |
+| [Daemos][daemos]                     | Local-only music player                                             |
+| [xithrius.cloud][xithrius.cloud]     | Personal portfolio website                                          |
+| [Gradient skins][gradient-skins]     | Generate gradient Minecraft skins with ease                         |
+| [timezone-tracker][timezone-tracker] | Converting/tracking timezones of others relative to your local time |
