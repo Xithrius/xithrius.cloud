@@ -34,6 +34,7 @@ import HeaderLink from "./HeaderLink.astro"
   h2 {
     margin: 0;
     font-size: 1em;
+    justify-self: start;
   }
 
   h2 a,
@@ -41,9 +42,19 @@ import HeaderLink from "./HeaderLink.astro"
     text-decoration: none;
   }
   nav {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  .internal-links {
+    justify-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .social-links {
+    justify-self: end;
   }
   nav a {
     padding: 1em 0.5em;
