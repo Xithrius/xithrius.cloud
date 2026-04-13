@@ -3,18 +3,20 @@ import BaseHead from "../components/BaseHead.astro"
 import Footer from "../components/Footer.astro"
 import Header from "../components/Header.astro"
 import { SITE_TITLE } from "../consts"
+import { Font } from "astro:assets"
+import HomeTitle from "../components/HomeTitle.astro"
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} />
+    <Font cssVariable="--font-turret-road" preload />
   </head>
   <body>
     <Header />
-    <main>
-      <h1>xithrius.cloud</h1>
-    </main>
+    <!-- Home title is outside <main> so it isn’t limited to the 720px content column -->
+    <HomeTitle />
     <Footer />
   </body>
 </html>

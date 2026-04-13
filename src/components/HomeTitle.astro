@@ -1,0 +1,70 @@
+---
+import { SITE_TITLE } from "../consts"
+---
+
+<div class="home-title-shell">
+  <div class="home-title animated-gradient">
+    {SITE_TITLE}
+  </div>
+</div>
+
+<style>
+  .home-title-shell {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3em 1em;
+    text-align: center;
+  }
+
+  .home-title {
+    display: inline-block;
+    max-width: 100%;
+    text-align: center;
+    font-family: var(--font-turret-road), sans-serif;
+    font-weight: 200;
+    font-size: 10vw;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 768px) {
+    .home-title {
+      font-size: 15vw;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .home-title {
+      font-size: 10vw;
+    }
+  }
+
+  .animated-gradient {
+    background: linear-gradient(
+      45deg,
+      #dc2626,
+      #db2777,
+      #ec4899,
+      #f97316,
+      #dc2626
+    );
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientShift 10s ease-in-out infinite;
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+</style>
