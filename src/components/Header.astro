@@ -7,12 +7,13 @@ import HeaderLink from "./HeaderLink.astro"
   <nav>
     <h2><a href="/">{SITE_TITLE}</a></h2>
     <div class="internal-links">
+      <HeaderLink href="/">Home</HeaderLink>
       <HeaderLink href="/blog">Blog</HeaderLink>
-      <HeaderLink href="/projects">Projects</HeaderLink>
+      <HeaderLink href="/about">About</HeaderLink>
     </div>
     <div class="social-links">
-      <a href="https://github.com/Xithrius" target="_blank">
-        <span class="sr-only">Xithrius on GitHub</span>
+      <a href="https://github.com/xithrius" target="_blank">
+        <span class="sr-only">Go to Xithrius's GitHub repo</span>
         <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
           ><path
             fill="currentColor"
@@ -23,7 +24,6 @@ import HeaderLink from "./HeaderLink.astro"
     </div>
   </nav>
 </header>
-
 <style>
   header {
     margin: 0;
