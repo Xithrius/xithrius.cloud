@@ -11,20 +11,14 @@ export default defineConfig({
 	fonts: [
 		{
 			provider: fontProviders.local(),
-			name: 'Atkinson',
-			cssVariable: '--font-atkinson',
-			fallbacks: ['sans-serif'],
+			name: 'Commit Mono',
+			cssVariable: '--font-commit-mono',
+			fallbacks: ['monospace'],
 			options: {
 				variants: [
 					{
-						src: ['./src/assets/fonts/atkinson-regular.woff'],
+						src: ['./src/assets/fonts/CommitMono-400-Regular.otf'],
 						weight: 400,
-						style: 'normal',
-						display: 'swap',
-					},
-					{
-						src: ['./src/assets/fonts/atkinson-bold.woff'],
-						weight: 700,
 						style: 'normal',
 						display: 'swap',
 					},
